@@ -95,6 +95,10 @@ export const homeFaqs = [
     a: "Price depends on size, condition grade, current availability and how far the container travels to your site. Rather than publish a number that changes week to week, we quote a delivered price for your ZIP code — usually after a couple of quick questions about access.",
   },
   {
+    q: "Should I rent or buy a container?",
+    a: "Rent when you need storage for a project or a season and want it picked up afterward. Buy when you need it long-term or plan to modify it. Not sure? Ask us to quote both on one request.",
+  },
+  {
     q: "What information do you need for a quote?",
     a: "The size (or what you plan to store), how many, your delivery ZIP code, when you need it, and anything unusual about site access. Photos of the drop spot are helpful but not required.",
   },
@@ -112,18 +116,18 @@ export const homeFaqs = [
   },
   {
     q: "How much room does the delivery truck need?",
-    a: "More than the container. A tilt-bed truck needs a straight approach, enough length to slide the container off, and clear overhead space for the bed to tilt. We confirm the exact requirement for your site when we quote.",
+    a: "More than the container. Our pickup and gooseneck trailer needs a clear approach, room to maneuver and overhead clearance — with a 40 ft container aboard, the rig is well over 60 ft long. We confirm the exact requirement for your site when we quote.",
   },
 ];
 
 export const deliveryFaqs = [
   {
     q: "What kind of truck delivers the container?",
-    a: "Containers are typically delivered on a tilt-bed truck or trailer that slides the container off onto the ground. We confirm the equipment and its space requirements with your quote.",
+    a: "We deliver with our own pickup truck and gooseneck flatbed trailer. When we quote, we confirm how the container will be unloaded at your site and what space the rig needs.",
   },
   {
     q: "Can you place the container exactly where I want it?",
-    a: "If the truck can reach the spot in a straight line with the clearance it needs, yes. Tell us which way you want the doors to face — that's decided before the container comes off the truck.",
+    a: "If the truck and trailer can reach the spot with the clearance they need, yes. Tell us which way you want the doors to face — that's decided before the container comes off the truck.",
   },
   {
     q: "Do I need to be there on delivery day?",
@@ -135,6 +139,6 @@ export const deliveryFaqs = [
   },
   {
     q: "Can I move the container later?",
-    a: "Yes, with the right equipment. An empty container can be picked up and relocated by a tilt-bed truck. Loaded containers should not be moved this way.",
+    a: "Yes, with the right equipment. An empty container can be picked up and relocated. Containers should always be emptied before they're moved.",
   },
 ];

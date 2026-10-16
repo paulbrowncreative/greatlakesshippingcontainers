@@ -77,12 +77,12 @@ export const containers: ContainerProduct[] = [
       { title: "Farm equipment and supplies", body: "Secure, rodent-resistant storage for feed, seed, tools and small equipment." },
     ],
     considerations: [
-      "Needs a level, firm pad roughly 20 ft × 8 ft, plus room for the delivery truck to back in and tilt off.",
-      "Delivered empty, a 20 ft unit is light enough for most tilt-bed trucks — confirm road and driveway weight limits in spring.",
+      "Needs a level, firm pad roughly 20 ft × 8 ft, plus room for the delivery truck and trailer to reach it.",
+      "Empty, a 20 ft unit weighs roughly 2½ tons — still worth checking driveway and spring road limits before delivery day.",
       "Doors are on one end only (unless you request a specialty unit), so plan placement around how you'll load it.",
     ],
     faqs: [
-      { q: "Will a 20 ft container fit in my driveway?", a: "Most residential driveways can hold the container itself (20 ft × 8 ft). The real limit is usually the delivery truck: it needs a straight approach, room to tilt the bed, and clear overhead space. Send us your address and a photo of the spot and we'll tell you whether it works." },
+      { q: "Will a 20 ft container fit in my driveway?", a: "Most residential driveways can hold the container itself (20 ft × 8 ft). The real limit is usually the delivery truck: the truck and trailer need a clear approach, room to maneuver, and overhead clearance. Send us your address and a photo of the spot and we'll tell you whether it works." },
       { q: "How much can I store in a 20 ft container?", a: "About 1,170 cubic feet — roughly the contents of a two-car garage, or 10 standard pallets on the floor." },
       { q: "Is a 20 ft container half the price of a 40?", a: "Usually not. Freight, handling and delivery costs are similar for both sizes, so a 40 ft unit often costs less per square foot. If you're between sizes, ask us to quote both." },
     ],
@@ -101,7 +101,7 @@ export const containers: ContainerProduct[] = [
     lede:
       "Twice the floor space of a 20-footer for a delivery cost that's usually close to the same. The 40 ft standard is the workhorse for commercial storage, farms and long-term projects.",
     summary: "Maximum storage per delivery for commercial, agricultural and industrial sites.",
-    image: images.container40,
+    image: images.deliveryRural,
     external: [
       { label: "Length", value: "40 ft" },
       { label: "Width", value: "8 ft" },
@@ -136,7 +136,7 @@ export const containers: ContainerProduct[] = [
       "Heavier than a 20 — check whether your road is under Michigan's spring seasonal weight restrictions before scheduling.",
     ],
     faqs: [
-      { q: "How much space does delivery of a 40 ft container need?", a: "More than the container itself. A tilt-bed truck and a 40 ft unit together need a long straight run to slide it off, plus overhead clearance. We confirm the exact requirement for your site when we quote — photos and a rough measurement help." },
+      { q: "How much space does delivery of a 40 ft container need?", a: "More than the container itself. Our pickup and gooseneck trailer with a 40 ft unit on board is well over 60 ft long, so it needs a clear approach, room to maneuver and overhead clearance. We confirm the exact requirement for your site when we quote — photos and a rough measurement help." },
       { q: "Should I choose a 40 ft standard or a high cube?", a: "If you're storing pallets, boxes or equipment under 7 ft 6 in tall, the standard is fine. If you need taller items through the door, plan to add shelving or are converting the unit, the high cube's extra foot is worth it." },
       { q: "Can a 40 ft container be placed on gravel?", a: "Yes — compacted gravel is one of the most common bases. The key is that it's level and firm so the doors keep opening and closing properly." },
     ],

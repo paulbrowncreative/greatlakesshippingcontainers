@@ -60,16 +60,3 @@ export const IconFacebook = (p: P) => (
     <path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4a21 21 0 0 0-2.3-.1c-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21z" />
   </svg>
 );
-
-/** Brand mark: a container's door end (four lock rods) over a Great Lakes wave line. */
-export function BrandMark(p: P) {
-  return (
-    <svg viewBox="0 0 40 40" aria-hidden focusable={false} {...p}>
-      <rect x="1.5" y="1.5" width="37" height="37" rx="3" fill="#b5441a" />
-      <rect x="6" y="6" width="28" height="22" fill="none" stroke="#fff" strokeWidth="2" />
-      <path d="M12 8.5v17M17.3 8.5v17M22.7 8.5v17M28 8.5v17" stroke="#fff" strokeWidth="1.8" />
-      <path d="M10 13h4M15.3 20h4M20.7 13h4M26 20h4" stroke="#fff" strokeWidth="1.6" />
-      <path d="M5 33.5c2.5-2 5-2 7.5 0s5 2 7.5 0 5-2 7.5 0 5 2 7.5 0" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
-}

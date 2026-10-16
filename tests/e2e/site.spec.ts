@@ -117,3 +117,16 @@ test("FAQ accordions toggle with the keyboard", async ({ page }) => {
   await page.keyboard.press("Enter");
   await expect(page.locator("details", { has: summary })).toHaveAttribute("open", "");
 });
+
+test("rental CTA pre-selects a rental quote with a rental-length question", async ({ page }) => {
+  await page.goto("/services/container-rentals");
+  await page.getByRole("link", { name: "Get a Rental Quote" }).first().click();
+  await expect(page).toHaveURL(/\/quote\?type=rent/);
+  await expect(page.getByLabel("Rent a container")).toBeChecked();
+  await expect(page.getByLabel("How long do you need it?")).toBeVisible();
+});
+
+test("phone number is a working tap-to-call link", async ({ page }) => {
+  await page.goto("/contact");
+  await expect(page.locator('main a[href="tel:+15862657744"]').first()).toBeVisible();
+});

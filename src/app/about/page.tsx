@@ -10,7 +10,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "About Great Lakes Shipping Containers | Michigan Supplier",
   description:
-    "Great Lakes Shipping Containers LLC is a Michigan company supplying 20 ft and 40 ft shipping containers with delivery. How we work and what you can expect.",
+    "Great Lakes Shipping Containers LLC is a Michigan company selling and renting 20 ft and 40 ft shipping containers with delivery. How we work and what to expect.",
   path: "/about",
 });
 
@@ -20,7 +20,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About us"
         title="A Michigan container company"
-        lede={`${business.legalName} supplies steel shipping containers to the people who need secure space on site — contractors, farmers, businesses and homeowners across ${business.state}.`}
+        lede={`${business.legalName} sells and rents steel shipping containers to the people who need secure space on site — contractors, farmers, businesses and homeowners in ${business.state}.`}
         crumbs={[{ name: "About", path: "/about" }]}
       />
       <section className="section section--white" aria-labelledby="what-we-do">
@@ -43,7 +43,7 @@ export default function AboutPage() {
               </Link>
             </p>
           </div>
-          <Photo image={images.portYard} aspect="4x3" sizes="(min-width: 60rem) 45vw, 100vw" />
+          <Photo image={images.deliveryYard} aspect="4x3" sizes="(min-width: 60rem) 45vw, 100vw" companyCaption="Our truck and trailer at the container yard" />
         </div>
       </section>
       <section className="section section--dark" aria-labelledby="commitments">

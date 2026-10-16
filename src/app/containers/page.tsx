@@ -85,7 +85,7 @@ export default function ContainersPage() {
                 <strong>Measure your tallest item.</strong> Standard doors open to about 7 ft 6 in; high cube doors to about 8 ft 5 in.
               </li>
               <li>
-                <strong>Check the drop zone.</strong> Delivery needs much more room than the container — a straight approach and
+                <strong>Check the drop zone.</strong> Delivery needs much more room than the container — a clear approach and
                 overhead clearance.
               </li>
               <li>

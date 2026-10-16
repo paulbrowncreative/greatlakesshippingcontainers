@@ -52,44 +52,49 @@ export const images = {
     illustrative: false,
   },
 
-  // --- Illustrative photos ---
-  portYard: {
-    src: "/images/port-container-yard.jpg",
-    width: 784,
-    height: 1168,
-    alt: "Rows of shipping containers in a port container yard with gantry cranes in the distance",
-    illustrative: true,
+  new20: {
+    src: "/images/glsc-new-20ft-one-trip.jpg",
+    width: 1500,
+    height: 1500,
+    alt: "New beige one-trip 20 ft shipping containers stacked in a gravel yard, with cargo doors closed",
+    illustrative: false,
   },
-  container40: {
-    src: "/images/container-40ft-lot.jpg",
-    width: 1800,
-    height: 1200,
-    alt: "A 40 ft orange shipping container sitting on a paved commercial lot",
-    credit: unsplash("Arno Senoner", "1766945206843-eac0b1aa0343"),
-    illustrative: true,
+  used40Yard: {
+    src: "/images/glsc-used-40ft-yard.jpg",
+    width: 2000,
+    height: 1500,
+    alt: "Used 40 ft high cube shipping containers in red, blue and orange stacked several high in a container yard",
+    illustrative: false,
   },
-  craneLift: {
-    src: "/images/container-crane-lift.jpg",
-    width: 1800,
-    height: 1200,
-    alt: "A crane lifting a dark green shipping container into position against a blue sky",
-    credit: unsplash("Rook of Arts", "1776938437751-33111079b460"),
-    illustrative: true,
+  deliveryYard: {
+    src: "/images/glsc-delivery-truck-yard.jpg",
+    width: 2000,
+    height: 1500,
+    alt: "A white Great Lakes Shipping Containers pickup truck with a gooseneck flatbed trailer carrying a used 40 ft container",
+    illustrative: false,
   },
+  deliveryRural: {
+    src: "/images/glsc-delivery-rural-road.jpg",
+    width: 1500,
+    height: 1125,
+    alt: "The Great Lakes Shipping Containers truck and gooseneck trailer hauling a 40 ft container down a gravel road lined with bare trees",
+    illustrative: false,
+  },
+  newOnTrailer: {
+    src: "/images/glsc-new-40ft-on-trailer.jpg",
+    width: 2000,
+    height: 1080,
+    alt: "A new beige 40 ft high cube container strapped to a gooseneck trailer behind a white pickup, with stacks of new containers behind",
+    illustrative: false,
+  },
+
+  // --- Illustrative stock photos ---
   agriculture: {
     src: "/images/container-agriculture-hay.jpg",
     width: 1800,
     height: 1202,
     alt: "A farm worker loading hay bales into an open shipping container",
     credit: unsplash("Land O'Lakes, Inc.", "1761839257874-e56dfa2260cb"),
-    illustrative: true,
-  },
-  sitePlacement: {
-    src: "/images/container-site-placement.jpg",
-    width: 1800,
-    height: 1200,
-    alt: "A single light gray shipping container placed on level ground at the edge of a wooded property",
-    credit: unsplash("Arlind Photography", "1790364755326-ad7b61618cf2"),
     illustrative: true,
   },
 } satisfies Record<string, SiteImage>;

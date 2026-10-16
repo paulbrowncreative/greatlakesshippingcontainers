@@ -30,7 +30,7 @@ export default function DeliveryPage() {
           { name: "Services", path: "/services/container-sales" },
           { name: "Delivery", path: "/services/delivery" },
         ]}
-        image={images.craneLift}
+        image={images.deliveryYard}
       >
         <TrackedLink href="/quote" className="btn btn--lg" event="quote_cta_click" eventParams={{ location: "delivery_hero" }}>
           Quote Delivery to My Site <IconArrow />
@@ -73,23 +73,24 @@ export default function DeliveryPage() {
             <p className="eyebrow">Site-readiness checklist</p>
             <h2 id="checklist">Before delivery day</h2>
             <p className="lede">
-              Delivery is typically by tilt-bed truck, which slides the container off the back. Clearances below are common rules of
-              thumb — your quote confirms the exact requirements for the truck assigned.
+              We deliver with our own pickup and gooseneck flatbed trailer. With a 40 ft container on board, that rig is longer than
+              most people expect — the figures below are planning guides, and your quote confirms how the container will be unloaded
+              and exactly what your site needs.
             </p>
           </div>
           <div className="grid grid--3">
             <div className="card">
-              <h3>Straight-line room</h3>
+              <h3>Room to pull in and out</h3>
               <p>
-                The truck needs to line up straight with the drop spot and pull forward as the container slides off. Plan on roughly
-                75 ft of straight clearance for a 20 ft container and about 110 ft for a 40.
+                A pickup and gooseneck trailer carrying a 40 ft container is well over 60 ft long. Check that the rig can pull in,
+                position beside the drop spot and get back out — without backing down a long, narrow drive.
               </p>
             </div>
             <div className="card">
               <h3>Width and height</h3>
               <p>
-                Allow at least 12 ft of width along the path and about 14 ft of overhead clearance at the drop spot — more where the
-                bed tilts. Look up: wires, branches, eaves and carports.
+                Allow at least 12 ft of width along the path and about 14 ft of overhead clearance along the route and at the drop spot.
+                Look up: wires, branches, eaves and carports.
               </p>
             </div>
             <div className="card">
@@ -141,7 +142,7 @@ export default function DeliveryPage() {
               Not sure whether your road is restricted? Your county road commission publishes current seasonal restrictions.
             </p>
           </div>
-          <Photo image={images.sitePlacement} aspect="4x3" sizes="(min-width: 60rem) 45vw, 100vw" />
+          <Photo image={images.deliveryRural} aspect="4x3" sizes="(min-width: 60rem) 45vw, 100vw" companyCaption="Our truck and gooseneck trailer on a Michigan gravel road" />
         </div>
       </section>
 

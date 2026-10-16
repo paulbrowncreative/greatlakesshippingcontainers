@@ -14,9 +14,9 @@ import { images } from "@/content/images";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Shipping Containers for Sale in Michigan | Great Lakes Containers",
+  title: "Shipping Containers for Sale & Rent in Michigan | Great Lakes",
   description:
-    "20 ft, 40 ft and high cube shipping containers for sale with delivery to your Michigan site. Compare sizes, see typical specs and request a delivered quote.",
+    "Buy or rent 20 ft, 40 ft and high cube shipping containers, delivered to your Michigan site on our own truck. Compare sizes and request a quote.",
   path: "/",
 });
 
@@ -30,14 +30,14 @@ export default function HomePage() {
         <div className="container hero__inner">
           <div>
             <p className="eyebrow" style={{ color: "var(--corten-200)" }}>
-              Shipping containers for sale · {business.state}
+              Container sales &amp; rentals · {business.state}
             </p>
             <h1>
               Shipping containers <em>for every need</em>
             </h1>
             <p className="hero__lede">
-              20 ft and 40 ft steel containers for jobsites, farms, businesses and homes — quoted with delivery to your
-              site. Tell us the size and ZIP code, and we&apos;ll come back with the right unit and one delivered price.
+              Buy or rent 20 ft and 40 ft steel containers for jobsites, farms, businesses and homes — delivered on our own
+              truck and trailer. Tell us the size and ZIP code, and we&apos;ll come back with the right unit and a delivered price.
             </p>
             <div className="hero__actions cluster">
               <TrackedLink href="/quote" className="btn btn--lg" event="quote_cta_click" eventParams={{ location: "hero" }}>
@@ -107,9 +107,14 @@ export default function HomePage() {
                 Three sizes cover almost every storage job. Choose by floor space, door height and how much room you have for
                 delivery.
               </p>
-              <Link href="/containers" className="text-link">
-                Compare all sizes side by side
-              </Link>
+              <p className="cluster" style={{ gap: "var(--space-5)" }}>
+                <Link href="/containers" className="text-link">
+                  Compare all sizes side by side
+                </Link>
+                <Link href="/services/container-rentals" className="text-link">
+                  Need one short-term? Rent it
+                </Link>
+              </p>
             </div>
           </div>
           <div className="grid grid--3">
@@ -157,13 +162,14 @@ export default function HomePage() {
       <section className="section section--white" aria-labelledby="delivery-heading">
         <div className="container split split--wide-right">
           <div className="media-offset">
-            <Photo image={images.craneLift} aspect="4x3" sizes="(min-width: 60rem) 45vw, 100vw" />
+            <Photo image={images.newOnTrailer} aspect="4x3" sizes="(min-width: 60rem) 45vw, 100vw" companyCaption="Our truck and gooseneck trailer" />
           </div>
           <div>
             <p className="eyebrow">Delivery</p>
             <h2 id="delivery-heading">Planned for your site, not just your ZIP code</h2>
             <p className="lede mt-4">
-              Most delivery problems are access problems. We ask the right questions first so delivery day is uneventful.
+              We deliver with our own pickup and gooseneck trailer. Most delivery problems are access problems, so we ask the
+              right questions first and delivery day is uneventful.
             </p>
             <ol className="steps steps--2 mt-6" role="list" style={{ gridTemplateColumns: "1fr" }}>
               <li className="step">

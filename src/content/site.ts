@@ -23,6 +23,7 @@ export const primaryNav: { label: string; href: string; children?: NavItem[] }[]
     href: "/services/container-sales",
     children: [
       { label: "Container Sales", href: "/services/container-sales", description: "Buy a container outright" },
+      { label: "Container Rentals", href: "/services/container-rentals", description: "Storage for a project or season" },
       { label: "Delivery & Placement", href: "/services/delivery", description: "How delivery is planned and quoted" },
     ],
   },
@@ -43,6 +44,7 @@ export const footerNav = {
   ],
   company: [
     { label: "Container Sales", href: "/services/container-sales" },
+    { label: "Container Rentals", href: "/services/container-rentals" },
     { label: "Delivery & Placement", href: "/services/delivery" },
     { label: "Container Uses", href: "/uses" },
     { label: "Service Area", href: "/service-area" },

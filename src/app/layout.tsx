@@ -16,7 +16,7 @@ const plex = IBM_Plex_Sans({ subsets: ["latin"], weight: ["400", "500", "600"], 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: { default: business.name, template: `%s | ${business.name}` },
-  description: `${business.legalName}: 20 ft and 40 ft shipping containers for sale with delivery in Michigan. Request a quote for your site.`,
+  description: `${business.legalName}: 20 ft and 40 ft shipping container sales and rentals with delivery in Michigan. Request a quote for your site.`,
   applicationName: business.name,
   formatDetection: { telephone: false, email: false, address: false },
   verification: process.env.GOOGLE_SITE_VERIFICATION ? { google: process.env.GOOGLE_SITE_VERIFICATION } : undefined,

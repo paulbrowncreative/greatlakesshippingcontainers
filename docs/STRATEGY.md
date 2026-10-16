@@ -87,6 +87,7 @@ Rentals and modifications are built as switches (`offerings` in `business.ts`), 
 | `/containers/40-ft-high-cube-containers` | 40 ft high cube container | high cube dimensions, 9'6" container; transactional |
 | `/containers/condition-grades` | used shipping container grades | cargo worthy vs wind and water tight, one trip container; informational/commercial |
 | `/services/container-sales` | buy shipping container Michigan | used shipping containers Michigan; transactional |
+| `/services/container-rentals` | shipping container rental Michigan | storage container rental, rent a container; transactional |
 | `/services/delivery` | shipping container delivery Michigan | container delivery requirements, site prep; informational/local |
 | `/uses` | shipping container storage uses | jobsite storage container, farm storage container, commercial storage containers |
 | `/service-area` | shipping container delivery near me (MI) | local; to be extended with Metro Detroit and other confirmed markets |
@@ -110,3 +111,10 @@ Rentals and modifications are built as switches (`offerings` in `business.ts`), 
 - **Forms:** one shared validation module (`src/lib/inquiry.ts`) used by the browser and the server. The API route (`src/lib/server/handle-inquiry.ts`) checks origin, content type, rate limit, body size, honeypot, minimum fill time, validation, link-spam, optional Turnstile and duplicate fingerprint, then sends through **Resend**, and reports success only when Resend returns an email id.
 - **No database:** the email in the recipient's inbox is the record. Resend's dashboard logs every send (and failure) for diagnosis. Server logs carry the reference and coarse metadata, never personal data.
 - **Dependencies:** `next`, `react`, `react-dom`, `server-only`. Nothing else ships to production.
+
+## 9. Facts confirmed from owner-supplied photos (added after launch build)
+
+- **Logo:** Great Lakes map over "GREAT LAKES / SHIPPING CONTAINERS / SALES & RENTALS", in royal blue (sampled at about `#143AC4`). This confirms **rentals**. The map was traced to vector for the brand mark, and the accent color was moved to the brand blue. The corten-orange CTA color is kept deliberately as a high-contrast complement to the blue.
+- **Phone:** (586) 265-7744, from the door signage on the company truck (legible in three photos).
+- **Delivery equipment:** Ford F-350 dually with a gooseneck flatbed trailer. Delivery copy no longer assumes a tilt-bed truck. The unloading method is confirmed per quote.
+- **Inventory seen:** new one-trip 20 ft (22G1) and 20 ft high cube (25G1), new 40 ft high cube (45G1), used 40 ft high cube in quantity, and used 20 ft and 40 ft standard. The site describes these as example units and makes no stock claims.

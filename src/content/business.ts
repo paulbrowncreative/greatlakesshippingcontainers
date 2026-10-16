@@ -14,11 +14,14 @@ export const business = {
   shortName: "Great Lakes Containers",
   /** Existing site tagline, kept as brand continuity. */
   tagline: "Shipping Containers for Every Need",
+  /** Line from the company logo. */
+  logoLine: "Sales & Rentals",
   state: "Michigan",
   stateCode: "MI",
 
   /** Public contact details. Leave null until the owner confirms them. */
-  phone: null as string | null, // e.g. "(248) 555-0100" — display format
+  // Read from the company truck door signage in owner-supplied photos — confirm with owner.
+  phone: "(586) 265-7744" as string | null,
   publicEmail: null as string | null,
   address: null as null | {
     street: string;
@@ -35,14 +38,14 @@ export const business = {
   },
 
   /**
-   * What the company sells or provides. `sales` and `delivery` are the working assumption
-   * for a container supplier and must be confirmed by the owner. Rental and modification
-   * pages are built but stay unpublished until switched on.
+   * What the company provides. Sales and rentals come from the company logo ("Sales &
+   * Rentals"); delivery from owner photos of the company truck and gooseneck trailer.
+   * Modifications are unconfirmed and stay off.
    */
   offerings: {
     sales: true,
     delivery: true,
-    rental: false,
+    rental: true,
     modifications: false,
   } satisfies Record<Offering, boolean>,
 } as const;

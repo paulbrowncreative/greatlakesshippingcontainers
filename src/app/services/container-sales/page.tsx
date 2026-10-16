@@ -35,6 +35,10 @@ const faqs = [
     a: "Which condition grade the unit is, whether delivery is included in the price, what the delivery truck needs on site, and what happens if the truck can't reach your spot. You should get clear answers to all four before you pay.",
   },
   {
+    q: "Do you rent containers too?",
+    a: "Yes. If you only need storage for a project or a season, see our container rentals page, or choose “Rent a container” in the quote form.",
+  },
+  {
     q: "Can I modify the container after I buy it?",
     a: "It's yours, so yes — though if you plan to add doors, windows or insulation, a one-trip or high cube unit is usually the better starting point. Tell us your plans when you request a quote.",
   },
@@ -46,12 +50,12 @@ export default function SalesPage() {
       <PageHero
         eyebrow="Container sales"
         title="Buy a shipping container"
-        lede={`Own a container outright — no monthly payments, no return date. We quote the unit and delivery to your ${business.state} site as one price.`}
+        lede={`Own a container outright — no monthly payments, no return date. We quote the unit and delivery to your ${business.state} site as one price. Only need it for a while? Renting may suit you better.`}
         crumbs={[
           { name: "Services", path: "/services/container-sales" },
           { name: "Container Sales", path: "/services/container-sales" },
         ]}
-        image={images.container40}
+        image={images.used40Yard}
       >
         <TrackedLink href="/quote" className="btn btn--lg" event="quote_cta_click" eventParams={{ location: "sales_hero" }}>
           Get a Delivered Quote <IconArrow />

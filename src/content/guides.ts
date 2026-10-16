@@ -31,7 +31,7 @@ export const guides: Guide[] = [
     published: "2026-10-16",
     updated: "2026-10-16",
     readMinutes: 5,
-    image: images.container40,
+    image: images.used40Yard,
     body: [
       { type: "p", text: "Most buyers end up choosing between the two standard sizes. The right answer usually comes down to three things: how much you're storing, how much room you have for delivery, and cost per square foot." },
       { type: "h2", text: "The quick comparison" },
@@ -43,7 +43,6 @@ export const guides: Guide[] = [
           ["Volume", "≈ 1,170 cu ft", "≈ 2,390 cu ft"],
           ["Standard pallets on the floor", "≈ 10", "≈ 20"],
           ["Pad needed", "20 × 8 ft", "40 × 8 ft"],
-          ["Typical straight-line delivery room", "≈ 75 ft", "≈ 110 ft"],
         ],
       },
       { type: "p", text: "Figures are typical; exact dimensions vary slightly by manufacturer, and delivery requirements depend on the truck." },
@@ -88,7 +87,7 @@ export const guides: Guide[] = [
     published: "2026-10-16",
     updated: "2026-10-16",
     readMinutes: 6,
-    image: images.sitePlacement,
+    image: images.deliveryRural,
     body: [
       { type: "p", text: "A container is only as useful as where it ends up. A few hours of preparation prevents the two most common delivery problems: a truck that can't reach the spot, and a container that settles out of level so its doors won't close." },
       { type: "h2", text: "1. Choose the spot" },
@@ -114,13 +113,13 @@ export const guides: Guide[] = [
         ],
       },
       { type: "h2", text: "3. Check truck access" },
-      { type: "p", text: "Delivery is typically by a tilt-bed truck that tilts and pulls forward to slide the container off. That takes more room than the container itself." },
+      { type: "p", text: "Containers arrive on a truck or truck-and-trailer that is far longer than the container itself, and the unloading method depends on the supplier's equipment. Ask how yours will be unloaded, then check:" },
       {
         type: "ul",
         items: [
-          "Straight-line room: roughly 75 ft for a 20 ft container, about 110 ft for a 40 ft (rules of thumb — confirm with your supplier).",
+          "Length: room for the whole rig to pull in, position beside the spot and get back out. A pickup and gooseneck trailer carrying a 40 ft container is well over 60 ft long.",
           "Width: at least 12 ft along the route, including gates.",
-          "Overhead: about 14 ft clear at the drop spot, more where the bed tilts. Look for power lines, branches and eaves.",
+          "Overhead: about 14 ft clear along the route and at the drop spot. Look for power lines, branches and eaves.",
           "Ground: firm enough for a heavy truck. Avoid soft lawns after rain.",
         ],
       },

@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { business, phoneHref } from "@/content/business";
 import { footerNav } from "@/content/site";
-import { BrandMark, IconFacebook } from "./Icons";
+import { BrandMark } from "./BrandMark";
+import { IconFacebook } from "./Icons";
 
 export function Footer() {
   const tel = phoneHref();
@@ -19,8 +20,8 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-4 max-prose">
-              {business.legalName} supplies 20 ft and 40 ft shipping containers with delivery to sites in {business.state}. Every
-              order starts with a written quote for your exact site.
+              {business.legalName} sells and rents 20 ft and 40 ft shipping containers, delivered to sites in {business.state} on
+              our own truck and trailer. Every order starts with a written quote for your exact site.
             </p>
             <ul className="footer-list mt-4" role="list">
               <li>

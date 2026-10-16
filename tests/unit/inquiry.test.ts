@@ -32,9 +32,14 @@ describe("validate", () => {
     expect(e).toEqual({});
   });
 
-  it("rejects options that are not offered (rental disabled by default)", () => {
-    expect(validate(validQuote({ inquiryType: "rent" })).inquiryType).toBeTruthy();
+  it("rejects options that are not offered (modifications are off)", () => {
+    expect(validate(validQuote({ inquiryType: "modify" })).inquiryType).toBeTruthy();
     expect(validate(validQuote({ containerSize: "45-pallet-wide" })).containerSize).toBeTruthy();
+  });
+
+  it("rental requests need a rental length", () => {
+    expect(validate(validQuote({ inquiryType: "rent" })).rentalDuration).toBeTruthy();
+    expect(validate(validQuote({ inquiryType: "rent", rentalDuration: "3-6" }))).toEqual({});
   });
 
   it.each([

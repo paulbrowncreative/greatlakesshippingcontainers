@@ -5,7 +5,8 @@ import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { business, phoneHref } from "@/content/business";
 import { primaryNav } from "@/content/site";
-import { BrandMark, IconChevron, IconClose, IconMenu, IconPhone } from "./Icons";
+import { BrandMark } from "./BrandMark";
+import { IconChevron, IconClose, IconMenu, IconPhone } from "./Icons";
 import { TrackedLink } from "./TrackedLink";
 
 function isActive(pathname: string, href: string) {
