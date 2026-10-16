@@ -1,5 +1,5 @@
 import { PageHero } from "@/components/PageHero";
-import { images } from "@/content/images";
+import { images, type SiteImage } from "@/content/images";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -10,24 +10,26 @@ export const metadata = pageMetadata({
 });
 
 export default function CreditsPage() {
-  const list = Object.values(images);
+  const all: SiteImage[] = Object.values(images);
+  const stock = all.filter((img) => img.credit);
   return (
     <>
-      <PageHero title="Photo credits" crumbs={[{ name: "Photo Credits", path: "/photo-credits" }]} lede="Photos marked “Illustrative” are licensed stock images, not our inventory or projects." />
+      <PageHero title="Photo credits" crumbs={[{ name: "Photo Credits", path: "/photo-credits" }]} lede="Photos captioned “Illustrative photo” are not our inventory. Uncaptioned and “example unit” photos are our own." />
       <section className="section section--white">
         <div className="container prose">
-          <p>The following images are used under the Unsplash License. Thank you to the photographers.</p>
+          <p>These stock images are used under the Unsplash License. Thank you to the photographers.</p>
           <ul>
-            {list.map((img) => (
+            {stock.map((img) => (
               <li key={img.src}>
-                {img.alt}. Photo by {img.credit.name} on{" "}
-                <a href={img.credit.url} rel="noopener" target="_blank">
+                {img.alt}. Photo by {img.credit!.name} on{" "}
+                <a href={img.credit!.url} rel="noopener" target="_blank">
                   Unsplash<span className="sr-only"> (opens in a new tab)</span>
                 </a>
                 .
               </li>
             ))}
           </ul>
+          <p>Container photos without an &ldquo;Illustrative&rdquo; caption are supplied by Great Lakes Shipping Containers and show example units; availability changes, and your quote confirms the exact unit.</p>
         </div>
       </section>
     </>

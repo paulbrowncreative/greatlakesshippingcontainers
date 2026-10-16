@@ -1,8 +1,8 @@
 /**
- * Every photo on the site is a licensed illustrative image (Unsplash License), not
- * Great Lakes Shipping Containers inventory. Captions and the /photo-credits page
- * say so. Replace with company photography as it becomes available — keep the
- * `illustrative` flag accurate so captions stay honest.
+ * Image registry. `illustrative: true` marks licensed stock (or photos whose origin
+ * isn't the company's own yard) — those render with an "Illustrative photo" caption.
+ * Company photos are supplied by the owner (`illustrative: false`); they show example
+ * units, so captions never imply a specific unit is in stock.
  */
 
 export type SiteImage = {
@@ -10,7 +10,8 @@ export type SiteImage = {
   width: number;
   height: number;
   alt: string;
-  credit: { name: string; url: string };
+  /** Third-party credit. Omitted for company-supplied photos. */
+  credit?: { name: string; url: string };
   illustrative: boolean;
 };
 
@@ -21,20 +22,42 @@ const unsplash = (photographer: string, photoId: string) => ({
 });
 
 export const images = {
+  // --- Company photos (supplied by Great Lakes Shipping Containers) ---
   hero: {
-    src: "/images/container-yard-row.jpg",
-    width: 2400,
-    height: 1600,
-    alt: "A row of used 20 ft and 40 ft shipping containers lined up in a gravel yard beside a brick industrial building",
-    credit: unsplash("Josh Snader", "1763325088554-529181f76960"),
-    illustrative: true,
+    src: "/images/glsc-40ft-high-cube-new.jpg",
+    width: 2000,
+    height: 1500,
+    alt: "A new beige 40 ft high cube shipping container marked 9'6\" high, with more containers stacked behind it in a gravel yard",
+    illustrative: false,
   },
   container20: {
-    src: "/images/container-20ft-doors.jpg",
-    width: 1600,
-    height: 1762,
-    alt: "Cargo doors and locking bars on the end of an orange steel shipping container",
-    credit: unsplash("David Birozy", "1684119697588-011c0b206dab"),
+    src: "/images/glsc-20ft-winter-lot.jpg",
+    width: 880,
+    height: 1168,
+    alt: "A red 20 ft shipping container placed on a plowed parking lot with snow on the ground at dusk",
+    illustrative: false,
+  },
+  highCube: {
+    src: "/images/glsc-high-cube-side-doors.jpg",
+    width: 2000,
+    height: 1135,
+    alt: "New beige 9'6\" high cube containers with several sets of side doors, stacked two high",
+    illustrative: false,
+  },
+  usedStack: {
+    src: "/images/glsc-used-20ft-stack.jpg",
+    width: 880,
+    height: 1168,
+    alt: "Used red 20 ft shipping containers stacked two high in a gravel yard",
+    illustrative: false,
+  },
+
+  // --- Illustrative photos ---
+  portYard: {
+    src: "/images/port-container-yard.jpg",
+    width: 784,
+    height: 1168,
+    alt: "Rows of shipping containers in a port container yard with gantry cranes in the distance",
     illustrative: true,
   },
   container40: {
@@ -43,14 +66,6 @@ export const images = {
     height: 1200,
     alt: "A 40 ft orange shipping container sitting on a paved commercial lot",
     credit: unsplash("Arno Senoner", "1766945206843-eac0b1aa0343"),
-    illustrative: true,
-  },
-  containerDoors: {
-    src: "/images/container-doors-blue.jpg",
-    width: 1600,
-    height: 1728,
-    alt: "Close view of a used blue shipping container's doors showing wear, CSC labels and lock rods",
-    credit: unsplash("David Birozy", "1684119698172-ec912168c84f"),
     illustrative: true,
   },
   craneLift: {
@@ -69,28 +84,12 @@ export const images = {
     credit: unsplash("Land O'Lakes, Inc.", "1761839257874-e56dfa2260cb"),
     illustrative: true,
   },
-  winterYard: {
-    src: "/images/container-yard-winter.jpg",
-    width: 2000,
-    height: 1333,
-    alt: "Stacks of shipping containers in a container yard with snow on the ground",
-    credit: unsplash("Jp Valery", "1485717176797-ee010b5cd338"),
-    illustrative: true,
-  },
   sitePlacement: {
     src: "/images/container-site-placement.jpg",
     width: 1800,
     height: 1200,
     alt: "A single light gray shipping container placed on level ground at the edge of a wooded property",
     credit: unsplash("Arlind Photography", "1790364755326-ad7b61618cf2"),
-    illustrative: true,
-  },
-  containerStack: {
-    src: "/images/container-stack.jpg",
-    width: 1600,
-    height: 1067,
-    alt: "Shipping containers in many colors stacked several units high",
-    credit: unsplash("Julia Taubitz", "1784914185452-5b73dc4ea306"),
     illustrative: true,
   },
 } satisfies Record<string, SiteImage>;

@@ -1,10 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ContainerCard } from "@/components/ContainerCard";
 import { CtaBand } from "@/components/CtaBand";
 import { Faq } from "@/components/Faq";
 import { IconArrow } from "@/components/Icons";
 import { JsonLd } from "@/components/JsonLd";
+import { Photo } from "@/components/Photo";
 import { PageHero } from "@/components/PageHero";
 import { TrackedLink } from "@/components/TrackedLink";
 import { business } from "@/content/business";
@@ -81,10 +81,7 @@ export default function SalesPage() {
               </li>
             </ul>
           </div>
-          <figure className="media media--4x3">
-            <Image src={images.winterYard.src} alt={images.winterYard.alt} fill sizes="(min-width: 60rem) 45vw, 100vw" />
-            <figcaption>Illustrative photo</figcaption>
-          </figure>
+          <Photo image={images.usedStack} aspect="4x3" sizes="(min-width: 60rem) 45vw, 100vw" companyCaption="Used containers in the yard" />
         </div>
       </section>
 

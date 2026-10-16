@@ -1,9 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
 import { Faq } from "@/components/Faq";
 import { IconArrow } from "@/components/Icons";
 import { JsonLd } from "@/components/JsonLd";
+import { Photo } from "@/components/Photo";
 import { PageHero } from "@/components/PageHero";
 import { TrackedLink } from "@/components/TrackedLink";
 import { images } from "@/content/images";
@@ -141,10 +141,7 @@ export default function DeliveryPage() {
               Not sure whether your road is restricted? Your county road commission publishes current seasonal restrictions.
             </p>
           </div>
-          <figure className="media media--4x3">
-            <Image src={images.sitePlacement.src} alt={images.sitePlacement.alt} fill sizes="(min-width: 60rem) 45vw, 100vw" />
-            <figcaption>Illustrative photo</figcaption>
-          </figure>
+          <Photo image={images.sitePlacement} aspect="4x3" sizes="(min-width: 60rem) 45vw, 100vw" />
         </div>
       </section>
 

@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
 import { Faq } from "@/components/Faq";
+import { Photo } from "@/components/Photo";
 import { PageHero } from "@/components/PageHero";
 import { conditionGrades } from "@/content/containers";
 import { images } from "@/content/images";
@@ -73,10 +73,7 @@ export default function GradesPage() {
       </section>
       <section className="section section--white" aria-labelledby="inspect">
         <div className="container split">
-          <figure className="media media--4x3">
-            <Image src={images.containerDoors.src} alt={images.containerDoors.alt} fill sizes="(min-width: 60rem) 45vw, 100vw" />
-            <figcaption>Illustrative photo</figcaption>
-          </figure>
+          <Photo image={images.usedStack} aspect="4x3" sizes="(min-width: 60rem) 45vw, 100vw" companyCaption="Used containers in the yard" />
           <div className="stack">
             <p className="eyebrow">Checking a used unit</p>
             <h2 id="inspect">What to look at when it arrives</h2>

@@ -155,7 +155,7 @@ export const containers: ContainerProduct[] = [
     lede:
       "Same footprint as a 40 ft standard with a full foot of extra height. High cubes are the pick for tall equipment, shelving systems and any container you plan to modify.",
     summary: "An extra foot of height for tall equipment, racking and conversions.",
-    image: images.containerStack,
+    image: images.highCube,
     external: [
       { label: "Length", value: "40 ft" },
       { label: "Width", value: "8 ft" },

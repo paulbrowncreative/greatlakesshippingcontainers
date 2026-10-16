@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
+import { Photo } from "@/components/Photo";
 import { PageHero } from "@/components/PageHero";
 import { images } from "@/content/images";
 import { uses } from "@/content/pages";
@@ -55,10 +55,7 @@ export default function UsesPage() {
               </p>
             </div>
             {u.image && (
-              <figure className="media media--4x3">
-                <Image src={u.image.src} alt={u.image.alt} fill sizes="(min-width: 60rem) 45vw, 100vw" />
-                <figcaption>Illustrative photo</figcaption>
-              </figure>
+              <Photo image={u.image} />
             )}
           </div>
         </section>

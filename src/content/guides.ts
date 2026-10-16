@@ -154,7 +154,7 @@ export const guides: Guide[] = [
     published: "2026-10-16",
     updated: "2026-10-16",
     readMinutes: 4,
-    image: images.containerDoors,
+    image: images.usedStack,
     body: [
       { type: "p", text: "“Used” covers a wide range — from a nearly new box with a few scuffs to a well-traveled unit that's seen fifteen years at sea. Knowing the grade matters more than the word new or used." },
       { type: "h2", text: "New (one-trip) containers" },

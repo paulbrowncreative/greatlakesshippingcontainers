@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
+import { Photo } from "@/components/Photo";
 import { PageHero } from "@/components/PageHero";
 import { business } from "@/content/business";
 import { images } from "@/content/images";
@@ -43,10 +43,7 @@ export default function AboutPage() {
               </Link>
             </p>
           </div>
-          <figure className="media media--4x3">
-            <Image src={images.containerStack.src} alt={images.containerStack.alt} fill sizes="(min-width: 60rem) 45vw, 100vw" />
-            <figcaption>Illustrative photo</figcaption>
-          </figure>
+          <Photo image={images.portYard} aspect="4x3" sizes="(min-width: 60rem) 45vw, 100vw" />
         </div>
       </section>
       <section className="section section--dark" aria-labelledby="commitments">

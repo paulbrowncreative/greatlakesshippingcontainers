@@ -33,6 +33,7 @@ E2E coverage: every sitemap page returns 200 with a unique title (≤70 chars), 
 3. Over-long titles and descriptions on 6 pages; shortened.
 4. Thank-you page showed "sent" on direct visits; it now confirms only with a valid reference.
 5. Product "Also consider" row referenced a non-product slug; fixed.
+6. Container cards rendered with page-level H2 styling on `/containers` (huge, blue, underlined); card headings are now styled at either level.
 
 ## 5. Visual QA
 
@@ -61,7 +62,7 @@ Rendered screenshots were reviewed at 390 px and 1440 px for Home, Quote, 40 ft 
 ## 9. Known limitations
 
 - Business facts (phone, address, hours, logo, offerings) are unverified, so the related UI is hidden. See `docs/OWNER-CHECKLIST.md`.
-- All photos are licensed illustrative stock; the original site's gallery images could not be downloaded.
+- Four owner-supplied photos are used as company photos (captioned as example units, never "in stock"). Remaining stock photos are captioned "Illustrative photo" through the shared `Photo` component, which captions from each image's `illustrative` flag.
 - No reviews or testimonials, because none could be verified.
 - No location pages yet, because no confirmed markets.
 - Rate limiting and dedupe are per server instance (see `docs/DEPLOYMENT.md` §6).

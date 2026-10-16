@@ -29,8 +29,8 @@ export default function TermsPage() {
           </p>
           <h2>Photographs</h2>
           <p>
-            Unless a caption says otherwise, photographs on this site are illustrative and do not show specific units we have for
-            sale. Photographs are used under license; see Photo Credits.
+            Photographs captioned &ldquo;Illustrative&rdquo; are licensed stock images and do not show our units. Other container photos
+            show example units; availability changes, and the unit you buy is the one described in your quote. See Photo Credits.
           </p>
           <h2>Local rules</h2>
           <p>

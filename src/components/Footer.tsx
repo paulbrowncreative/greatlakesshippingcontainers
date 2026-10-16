@@ -86,7 +86,7 @@ export function Footer() {
           <p>
             © {year} {business.legalName}. All rights reserved.
           </p>
-          <p>Photos are illustrative unless noted. See photo credits.</p>
+          <p>Photos captioned &ldquo;Illustrative&rdquo; are stock images. See photo credits.</p>
         </div>
       </div>
     </footer>

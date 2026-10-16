@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CtaBand } from "@/components/CtaBand";
 import { JsonLd } from "@/components/JsonLd";
+import { Photo } from "@/components/Photo";
 import { PageHero } from "@/components/PageHero";
 import { guides, getGuide, type Block } from "@/content/guides";
 import { absoluteUrl } from "@/content/site";
@@ -94,10 +94,7 @@ export default async function GuidePage({ params }: Props) {
             <p className="muted small">
               Updated <time dateTime={g.updated}>{date}</time>
             </p>
-            <figure className="media media--3x2">
-              <Image src={g.image.src} alt={g.image.alt} fill sizes="(min-width: 60rem) 55vw, 100vw" priority />
-              <figcaption>Illustrative photo</figcaption>
-            </figure>
+            <Photo image={g.image} aspect="3x2" sizes="(min-width: 60rem) 55vw, 100vw" priority />
             {g.body.map(render)}
           </div>
           <aside className="stack" aria-label="Related" style={{ position: "sticky", top: "calc(var(--header-h) + 1.5rem)" }}>

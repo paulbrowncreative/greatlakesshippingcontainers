@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Photo } from "@/components/Photo";
 import { ContainerCard } from "@/components/ContainerCard";
 import { ContainerChooser } from "@/components/ContainerChooser";
 import { CtaBand } from "@/components/CtaBand";
@@ -63,11 +64,11 @@ export default function HomePage() {
             </div>
             <div className="hero__fact">
               <dt>Your quote</dt>
-              <dd>One delivered price</dd>
+              <dd>Delivered price</dd>
             </div>
           </dl>
         </div>
-        <span className="photo-note">Illustrative photo</span>
+        {images.hero.illustrative && <span className="photo-note">Illustrative photo</span>}
       </section>
 
       <section className="section section--white" aria-labelledby="how-we-work">
@@ -156,10 +157,7 @@ export default function HomePage() {
       <section className="section section--white" aria-labelledby="delivery-heading">
         <div className="container split split--wide-right">
           <div className="media-offset">
-            <figure className="media media--4x3">
-              <Image src={images.craneLift.src} alt={images.craneLift.alt} fill sizes="(min-width: 60rem) 45vw, 100vw" />
-              <figcaption>Illustrative photo</figcaption>
-            </figure>
+            <Photo image={images.craneLift} aspect="4x3" sizes="(min-width: 60rem) 45vw, 100vw" />
           </div>
           <div>
             <p className="eyebrow">Delivery</p>
@@ -231,10 +229,9 @@ export default function HomePage() {
               Answer three questions and get a starting recommendation. You can send it straight into a quote request — we&apos;ll
               double-check it against your site.
             </p>
-            <figure className="media media--3x2 mt-6">
-              <Image src={images.sitePlacement.src} alt={images.sitePlacement.alt} fill sizes="(min-width: 60rem) 45vw, 100vw" />
-              <figcaption>Illustrative photo</figcaption>
-            </figure>
+            <div className="mt-6">
+              <Photo image={images.container20} aspect="3x2" companyCaption="A 20 ft container placed on a plowed lot" />
+            </div>
           </div>
           <ContainerChooser />
         </div>

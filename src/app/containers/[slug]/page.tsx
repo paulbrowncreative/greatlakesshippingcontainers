@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ContainerCard } from "@/components/ContainerCard";
@@ -7,6 +6,7 @@ import { CtaBand } from "@/components/CtaBand";
 import { Faq } from "@/components/Faq";
 import { IconArrow } from "@/components/Icons";
 import { JsonLd } from "@/components/JsonLd";
+import { Photo } from "@/components/Photo";
 import { PageHero } from "@/components/PageHero";
 import { SpecPlate } from "@/components/SpecPlate";
 import { TrackedLink } from "@/components/TrackedLink";
@@ -61,10 +61,7 @@ export default async function ContainerPage({ params }: Props) {
       <section className="section" id="specs" aria-label="Specifications">
         <div className="container split split--top">
           <div className="stack">
-            <figure className="media media--4x3">
-              <Image src={c.image.src} alt={c.image.alt} fill sizes="(min-width: 60rem) 45vw, 100vw" priority />
-              <figcaption>Illustrative photo — not a specific unit in stock</figcaption>
-            </figure>
+            <Photo image={c.image} aspect="4x3" sizes="(min-width: 60rem) 45vw, 100vw" priority companyCaption="Example unit — the exact unit is confirmed on your quote" />
             <div className="callout">
               <h2 style={{ fontSize: "var(--fs-h4)" }}>Pricing &amp; availability</h2>
               <p>

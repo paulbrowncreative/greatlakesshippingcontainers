@@ -25,7 +25,7 @@ The site is built to stay accurate when facts are missing: anything not yet conf
 - [ ] **Public email** (if you want one shown) → `business.publicEmail`.
 - [ ] **Year founded** → `business.yearFounded`.
 - [ ] **Official logo** (SVG preferred). Replace `BrandMark` in `src/components/Icons.tsx` and `src/app/icon.svg`.
-- [ ] **Company photography.** Real photos of your containers, yard, trucks and deliveries outperform stock imagery. Add files to `public/images/`, register them in `src/content/images.ts` with `illustrative: false`, and swap them in. The original GoDaddy "Cargo and Freight Gallery" images could not be downloaded during the rebuild; please supply the originals.
+- [x] **Company photography (first batch added).** Four supplied photos now appear on the home hero, the 20 ft and 40 ft high cube pages, condition grades, and container sales. **Please confirm they are the company's own photos and OK to publish.** More would help, especially a 40 ft standard unit, a delivery in progress (truck or tilt-bed) and a farm or jobsite placement, which still use labelled stock. Add files to `public/images/`, register them in `src/content/images.ts` with `illustrative: false`, and they render without the "Illustrative" caption.
 - [ ] **Confirmed delivery markets.** Add entries to `src/content/service-areas.ts` (e.g. Metro Detroit) with genuinely local notes. Each one becomes a page at `/service-area/<slug>`, listed in the sitemap.
 - [ ] **Google Business Profile.** Create or claim it with the same name, phone and URL as the site.
 - [ ] **Real customer reviews.** Once you have some, add a reviews section with the customer's permission and a link to the source. Never paraphrase or invent reviews.
@@ -35,4 +35,4 @@ The site is built to stay accurate when facts are missing: anything not yet conf
 - [ ] **Cloudflare Turnstile** spam protection → `NEXT_PUBLIC_TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY`.
 - [ ] **Google Analytics 4** → `NEXT_PUBLIC_GA_MEASUREMENT_ID`. Mark `generate_lead` as a key event.
 - [ ] **Google Search Console** → `GOOGLE_SITE_VERIFICATION`, then submit `https://glsc-mi.com/sitemap.xml`.
-- [ ] **Photo credits.** Confirm the photographer names in `src/content/images.ts` (they were taken from the Unsplash listing).
+- [ ] **Photo credits.** Confirm the photographer names in `src/content/images.ts` (they were taken from the Unsplash listing). The supplied aerial port photo is captioned "Illustrative photo" because it doesn't show your yard; tell us if it's yours.
