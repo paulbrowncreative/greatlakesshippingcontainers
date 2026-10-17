@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { RelatedReading } from "@/components/blog/RelatedReading";
 import { CtaBand } from "@/components/CtaBand";
 import { IconArrow } from "@/components/Icons";
 import { PageHero } from "@/components/PageHero";
@@ -90,6 +91,7 @@ export default function ServiceAreaPage() {
       <p className="container small muted" style={{ paddingBlock: "var(--space-5)" }}>
         Read our <Link href="/services/delivery">delivery &amp; site-prep guide</Link> for clearance rules of thumb.
       </p>
+      <RelatedReading path="/service-area" title="Planning a Michigan delivery" />
       <CtaBand location="service_area_footer" title="Do you deliver to my ZIP?" body="Ask in the quote form — it takes two minutes, and we'll answer with a delivered price." />
     </>
   );

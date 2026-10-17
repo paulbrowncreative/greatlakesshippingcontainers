@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { RelatedReading } from "@/components/blog/RelatedReading";
 import { CtaBand } from "@/components/CtaBand";
 import { Photo } from "@/components/Photo";
 import { PageHero } from "@/components/PageHero";
@@ -60,6 +61,7 @@ export default function UsesPage() {
           </div>
         </section>
       ))}
+      <RelatedReading path="/uses" />
       <CtaBand location="uses_footer" title="Tell us what you're storing" body="We'll recommend a size and grade for the job and quote it delivered to your site." />
     </>
   );

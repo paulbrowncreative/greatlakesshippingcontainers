@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ContainerCard } from "@/components/ContainerCard";
+import { RelatedReading } from "@/components/blog/RelatedReading";
 import { CtaBand } from "@/components/CtaBand";
 import { Faq } from "@/components/Faq";
 import { IconArrow } from "@/components/Icons";
@@ -151,6 +152,7 @@ export default async function ContainerPage({ params }: Props) {
         </div>
       </section>
 
+      <RelatedReading path={`/containers/${c.slug}`} />
       <CtaBand
         location={`product_${c.slug}`}
         title={`Get a delivered price on a ${c.shortName}`}

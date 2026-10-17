@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Photo } from "@/components/Photo";
+import { PostCard } from "@/components/blog/PostCard";
 import { ContainerCard } from "@/components/ContainerCard";
 import { ContainerChooser } from "@/components/ContainerChooser";
 import { CtaBand } from "@/components/CtaBand";
 import { Faq } from "@/components/Faq";
 import { IconArrow } from "@/components/Icons";
 import { TrackedLink } from "@/components/TrackedLink";
+import { postsNewestFirst } from "@/content/blog";
 import { business } from "@/content/business";
 import { containers } from "@/content/containers";
 import { homeFaqs, howWeWork, uses } from "@/content/pages";
@@ -25,7 +27,7 @@ export default function HomePage() {
     <>
       <section className="hero">
         <div className="hero__media">
-          <Image src={images.hero.src} alt={images.hero.alt} fill priority sizes="100vw" quality={70} />
+          <Image src={images.hero.src} alt={images.hero.alt} fill preload fetchPriority="high" sizes="100vw" quality={70} />
         </div>
         <div className="container hero__inner">
           <div>
@@ -240,6 +242,28 @@ export default function HomePage() {
             </div>
           </div>
           <ContainerChooser />
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="blog-heading">
+        <div className="container">
+          <div className="section-head section-head--split">
+            <div>
+              <p className="eyebrow">From the blog</p>
+              <h2 id="blog-heading">Know before you buy</h2>
+            </div>
+            <p className="lede">
+              Plain-English guides on prices, permits, delivery and keeping a container in good shape.{" "}
+              <Link href="/blog">All articles</Link>
+            </p>
+          </div>
+          <div className="grid grid--3">
+            {postsNewestFirst()
+              .slice(0, 3)
+              .map((p) => (
+                <PostCard key={p.slug} post={p} />
+              ))}
+          </div>
         </div>
       </section>
 

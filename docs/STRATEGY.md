@@ -118,3 +118,22 @@ Rentals and modifications are built as switches (`offerings` in `business.ts`), 
 - **Phone:** (586) 265-7744, from the door signage on the company truck (legible in three photos).
 - **Delivery equipment:** Ford F-350 dually with a gooseneck flatbed trailer. Delivery copy no longer assumes a tilt-bed truck. The unloading method is confirmed per quote.
 - **Inventory seen:** new one-trip 20 ft (22G1) and 20 ft high cube (25G1), new 40 ft high cube (45G1), used 40 ft high cube in quantity, and used 20 ft and 40 ft standard. The site describes these as example units and makes no stock claims.
+
+## 10. Blog keyword map (added October 17, 2026)
+
+Each post targets one primary phrase and links into the pages it supports. Those pages list it under "Related reading". Search volumes were not available (no SEO-tool access in this environment), so targets were chosen by commercial intent and topical fit. Validate them in Search Console after launch.
+
+| Post | Primary keyword | Intent | Supports |
+|---|---|---|---|
+| shipping-container-cost | shipping container cost | Commercial investigation | Sales, containers hub, quote |
+| rent-vs-buy-shipping-container | rent vs buy shipping container | Commercial investigation | Rentals, sales |
+| shipping-container-permit-michigan | shipping container permit Michigan | Informational, local | Delivery, service area, rentals |
+| michigan-frost-laws-container-delivery | Michigan frost laws | Informational, local | Delivery, service area |
+| keep-storage-container-dry | shipping container condensation | Informational | Grades, 20 ft, 40 ft |
+| secure-shipping-container-jobsite | shipping container security | Informational | Uses, 20 ft, rentals |
+| high-cube-vs-standard-container | high cube vs standard container | Commercial investigation | 40 ft HC, 40 ft, containers hub |
+| 20-ft-vs-40-ft-shipping-container | 20ft vs 40ft container | Commercial investigation | Containers hub, 20 ft, 40 ft |
+| preparing-your-site-for-container-delivery | shipping container site preparation | Informational | Delivery, service area |
+| new-vs-used-shipping-containers | new vs used shipping containers | Commercial investigation | Grades, sales |
+
+**Next posts to consider** (once the owner can confirm details): container modifications (if offered), farm storage case study with photos, a real customer delivery story (with permission), and pages for each confirmed Michigan delivery market.

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { CompareTable } from "@/components/CompareTable";
 import { ContainerCard } from "@/components/ContainerCard";
 import { ContainerChooser } from "@/components/ContainerChooser";
+import { RelatedReading } from "@/components/blog/RelatedReading";
 import { CtaBand } from "@/components/CtaBand";
 import { Faq } from "@/components/Faq";
 import { JsonLd } from "@/components/JsonLd";
@@ -94,7 +95,7 @@ export default function ContainersPage() {
               </li>
             </ul>
             <p>
-              <Link className="text-link" href="/guides/20-ft-vs-40-ft-shipping-container">
+              <Link className="text-link" href="/blog/20-ft-vs-40-ft-shipping-container">
                 Read the full 20 ft vs 40 ft guide
               </Link>
             </p>
@@ -116,6 +117,7 @@ export default function ContainersPage() {
         </div>
       </section>
 
+      <RelatedReading path="/containers" title="Sizing guides" />
       <CtaBand location="containers_footer" />
       <JsonLd
         data={{

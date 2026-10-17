@@ -51,6 +51,8 @@ const nextConfig: NextConfig = {
       { source: "/get-a-quote", destination: "/quote", permanent: true },
       { source: "/request-a-quote", destination: "/quote", permanent: true },
       { source: "/gallery", destination: "/containers", permanent: false },
+      { source: "/guides", destination: "/blog", permanent: true },
+      { source: "/guides/:slug", destination: "/blog/:slug", permanent: true },
     ];
   },
 };

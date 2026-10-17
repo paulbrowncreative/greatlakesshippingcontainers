@@ -1,10 +1,10 @@
 # QA Report
 
-Date: October 16, 2026. Build: Next.js 16.4.2, Node 22. Every result below was produced in the development container. Items marked **Not yet verified** require production credentials or a deployed environment.
+Last full pass: October 17, 2026. Build: Next.js 16.4.2, Node 22. Every result below was produced in the development container. Items marked **Not yet verified** require production credentials or a deployed environment.
 
-## 1. Pages built (24 indexable URLs + utility pages)
+## 1. Pages built (32 indexable URLs + utility pages)
 
-Home · Containers hub · 20 ft · 40 ft · 40 ft High Cube · Condition Grades · Container Sales · Delivery & Placement · Uses · Service Area · Guides hub · 3 guides · About · Contact · Quote · Privacy · Terms. Utility (noindex): Thank-you · Photo Credits · 404. Data-driven route `/service-area/[slug]` is ready (no markets listed yet).
+Home · Containers hub · 20 ft · 40 ft · 40 ft High Cube · Condition Grades · Container Sales · Container Rentals · Delivery & Placement · Uses · Service Area · Blog index · 10 blog posts · About · Contact · Quote · Privacy · Terms. RSS feed at `/blog/rss.xml`. Utility (noindex): Thank-you · Photo Credits · 404. Data-driven route `/service-area/[slug]` is ready (no markets listed yet).
 
 ## 2. Features
 
@@ -20,11 +20,12 @@ Home · Containers hub · 20 ft · 40 ft · 40 ft High Cube · Condition Grades 
 |---|---|
 | `tsc --noEmit` | Pass |
 | ESLint (next/core-web-vitals + TS) | Pass, 0 warnings |
-| Vitest unit tests | **39/39 pass**: validation, sanitization, HTML escaping, header-injection-safe subject, API handler (recipient, reply-to, origin, honeypot, fill time, size limit, provider failure, network failure, not configured → 503, dedupe, rate limit, Turnstile), size chooser, rental-length rule |
-| `next build` | Pass. 27 routes, all pages static, only `/api/inquiry` dynamic |
-| Playwright e2e (production build + mock Resend API) | **20/20 pass** |
+| Vitest unit tests | **81/81 pass**: blog content integrity (every internal link resolves, `supports`/`related` references exist, meta lengths, keyword present, unique TOC anchors), plus: validation, sanitization, HTML escaping, header-injection-safe subject, API handler (recipient, reply-to, origin, honeypot, fill time, size limit, provider failure, network failure, not configured → 503, dedupe, rate limit, Turnstile), size chooser, rental-length rule |
+| `next build` | Pass. All pages static (SSG); only `/api/inquiry` dynamic |
+| Playwright e2e (production build + mock Resend API) | **26/26 pass** |
+| axe-core WCAG 2.0/2.1/2.2 A+AA scan (every sitemap page + thank-you + 404) | **0 violations** |
 
-E2E coverage: every sitemap page returns 200 with a unique title (≤70 chars), unique description (50–160), correct canonical, exactly one H1, no skipped heading levels, no `<img>` without alt, valid JSON-LD and no page errors; every internal link resolves; robots, sitemap, legacy redirects (308) and 404 with noindex; security headers; API rejects foreign origins and GET; desktop dropdown keyboard behavior; chooser → pre-filled quote; FAQ keyboard toggle; **full quote submission to the mock email API, checking recipient `chris@stierenterprise.com`, reply-to, subject and body**; provider failure shows an error, keeps form values and sends nothing; contact submission; thank-you page doesn't claim success without a reference; rental CTA pre-selects a rental quote; tap-to-call link; no element wider than the screen at 320/360/414/768 px on 15 pages (measured per element, because mobile emulation hides page-level overflow); mobile drawer open, Escape, focus return and navigation; sticky bar behavior; 44 px tap targets.
+E2E coverage: every sitemap page returns 200 with a unique title (≤70 chars), unique description (50–160), correct canonical, exactly one H1, no skipped heading levels, no `<img>` without alt, valid JSON-LD and no page errors; every internal link resolves; robots, sitemap, legacy redirects (308) and 404 with noindex; security headers; API rejects foreign origins and GET; desktop dropdown keyboard behavior; chooser → pre-filled quote; FAQ keyboard toggle; **full quote submission to the mock email API, checking recipient `chris@stierenterprise.com`, reply-to, subject and body**; provider failure shows an error, keeps form values and sends nothing; contact submission; thank-you page doesn't claim success without a reference; rental CTA pre-selects a rental quote; tap-to-call link; no element wider than the screen at 320/360/414/768 px on 15 pages (measured per element, because mobile emulation hides page-level overflow); mobile drawer open, Escape, focus return and navigation; sticky bar behavior; 44 px tap targets; blog index (each post once, topic links), post TOC anchors, BlogPosting JSON-LD with keywords, inline links, RSS validity, `/guides` → `/blog` 308 redirects, homepage blog teaser.
 
 ## 4. Defects found and fixed during QA
 
@@ -34,8 +35,25 @@ E2E coverage: every sitemap page returns 200 with a unique title (≤70 chars), 
 4. Thank-you page showed "sent" on direct visits; it now confirms only with a valid reference.
 5. Delivery copy wrongly assumed a tilt-bed truck. Owner photos show a pickup with a gooseneck flatbed trailer, so all delivery guidance was rewritten and the tilt-bed clearance figures removed.
 6. Product "Also consider" row referenced a non-product slug; fixed.
-8. A long, non-wrapping button label on About overflowed narrow phones. The old overflow test missed it because mobile emulation widens the layout viewport. Fixed the label, allowed button text to wrap on small screens, and rewrote the test to measure each element against the screen width.
 7. Container cards rendered with page-level H2 styling on `/containers` (huge, blue, underlined); card headings are now styled at either level.
+8. A long, non-wrapping button label on About overflowed narrow phones. The old overflow test missed it because mobile emulation widens the layout viewport. Fixed the label, allowed button text to wrap on small screens, and rewrote the test to measure each element against the screen width.
+9. Homepage hero image downloaded at normal priority, queued behind fonts and scripts (82% of LCP was load time). Moved hero images from the deprecated `priority` to `preload` + `fetchPriority="high"` and stopped preloading the header logo. Mobile LCP went from 3.4 s to 3.0 s and the Lighthouse score from 92 to 95.
+10. Blog index listed the newest posts twice; on phones the table of contents sat at the end of the article. Both fixed.
+
+## 4a. Lighthouse (mobile, simulated slow 4G + 4× CPU, production build)
+
+| Page | Performance | Accessibility | Best practices | SEO | LCP | CLS | TBT |
+|---|---|---|---|---|---|---|---|
+| `/` | 95 | 100 | 100 | 100 | 3.0 s | 0 | 40 ms |
+| `/blog` | 95 | 100 | 100 | 100 | 2.9 s | 0 | 30 ms |
+| `/blog/shipping-container-cost` | 96 | 100 | 100 | 100 | 2.9 s | 0 | 40 ms |
+| `/services/container-rentals` | 96 | 100 | 100 | 100 | 2.8 s | 0 | 40 ms |
+| `/quote` | 96 | 100 | 100 | 100 | 2.7 s | 0 | 90 ms |
+| `/containers/40-ft-high-cube-containers` | 96 | 100 | 100 | 100 | 2.8 s | 0 | 50 ms |
+
+The localhost server has no CDN or HTTP/2, so field numbers on a CDN host should be at least as good. Re-run PageSpeed Insights after deployment.
+
+Note: michigan.gov blocks automated requests (HTTP 403), so the two MDOT links cited in the frost-law post could not be fetched from the container. Both URLs come from MDOT's own search-indexed pages. Click-check them once after deploy.
 
 ## 5. Visual QA
 

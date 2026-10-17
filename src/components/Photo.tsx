@@ -15,7 +15,7 @@ export function Photo({ image, aspect = "4x3", sizes = "(min-width: 60rem) 45vw,
   const caption = image.illustrative ? "Illustrative photo" : companyCaption;
   return (
     <figure className={`media media--${aspect}`}>
-      <Image src={image.src} alt={image.alt} fill sizes={sizes} priority={priority} />
+      <Image src={image.src} alt={image.alt} fill sizes={sizes} preload={priority} fetchPriority={priority ? "high" : undefined} />
       {caption && <figcaption>{caption}</figcaption>}
     </figure>
   );

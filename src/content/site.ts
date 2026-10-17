@@ -29,7 +29,7 @@ export const primaryNav: { label: string; href: string; children?: NavItem[] }[]
   },
   { label: "Uses", href: "/uses" },
   { label: "Service Area", href: "/service-area" },
-  { label: "Guides", href: "/guides" },
+  { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -48,7 +48,7 @@ export const footerNav = {
     { label: "Delivery & Placement", href: "/services/delivery" },
     { label: "Container Uses", href: "/uses" },
     { label: "Service Area", href: "/service-area" },
-    { label: "Guides", href: "/guides" },
+    { label: "Blog", href: "/blog" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ],

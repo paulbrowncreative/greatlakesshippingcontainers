@@ -17,7 +17,7 @@ export default function NotFound() {
             <Link href="/services/delivery">Delivery &amp; site prep</Link>
           </li>
           <li>
-            <Link href="/guides">Buying guides</Link>
+            <Link href="/blog">Buying &amp; delivery guides</Link>
           </li>
           <li>
             <Link href="/contact">Contact us</Link>

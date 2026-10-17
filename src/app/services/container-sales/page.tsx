@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ContainerCard } from "@/components/ContainerCard";
+import { RelatedReading } from "@/components/blog/RelatedReading";
 import { CtaBand } from "@/components/CtaBand";
 import { Faq } from "@/components/Faq";
 import { IconArrow } from "@/components/Icons";
@@ -145,6 +146,7 @@ export default function SalesPage() {
         </div>
       </section>
 
+      <RelatedReading path="/services/container-sales" title="Buying guides" />
       <CtaBand location="sales_footer" />
       <JsonLd
         data={{

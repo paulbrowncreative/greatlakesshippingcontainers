@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-const paths = ["/", "/containers", "/services/container-rentals", "/containers/40-ft-high-cube-containers", "/containers/condition-grades", "/services/container-sales", "/services/delivery", "/uses", "/service-area", "/guides", "/guides/preparing-your-site-for-container-delivery", "/about", "/contact", "/quote", "/privacy"];
+const paths = ["/", "/containers", "/services/container-rentals", "/containers/40-ft-high-cube-containers", "/containers/condition-grades", "/services/container-sales", "/services/delivery", "/uses", "/service-area", "/blog", "/blog/preparing-your-site-for-container-delivery", "/blog/shipping-container-cost", "/about", "/contact", "/quote", "/privacy"];
 
 for (const width of [320, 360, 414, 768]) {
   test(`no horizontal overflow at ${width}px`, async ({ page }) => {

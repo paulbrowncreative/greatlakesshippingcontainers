@@ -30,7 +30,7 @@ export default function QuotePage() {
               <div className="alert alert--info">
                 <div>
                   <strong>This form needs JavaScript.</strong>
-                  <p>Please enable JavaScript, or message us on Facebook at {business.social.facebook}.</p>
+                  <p>Please enable JavaScript{business.phone ? `, call ${business.phone},` : ""} or message us on Facebook.</p>
                 </div>
               </div>
             </noscript>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ContainerCard } from "@/components/ContainerCard";
+import { RelatedReading } from "@/components/blog/RelatedReading";
 import { CtaBand } from "@/components/CtaBand";
 import { Faq } from "@/components/Faq";
 import { IconArrow } from "@/components/Icons";
@@ -179,6 +180,7 @@ export default function RentalsPage() {
         </div>
       </section>
 
+      <RelatedReading path="/services/container-rentals" />
       <CtaBand
         location="rentals_footer"
         title="Get a rental quote"

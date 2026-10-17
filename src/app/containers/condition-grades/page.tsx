@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { RelatedReading } from "@/components/blog/RelatedReading";
 import { CtaBand } from "@/components/CtaBand";
 import { Faq } from "@/components/Faq";
 import { Photo } from "@/components/Photo";
@@ -111,6 +112,7 @@ export default function GradesPage() {
           <Faq items={faqs} />
         </div>
       </section>
+      <RelatedReading path="/containers/condition-grades" />
       <CtaBand location="grades_footer" title="Not sure which grade fits?" body="Tell us what you're storing and how long you'll keep it. We'll recommend a grade and quote it delivered." />
     </>
   );

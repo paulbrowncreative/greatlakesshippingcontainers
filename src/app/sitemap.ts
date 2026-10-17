@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { containers } from "@/content/containers";
-import { guides } from "@/content/guides";
+import { posts } from "@/content/blog";
 import { serviceAreas } from "@/content/service-areas";
 import { absoluteUrl } from "@/content/site";
 
@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/containers/condition-grades", 0.7],
     ["/uses", 0.7],
     ["/service-area", 0.7],
-    ["/guides", 0.6],
+    ["/blog", 0.7],
     ["/about", 0.5],
     ["/contact", 0.6],
     ["/privacy", 0.2],
@@ -25,6 +25,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...pages.map(([path, priority]) => ({ url: absoluteUrl(path), priority })),
     ...containers.map((c) => ({ url: absoluteUrl(`/containers/${c.slug}`), priority: 0.9 })),
     ...serviceAreas.map((a) => ({ url: absoluteUrl(`/service-area/${a.slug}`), priority: 0.7 })),
-    ...guides.map((g) => ({ url: absoluteUrl(`/guides/${g.slug}`), lastModified: g.updated, priority: 0.6 })),
+    ...posts.map((p) => ({ url: absoluteUrl(`/blog/${p.slug}`), lastModified: p.updated, priority: 0.6 })),
   ];
 }

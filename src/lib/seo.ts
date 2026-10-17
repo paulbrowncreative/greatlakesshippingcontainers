@@ -54,7 +54,16 @@ export function organizationSchema() {
     areaServed: { "@type": "State", name: business.state },
     sameAs: Object.values(business.social),
   };
-  if (business.phone) base.telephone = business.phone;
+  if (business.phone) {
+    base.telephone = business.phone;
+    base.contactPoint = {
+      "@type": "ContactPoint",
+      telephone: `+1-${business.phone.replace(/\D/g, "").replace(/^(\d{3})(\d{3})(\d{4})$/, "$1-$2-$3")}`,
+      contactType: "sales",
+      areaServed: "US-MI",
+      availableLanguage: "English",
+    };
+  }
   if (business.publicEmail) base.email = business.publicEmail;
   if (business.yearFounded) base.foundingDate = String(business.yearFounded);
   if (business.address) {

@@ -81,7 +81,7 @@ export function Header() {
     <header className="site-header" onKeyDown={drawerOpen ? trapFocus : undefined}>
       <div className="container site-header__inner">
         <Link href="/" className="brand" aria-label={`${business.name} — home`}>
-          <BrandLogo priority />
+          <BrandLogo />
         </Link>
 
         <nav className="nav" aria-label="Main" ref={navRef}>

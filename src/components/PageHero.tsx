@@ -17,7 +17,7 @@ export function PageHero({ eyebrow, title, lede, crumbs, image, children }: Prop
     <section className={`page-hero${image ? " page-hero--media" : ""}`}>
       {image && (
         <div className="page-hero__img">
-          <Image src={image.src} alt="" fill priority sizes="100vw" />
+          <Image src={image.src} alt="" fill preload fetchPriority="high" sizes="100vw" />
         </div>
       )}
       <div className="container">

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { RelatedReading } from "@/components/blog/RelatedReading";
 import { CtaBand } from "@/components/CtaBand";
 import { Faq } from "@/components/Faq";
 import { IconArrow } from "@/components/Icons";
@@ -152,13 +153,14 @@ export default function DeliveryPage() {
             <p className="eyebrow">Questions</p>
             <h2 id="delivery-faq">Delivery questions</h2>
             <p className="lede mt-4">
-              More detail in our guide to <Link href="/guides/preparing-your-site-for-container-delivery">preparing your site</Link>.
+              More detail in our guide to <Link href="/blog/preparing-your-site-for-container-delivery">preparing your site</Link>.
             </p>
           </div>
           <Faq items={deliveryFaqs} />
         </div>
       </section>
 
+      <RelatedReading path="/services/delivery" title="Delivery & site-prep guides" />
       <CtaBand location="delivery_footer" title="Ready to check your site?" body="Send your ZIP code and a few details about access. We'll tell you what the truck needs and quote delivery with the container." />
       <JsonLd
         data={{

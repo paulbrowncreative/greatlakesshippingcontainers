@@ -27,7 +27,19 @@ export default function ContactPage() {
       </PageHero>
       <section className="section section--tight">
         <div className="container split split--form split--top">
-          <InquiryForm mode="contact" />
+          <div>
+            <noscript>
+              <div className="alert alert--info">
+                <div>
+                  <strong>This form needs JavaScript.</strong>
+                  <p>
+                    Please enable JavaScript{business.phone ? `, call ${business.phone},` : ""} or message us on Facebook.
+                  </p>
+                </div>
+              </div>
+            </noscript>
+            <InquiryForm mode="contact" />
+          </div>
           <aside className="stack" aria-label="Other ways to reach us">
             <h2 style={{ fontSize: "var(--fs-h3)" }}>Other ways to reach us</h2>
             <ul className="footer-list" role="list" style={{ gap: "var(--space-3)" }}>
