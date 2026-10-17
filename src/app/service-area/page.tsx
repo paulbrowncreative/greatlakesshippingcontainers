@@ -21,7 +21,7 @@ export default function ServiceAreaPage() {
       <PageHero
         eyebrow="Service area"
         title={`Delivering containers in ${business.state}`}
-        lede="We're a Michigan company, and we quote every delivery by ZIP code. Distance, route and site access all affect delivery cost — so the fastest way to know whether we can reach you is to ask."
+        lede="We’re a Michigan company, and we quote every delivery by ZIP code. Distance, route and site access all affect delivery cost — so the fastest way to know whether we can reach you is to ask."
         crumbs={[{ name: "Service Area", path: "/service-area" }]}
       >
         <TrackedLink href="/quote" className="btn btn--lg" event="quote_cta_click" eventParams={{ location: "service_area_hero" }}>
@@ -41,13 +41,13 @@ export default function ServiceAreaPage() {
               Two addresses in the same city can quote differently if one has a tight alley and the other an open lot.
             </p>
             <p>
-              That&apos;s why we don&apos;t publish a flat delivery rate or a list of towns. Enter your ZIP code in the quote form and
-              we&apos;ll confirm whether we deliver there and what it costs — usually alongside a question or two about access.
+              That’s why we don’t publish a flat delivery rate or a list of towns. Enter your ZIP code in the quote form and
+              we’ll confirm whether we deliver there and what it costs — usually alongside a question or two about access.
             </p>
             <ul className="checklist">
               <li>Residential driveways, farms, jobsites and commercial lots</li>
               <li>Single containers or multiple units to one site</li>
-              <li>Delivery timing planned around Michigan&apos;s spring seasonal weight restrictions</li>
+              <li>Delivery timing planned around Michigan’s spring seasonal weight restrictions</li>
             </ul>
           </div>
         </div>
@@ -82,9 +82,9 @@ export default function ServiceAreaPage() {
           </div>
           <ul className="checklist">
             <li>The ZIP code (and later the address) where the container will sit</li>
-            <li>A rough idea of the spot: surface, slope, and what&apos;s overhead</li>
+            <li>A rough idea of the spot: surface, slope, and what’s overhead</li>
             <li>Any gates, narrow drives or tight turns the truck must pass</li>
-            <li>When you need it — especially if that&apos;s during the spring thaw</li>
+            <li>When you need it — especially if that’s during the spring thaw</li>
           </ul>
         </div>
       </section>
@@ -92,7 +92,7 @@ export default function ServiceAreaPage() {
         Read our <Link href="/services/delivery">delivery &amp; site-prep guide</Link> for clearance rules of thumb.
       </p>
       <RelatedReading path="/service-area" title="Planning a Michigan delivery" />
-      <CtaBand location="service_area_footer" title="Do you deliver to my ZIP?" body="Ask in the quote form — it takes two minutes, and we'll answer with a delivered price." />
+      <CtaBand location="service_area_footer" title="Do you deliver to my ZIP?" body="Ask in the quote form — it takes two minutes, and we’ll answer with a delivered price." />
     </>
   );
 }

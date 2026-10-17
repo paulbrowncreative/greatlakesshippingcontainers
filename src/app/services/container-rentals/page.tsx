@@ -30,11 +30,11 @@ const faqs = [
   },
   {
     q: "Should I rent or buy?",
-    a: "Renting suits short projects and needs with a clear end date. If you'll need storage for a long time, or indefinitely, buying usually works out better. Not sure? Ask us to quote both.",
+    a: "Renting suits short projects and needs with a clear end date. If you’ll need storage for a long time, or indefinitely, buying usually works out better. Not sure? Ask us to quote both.",
   },
   {
     q: "Do I need to empty the container before pickup?",
-    a: "Yes. Containers need to be empty before they're picked up and moved. Plan a little time at the end of your project to clear it out.",
+    a: "Yes. Containers need to be empty before they’re picked up and moved. Plan a little time at the end of your project to clear it out.",
   },
   {
     q: "What does my site need for a rental delivery?",
@@ -53,7 +53,7 @@ export default function RentalsPage() {
       <PageHero
         eyebrow={`Container rentals · ${business.state}`}
         title="Shipping container rentals"
-        lede="Secure, weatherproof storage for a project, a season or a move — delivered to your site and taken away when you're done."
+        lede="Secure, weatherproof storage for a project, a season or a move — delivered to your site and taken away when you’re done."
         crumbs={[
           { name: "Services", path: "/services/container-sales" },
           { name: "Container Rentals", path: "/services/container-rentals" },
@@ -73,7 +73,7 @@ export default function RentalsPage() {
           <div className="stack">
             <p className="eyebrow">When renting makes sense</p>
             <h2 id="when-rent">Storage with an end date</h2>
-            <p className="lede">Rent when you need the space for a defined stretch of time and don&apos;t want to own a container afterward.</p>
+            <p className="lede">Rent when you need the space for a defined stretch of time and don’t want to own a container afterward.</p>
             <ul className="checklist">
               <li>
                 <strong>Construction and remodeling:</strong> lockable storage on site for the length of the job.
@@ -89,7 +89,7 @@ export default function RentalsPage() {
               </li>
             </ul>
           </div>
-          <Photo image={images.new20} companyCaption="Example units — your quote names the unit's condition" />
+          <Photo image={images.new20} companyCaption="Example units — your quote names the unit’s condition" />
         </div>
       </section>
 
@@ -110,11 +110,11 @@ export default function RentalsPage() {
             </li>
             <li className="step">
               <h3>We deliver</h3>
-              <p>Our truck and gooseneck trailer bring the container to the spot you&apos;ve chosen.</p>
+              <p>Our truck and gooseneck trailer bring the container to the spot you’ve chosen.</p>
             </li>
             <li className="step">
               <h3>We pick it up</h3>
-              <p>When you&apos;re finished, empty it and let us know. We schedule the pickup.</p>
+              <p>When you’re finished, empty it and let us know. We schedule the pickup.</p>
             </li>
           </ol>
         </div>
@@ -124,15 +124,15 @@ export default function RentalsPage() {
         <div className="container">
           <div className="section-head">
             <p className="eyebrow">Rent or buy?</p>
-            <h2 id="rent-vs-buy">Choose by how long you&apos;ll need it</h2>
+            <h2 id="rent-vs-buy">Choose by how long you’ll need it</h2>
           </div>
           <div className="grid grid--2">
             <div className="card">
               <h3>Rent if…</h3>
               <ul className="checklist mt-4">
                 <li>The project has a clear end date</li>
-                <li>You don&apos;t want to own or resell a container later</li>
-                <li>You want it picked up when you&apos;re done</li>
+                <li>You don’t want to own or resell a container later</li>
+                <li>You want it picked up when you’re done</li>
               </ul>
             </div>
             <div className="card">
@@ -184,7 +184,7 @@ export default function RentalsPage() {
       <CtaBand
         location="rentals_footer"
         title="Get a rental quote"
-        body="Tell us the size, your ZIP code, when you need it and for how long. We'll confirm the unit, the terms and what your site needs."
+        body="Tell us the size, your ZIP code, when you need it and for how long. We’ll confirm the unit, the terms and what your site needs."
         ctaLabel="Request a Rental Quote"
         ctaHref="/quote?type=rent"
       />

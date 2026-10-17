@@ -164,14 +164,14 @@ export function InquiryForm({ mode, initial }: Props) {
       const msg = data && !data.ok ? data.message : "Something went wrong on our end.";
       setServerError(
         data && !data.ok && data.code === "unavailable"
-          ? { title: "Online requests are temporarily unavailable", body: "Your details haven't been sent. Please reach us using the options below." }
-          : { title: "Your request wasn't sent", body: msg },
+          ? { title: "Online requests are temporarily unavailable", body: "Your details haven’t been sent. Please reach us using the options below." }
+          : { title: "Your request wasn’t sent", body: msg },
       );
     } catch {
       setStatus("idle");
       setServerError({
-        title: "Your request wasn't sent",
-        body: "We couldn't reach our server — check your connection and try again. Your details are still filled in.",
+        title: "Your request wasn’t sent",
+        body: "We couldn’t reach our server — check your connection and try again. Your details are still filled in.",
       });
     }
   };
@@ -221,7 +221,7 @@ export function InquiryForm({ mode, initial }: Props) {
           <>
             <ChoiceGroup
               name="inquiryType"
-              legend="I'm looking to…"
+              legend="I’m looking to…"
               options={inquiryTypes}
               value={values.inquiryType}
               error={errors.inquiryType}
@@ -372,7 +372,7 @@ export function InquiryForm({ mode, initial }: Props) {
               name="message"
               label={mode === "contact" ? "How can we help?" : "Anything else we should know?"}
               optional={mode === "quote"}
-              hint={mode === "quote" ? "What you'll store, special requirements, or questions." : undefined}
+              hint={mode === "quote" ? "What you’ll store, special requirements, or questions." : undefined}
               error={errors.message}
             >
               {(p) => (
@@ -649,7 +649,7 @@ function Review({ values, onEdit, steps }: { values: InquiryInput; onEdit: (s: S
       </section>
       <p className="small muted summary__group" style={{ display: "flex", gap: "0.5rem" }}>
         <IconCheckCircle style={{ width: "1.1rem", flex: "none", color: "var(--success)" }} />
-        Looks right? Send it and we&apos;ll reply by email. Your quote will confirm the exact unit, delivery cost and timing.
+        Looks right? Send it and we’ll reply by email. Your quote will confirm the exact unit, delivery cost and timing.
       </p>
     </div>
   );

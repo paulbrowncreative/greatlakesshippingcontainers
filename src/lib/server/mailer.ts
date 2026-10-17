@@ -33,9 +33,9 @@ export function isMailConfigured(): boolean {
 }
 
 /**
- * Sends through Resend's REST API. Success is reported only when Resend accepts the
+ * Sends through Resend’s REST API. Success is reported only when Resend accepts the
  * message and returns an id. The idempotency key makes a retried request with the
- * same content a no-op on Resend's side (24h window), preventing duplicate emails.
+ * same content a no-op on Resend’s side (24h window), preventing duplicate emails.
  */
 export async function sendMail(msg: MailMessage): Promise<MailResult> {
   const c = mailConfig();

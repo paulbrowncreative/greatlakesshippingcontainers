@@ -20,7 +20,7 @@ export default function QuotePage() {
       <PageHero
         eyebrow="Request a quote"
         title="Get a delivered price"
-        lede="Answer a few questions about the container and your site. We'll reply by email with the right unit, its condition grade and one price including delivery."
+        lede="Answer a few questions about the container and your site. We’ll reply by email with the right unit, its condition grade and one price including delivery."
         crumbs={[{ name: "Request a Quote", path: "/quote" }]}
       />
       <section className="section section--tight">

@@ -44,3 +44,10 @@ src/app/globals.css          Design system (tokens + components)
 ## Content rules
 
 No fabricated reviews, ratings, prices, inventory, addresses, phone numbers or credentials. Stock photos are labelled "Illustrative". Location pages exist only for markets the company has confirmed.
+
+## Content style
+
+- **Capitalization:** navigation labels, buttons and page `<title>`s use Title Case. Headings, body copy, form labels and text links use sentence case, including product names ("40 ft high cube").
+- **Typography:** curly apostrophes and quotes (’ “ ”); em dash (—) for breaks, en dash (–) for ranges (10–20). Feet and inch marks stay straight (9'6") so they match how people search.
+- **Terms:** ZIP code · jobsite · high cube · cargo-worthy · one-trip · wind & water tight · 20 ft / 40 ft (space, no period).
+- **Links:** underlines are continuous (`text-decoration-skip-ink: none`), so descenders like g and y never break them.

@@ -22,9 +22,9 @@ const questions: Q[] = [
     id: "amount",
     legend: "Roughly how much?",
     options: [
-      { value: "small", label: "Up to ~10 pallets' worth" },
-      { value: "medium", label: "10–20 pallets' worth" },
-      { value: "large", label: "More than 20 pallets' worth" },
+      { value: "small", label: "Up to ~10 pallets’ worth" },
+      { value: "medium", label: "10–20 pallets’ worth" },
+      { value: "large", label: "More than 20 pallets’ worth" },
     ],
   },
   {
@@ -45,7 +45,7 @@ export function recommend(a: Required<Answers>): Result {
   if (a.space === "tight") {
     if (a.amount === "small" || !tall) {
       return {
-        size: "20 ft Standard",
+        size: "20 ft standard",
         slug: "20-ft-shipping-containers",
         sizeParam: "20-standard",
         why:
@@ -55,7 +55,7 @@ export function recommend(a: Required<Answers>): Result {
       };
     }
     return {
-      size: "40 ft High Cube — if it fits",
+      size: "40 ft high cube — if it fits",
       slug: "40-ft-high-cube-containers",
       sizeParam: "40-high-cube",
       why: "You need height and volume, but your site is tight. Send photos with your quote request so we can confirm a 40 can be placed — or discuss a 20 ft high cube.",
@@ -63,7 +63,7 @@ export function recommend(a: Required<Answers>): Result {
   }
   if (tall) {
     return {
-      size: "40 ft High Cube",
+      size: "40 ft high cube",
       slug: "40-ft-high-cube-containers",
       sizeParam: "40-high-cube",
       why: "The extra foot of height (about 8 ft 5 in at the door) clears taller equipment and leaves headroom for shelving, insulation or lighting.",
@@ -71,14 +71,14 @@ export function recommend(a: Required<Answers>): Result {
   }
   if (a.amount === "small") {
     return {
-      size: "20 ft Standard",
+      size: "20 ft standard",
       slug: "20-ft-shipping-containers",
       sizeParam: "20-standard",
       why: "About 150 sq ft of floor space covers this comfortably. If you expect to grow, compare a 40 — it often costs less per square foot.",
     };
   }
   return {
-    size: "40 ft Standard",
+    size: "40 ft standard",
     slug: "40-ft-shipping-containers",
     sizeParam: "40-standard",
     why:
@@ -104,7 +104,7 @@ export function ContainerChooser() {
   return (
     <div className="chooser" id="size-chooser">
       <h2 style={{ fontSize: "var(--fs-h3)" }}>Which size do I need?</h2>
-      <p className="muted mt-2">Three quick questions. You&apos;ll get a starting recommendation you can send straight into a quote.</p>
+      <p className="muted mt-2">Three quick questions. You’ll get a starting recommendation you can send straight into a quote.</p>
       <div className="form mt-5">
         {questions.map((q) => (
           <fieldset key={q.id} className="field">

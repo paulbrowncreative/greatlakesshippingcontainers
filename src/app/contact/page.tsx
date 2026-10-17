@@ -7,7 +7,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Contact Great Lakes Shipping Containers",
-  description: "Questions about shipping container sizes, condition grades or delivery in Michigan? Send us a message and we'll reply by email.",
+  description: "Questions about shipping container sizes, condition grades or delivery in Michigan? Send us a message and we’ll reply by email.",
   path: "/contact",
 });
 
@@ -18,7 +18,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="Ask us anything"
-        lede="Questions about sizes, grades, delivery or your site — send a message and we'll reply by email. Ready for pricing? The quote form is faster."
+        lede="Questions about sizes, grades, delivery or your site — send a message and we’ll reply by email. Ready for pricing? The quote form is faster."
         crumbs={[{ name: "Contact", path: "/contact" }]}
       >
         <Link href="/quote" className="btn btn--lg">

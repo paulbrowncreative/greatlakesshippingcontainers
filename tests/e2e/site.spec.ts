@@ -65,7 +65,7 @@ test("robots, sitemap, redirects and 404", async ({ page, request }) => {
   expect(r.headers()["location"]).toBe("/contact");
   const res = await page.goto("/this-does-not-exist");
   expect(res?.status()).toBe(404);
-  await expect(page.locator("h1")).toHaveText("This page isn't here");
+  await expect(page.locator("h1")).toHaveText("This page isn’t here");
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/);
 });
 
@@ -102,9 +102,9 @@ test("size chooser recommends a container and links to a pre-filled quote", asyn
   await page.goto("/containers");
   const chooser = page.locator("#size-chooser");
   await chooser.getByLabel("Tall equipment or machinery").check();
-  await chooser.getByLabel("10–20 pallets' worth").check();
+  await chooser.getByLabel("10–20 pallets’ worth").check();
   await chooser.getByLabel("Open — yard, farm or large lot").check();
-  await expect(chooser.getByRole("heading", { name: "40 ft High Cube" })).toBeVisible();
+  await expect(chooser.getByRole("heading", { name: "40 ft high cube" })).toBeVisible();
   await chooser.getByRole("link", { name: "Quote this size" }).click();
   await expect(page).toHaveURL(/\/quote\?size=40-high-cube/);
   await expect(page.getByLabel("40 ft high cube")).toBeChecked();

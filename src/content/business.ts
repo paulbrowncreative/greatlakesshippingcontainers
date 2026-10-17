@@ -1,7 +1,7 @@
 /**
  * Single source of truth for business facts.
  *
- * Only values verified from the company's existing website (glsc-mi.com) or supplied
+ * Only values verified from the company’s existing website (glsc-mi.com) or supplied
  * by the owner belong here. Anything left `null` is hidden by the UI and omitted from
  * structured data — never fill these with guesses. See docs/OWNER-CHECKLIST.md.
  */

@@ -20,7 +20,7 @@ export default function UsesPage() {
       <PageHero
         eyebrow="Container uses"
         title="Who uses shipping containers — and why"
-        lede="A container is a lockable steel room you can put almost anywhere. Here's how different customers use them, and the size that usually fits."
+        lede="A container is a lockable steel room you can put almost anywhere. Here’s how different customers use them, and the size that usually fits."
         crumbs={[{ name: "Uses", path: "/uses" }]}
         image={images.agriculture}
       />
@@ -62,7 +62,7 @@ export default function UsesPage() {
         </section>
       ))}
       <RelatedReading path="/uses" />
-      <CtaBand location="uses_footer" title="Tell us what you're storing" body="We'll recommend a size and grade for the job and quote it delivered to your site." />
+      <CtaBand location="uses_footer" title="Tell us what you’re storing" body="We’ll recommend a size and grade for the job and quote it delivered to your site." />
     </>
   );
 }

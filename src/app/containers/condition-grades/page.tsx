@@ -25,12 +25,12 @@ const faqs = [
     a: "A properly graded wind & water tight or cargo-worthy container should not leak when new to you. Over time, door gaskets and roof dents that hold standing water are the usual culprits — keep the roof clear of snow and debris and the container level.",
   },
   {
-    q: "Can I see the container before it's delivered?",
-    a: "Ask when you request your quote. Photos of the specific unit, or the grade's typical condition, help you know what to expect.",
+    q: "Can I see the container before it’s delivered?",
+    a: "Ask when you request your quote. Photos of the specific unit, or the grade’s typical condition, help you know what to expect.",
   },
   {
-    q: "Is a cargo-worthy container worth it if I'm not shipping anything?",
-    a: "Usually not. If you're storing on site, a wind & water tight unit does the same job. Cargo-worthy is worth paying for when you might ship it or resell it later.",
+    q: "Is a cargo-worthy container worth it if I’m not shipping anything?",
+    a: "Usually not. If you’re storing on site, a wind & water tight unit does the same job. Cargo-worthy is worth paying for when you might ship it or resell it later.",
   },
 ];
 
@@ -38,9 +38,9 @@ export default function GradesPage() {
   return (
     <>
       <PageHero
-        eyebrow="Buyer's guide"
+        eyebrow="Buyer’s guide"
         title="Container condition grades"
-        lede="Two 40-footers can differ widely in price because of grade alone. Here's what each grade means in plain terms — and which one your project actually needs."
+        lede="Two 40-footers can differ widely in price because of grade alone. Here’s what each grade means in plain terms — and which one your project actually needs."
         crumbs={[
           { name: "Containers", path: "/containers" },
           { name: "Condition Grades", path: "/containers/condition-grades" },
@@ -113,7 +113,7 @@ export default function GradesPage() {
         </div>
       </section>
       <RelatedReading path="/containers/condition-grades" />
-      <CtaBand location="grades_footer" title="Not sure which grade fits?" body="Tell us what you're storing and how long you'll keep it. We'll recommend a grade and quote it delivered." />
+      <CtaBand location="grades_footer" title="Not sure which grade fits?" body="Tell us what you’re storing and how long you’ll keep it. We’ll recommend a grade and quote it delivered." />
     </>
   );
 }

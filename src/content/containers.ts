@@ -36,14 +36,14 @@ export type ContainerProduct = {
 export const containers: ContainerProduct[] = [
   {
     slug: "20-ft-shipping-containers",
-    name: "20 ft Standard Shipping Container",
-    shortName: "20 ft Standard",
+    name: "20 ft standard shipping container",
+    shortName: "20 ft standard",
     badge: "20'",
     heightLabel: "8'6\" tall",
     metaTitle: "20 ft Shipping Containers for Sale in Michigan | Sizes & Specs",
     metaDescription:
       "20 ft shipping containers for sale with delivery in Michigan. Typical dimensions, door clearance, weight and uses — request a quote for your site.",
-    h1: "20 ft Shipping Containers",
+    h1: "20 ft shipping containers",
     lede:
       "The most versatile size we quote. A 20-footer fits in a driveway, behind a shop or beside a jobsite trailer and still holds the contents of a two-car garage.",
     summary: "Compact footprint for driveways, jobsites and tight commercial lots.",
@@ -64,7 +64,7 @@ export const containers: ContainerProduct[] = [
     ],
     weight: [
       { label: "Tare (empty)", value: "≈ 4,700–5,100 lb" },
-      { label: "Max gross", value: "≈ 52,900–67,200 lb", note: "Per the unit's CSC plate" },
+      { label: "Max gross", value: "≈ 52,900–67,200 lb", note: "Per the unit’s CSC plate" },
     ],
     capacity: [
       { label: "Floor area", value: "≈ 150 sq ft" },
@@ -79,27 +79,27 @@ export const containers: ContainerProduct[] = [
     considerations: [
       "Needs a level, firm pad roughly 20 ft × 8 ft, plus room for the delivery truck and trailer to reach it.",
       "Empty, a 20 ft unit weighs roughly 2½ tons — still worth checking driveway and spring road limits before delivery day.",
-      "Doors are on one end only (unless you request a specialty unit), so plan placement around how you'll load it.",
+      "Doors are on one end only (unless you request a specialty unit), so plan placement around how you’ll load it.",
     ],
     faqs: [
-      { q: "Will a 20 ft container fit in my driveway?", a: "Most residential driveways can hold the container itself (20 ft × 8 ft). The real limit is usually the delivery truck: the truck and trailer need a clear approach, room to maneuver, and overhead clearance. Send us your address and a photo of the spot and we'll tell you whether it works." },
+      { q: "Will a 20 ft container fit in my driveway?", a: "Most residential driveways can hold the container itself (20 ft × 8 ft). The real limit is usually the delivery truck: the truck and trailer need a clear approach, room to maneuver, and overhead clearance. Send us your address and a photo of the spot and we’ll tell you whether it works." },
       { q: "How much can I store in a 20 ft container?", a: "About 1,170 cubic feet — roughly the contents of a two-car garage, or 10 standard pallets on the floor." },
-      { q: "Is a 20 ft container half the price of a 40?", a: "Usually not. Freight, handling and delivery costs are similar for both sizes, so a 40 ft unit often costs less per square foot. If you're between sizes, ask us to quote both." },
+      { q: "Is a 20 ft container half the price of a 40?", a: "Usually not. Freight, handling and delivery costs are similar for both sizes, so a 40 ft unit often costs less per square foot. If you’re between sizes, ask us to quote both." },
     ],
     related: ["40-ft-shipping-containers", "40-ft-high-cube-containers"],
   },
   {
     slug: "40-ft-shipping-containers",
-    name: "40 ft Standard Shipping Container",
-    shortName: "40 ft Standard",
+    name: "40 ft standard shipping container",
+    shortName: "40 ft standard",
     badge: "40'",
     heightLabel: "8'6\" tall",
     metaTitle: "40 ft Shipping Containers for Sale in Michigan | Specs & Delivery",
     metaDescription:
       "40 ft standard shipping containers with delivery in Michigan. Typical inside dimensions, weight, door size and site requirements. Get a quote.",
-    h1: "40 ft Shipping Containers",
+    h1: "40 ft shipping containers",
     lede:
-      "Twice the floor space of a 20-footer for a delivery cost that's usually close to the same. The 40 ft standard is the workhorse for commercial storage, farms and long-term projects.",
+      "Twice the floor space of a 20-footer for a delivery cost that’s usually close to the same. The 40 ft standard is the workhorse for commercial storage, farms and long-term projects.",
     summary: "Maximum storage per delivery for commercial, agricultural and industrial sites.",
     image: images.deliveryRural,
     external: [
@@ -118,7 +118,7 @@ export const containers: ContainerProduct[] = [
     ],
     weight: [
       { label: "Tare (empty)", value: "≈ 8,000–8,500 lb" },
-      { label: "Max gross", value: "≈ 67,200 lb", note: "Per the unit's CSC plate" },
+      { label: "Max gross", value: "≈ 67,200 lb", note: "Per the unit’s CSC plate" },
     ],
     capacity: [
       { label: "Floor area", value: "≈ 300 sq ft" },
@@ -126,32 +126,32 @@ export const containers: ContainerProduct[] = [
     ],
     bestFor: [
       { title: "Commercial and warehouse overflow", body: "Room for 20+ standard pallets, racking or long stock like pipe and lumber." },
-      { title: "Construction phases and long projects", body: "One secure unit for a whole crew's materials, tools and consumables." },
+      { title: "Construction phases and long projects", body: "One secure unit for a whole crew’s materials, tools and consumables." },
       { title: "Agriculture", body: "Large equipment, bulk supplies and seasonal storage in a single lockable box." },
       { title: "Manufacturing and industrial yards", body: "Spare parts, tooling, packaging and finished-goods staging outside the building." },
     ],
     considerations: [
       "Plan for a level pad about 40 ft × 8 ft and a long, straight approach for the delivery truck.",
       "Overhead clearance matters: watch for power lines, branches and canopies along the drop path.",
-      "Heavier than a 20 — check whether your road is under Michigan's spring seasonal weight restrictions before scheduling.",
+      "Heavier than a 20 — check whether your road is under Michigan’s spring seasonal weight restrictions before scheduling.",
     ],
     faqs: [
       { q: "How much space does delivery of a 40 ft container need?", a: "More than the container itself. Our pickup and gooseneck trailer with a 40 ft unit on board is well over 60 ft long, so it needs a clear approach, room to maneuver and overhead clearance. We confirm the exact requirement for your site when we quote — photos and a rough measurement help." },
-      { q: "Should I choose a 40 ft standard or a high cube?", a: "If you're storing pallets, boxes or equipment under 7 ft 6 in tall, the standard is fine. If you need taller items through the door, plan to add shelving or are converting the unit, the high cube's extra foot is worth it." },
-      { q: "Can a 40 ft container be placed on gravel?", a: "Yes — compacted gravel is one of the most common bases. The key is that it's level and firm so the doors keep opening and closing properly." },
+      { q: "Should I choose a 40 ft standard or a high cube?", a: "If you’re storing pallets, boxes or equipment under 7 ft 6 in tall, the standard is fine. If you need taller items through the door, plan to add shelving or are converting the unit, the high cube’s extra foot is worth it." },
+      { q: "Can a 40 ft container be placed on gravel?", a: "Yes — compacted gravel is one of the most common bases. The key is that it’s level and firm so the doors keep opening and closing properly." },
     ],
     related: ["40-ft-high-cube-containers", "20-ft-shipping-containers"],
   },
   {
     slug: "40-ft-high-cube-containers",
-    name: "40 ft High Cube Shipping Container",
-    shortName: "40 ft High Cube",
+    name: "40 ft high cube shipping container",
+    shortName: "40 ft high cube",
     badge: "40'HC",
     heightLabel: "9'6\" tall",
     metaTitle: "40 ft High Cube Containers for Sale in Michigan | 9'6\" Tall",
     metaDescription:
       "40 ft high cube shipping containers: one extra foot of height and about 12% more volume. Typical specs, door clearance and uses. Request a quote.",
-    h1: "40 ft High Cube Containers",
+    h1: "40 ft high cube containers",
     lede:
       "Same footprint as a 40 ft standard with a full foot of extra height. High cubes are the pick for tall equipment, shelving systems and any container you plan to modify.",
     summary: "An extra foot of height for tall equipment, racking and conversions.",
@@ -172,14 +172,14 @@ export const containers: ContainerProduct[] = [
     ],
     weight: [
       { label: "Tare (empty)", value: "≈ 8,500–8,900 lb" },
-      { label: "Max gross", value: "≈ 67,200 lb", note: "Per the unit's CSC plate" },
+      { label: "Max gross", value: "≈ 67,200 lb", note: "Per the unit’s CSC plate" },
     ],
     capacity: [
       { label: "Floor area", value: "≈ 300 sq ft" },
       { label: "Volume", value: "≈ 2,690 cu ft" },
     ],
     bestFor: [
-      { title: "Tall equipment and machinery", body: "Door height of about 8 ft 5 in clears equipment that won't fit a standard unit." },
+      { title: "Tall equipment and machinery", body: "Door height of about 8 ft 5 in clears equipment that won’t fit a standard unit." },
       { title: "Racking and shelving", body: "Extra headroom for a second shelf level or pallet racking." },
       { title: "Workshops and conversions", body: "Room for insulation, lighting and ductwork while keeping usable standing height." },
       { title: "Bulky, lightweight goods", body: "When you run out of space before you run out of payload, height is the cheapest volume." },
@@ -192,7 +192,7 @@ export const containers: ContainerProduct[] = [
     faqs: [
       { q: "How much taller is a high cube container?", a: "One foot. The outside height is 9 ft 6 in versus 8 ft 6 in for a standard, which gives about 8 ft 10 in of interior height." },
       { q: "Is a high cube worth it for storage?", a: "If your items are tall or you plan to stack or shelve, yes. For pallets and boxes under about 7 ft, a standard 40 usually stores the same and may cost less." },
-      { q: "Are 20 ft high cube containers available?", a: "They exist but are less common than 40 ft high cubes. Ask in your quote request and we'll check what we can source." },
+      { q: "Are 20 ft high cube containers available?", a: "They exist but are less common than 40 ft high cubes. Ask in your quote request and we’ll check what we can source." },
     ],
     related: ["40-ft-shipping-containers", "20-ft-shipping-containers"],
   },
@@ -215,17 +215,17 @@ export type ConditionGrade = {
 export const conditionGrades: ConditionGrade[] = [
   {
     id: "new",
-    name: "New / One-Trip",
+    name: "New / one-trip",
     aka: "1-trip, new build",
     summary: "Made recently and shipped loaded once, typically from overseas.",
     detail:
-      "Clean paint, tight door gaskets and minimal dents. A one-trip container is the closest thing to new you'll find in the domestic market and the right choice when the container will be visible or modified.",
+      "Clean paint, tight door gaskets and minimal dents. A one-trip container is the closest thing to new you’ll find in the domestic market and the right choice when the container will be visible or modified.",
     goodFor: "Storefronts, visible commercial sites, conversions, long-term ownership.",
     watchFor: "Highest price per unit. Minor scuffs from its single voyage are normal.",
   },
   {
     id: "cargo-worthy",
-    name: "Cargo-Worthy",
+    name: "Cargo-worthy",
     aka: "CW",
     summary: "Used, but structurally sound enough to be certified for ocean shipping.",
     detail:
@@ -235,7 +235,7 @@ export const conditionGrades: ConditionGrade[] = [
   },
   {
     id: "wind-water-tight",
-    name: "Wind & Water Tight",
+    name: "Wind & water tight",
     aka: "WWT",
     summary: "Retired from shipping but sealed against rain, snow and wind.",
     detail:
@@ -245,10 +245,10 @@ export const conditionGrades: ConditionGrade[] = [
   },
   {
     id: "as-is",
-    name: "As-Is",
+    name: "As-is",
     summary: "Sold with known defects — holes, heavy rust or damaged doors.",
     detail:
-      "As-is units can be useful for parts, low-stakes storage or projects where you'll be cutting and welding anyway. Always inspect or get detailed photos first.",
+      "As-is units can be useful for parts, low-stakes storage or projects where you’ll be cutting and welding anyway. Always inspect or get detailed photos first.",
     goodFor: "Budget projects, parts, custom builds that will replace panels anyway.",
     watchFor: "May leak. Not suitable when contents must stay dry.",
   },

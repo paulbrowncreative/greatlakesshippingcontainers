@@ -69,7 +69,7 @@ test("quote form validates each step and submits end-to-end to the email provide
   expect(String(email.text)).toContain("Submitted from: /quote");
 });
 
-test("provider failure shows an honest error and keeps the visitor's details", async ({ page, request }) => {
+test("provider failure shows an honest error and keeps the visitor’s details", async ({ page, request }) => {
   const before = (await sent(request)).length;
   await page.goto("/contact");
   await page.getByLabel("Full name").fill("Casey Failure");
@@ -78,7 +78,7 @@ test("provider failure shows an honest error and keeps the visitor's details", a
   await page.getByLabel(/may contact me/).check();
   await page.waitForTimeout(3100); // minimum fill time guard
   await page.getByRole("button", { name: "Send Message" }).click();
-  await expect(page.locator(".alert--error[role=alert]")).toContainText("Your request wasn't sent");
+  await expect(page.locator(".alert--error[role=alert]")).toContainText("Your request wasn’t sent");
   await expect(page).toHaveURL(/\/contact$/);
   await expect(page.getByLabel("Full name")).toHaveValue("Casey Failure");
   await expect(page.getByLabel("How can we help?")).toHaveValue(/SIMULATE_PROVIDER_FAILURE/);

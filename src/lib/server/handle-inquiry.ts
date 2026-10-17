@@ -44,7 +44,7 @@ export async function handleInquiry(request: Request): Promise<Response> {
   if (!limited.ok) {
     log("rate_limited", {});
     return json(
-      { ok: false, code: "rate-limited", message: "You've sent several requests in a short time. Please wait a few minutes and try again." },
+      { ok: false, code: "rate-limited", message: "You’ve sent several requests in a short time. Please wait a few minutes and try again." },
       429,
       { "Retry-After": String(limited.retryAfterSec) },
     );
@@ -61,7 +61,7 @@ export async function handleInquiry(request: Request): Promise<Response> {
     return json({ ok: false, code: "bad-request", message: "Unsupported request." }, 400);
   }
 
-  // Honeypot: real visitors never see or fill this field. Accept quietly so bots don't adapt; send nothing.
+  // Honeypot: real visitors never see or fill this field. Accept quietly so bots don’t adapt; send nothing.
   if (typeof body.website === "string" && body.website.trim() !== "") {
     log("honeypot", {});
     return json({ ok: true, reference: newReference() }, 200);
@@ -79,7 +79,7 @@ export async function handleInquiry(request: Request): Promise<Response> {
   }
 
   if (!(await verifyTurnstile(typeof body.turnstileToken === "string" ? body.turnstileToken : "", ip))) {
-    return json({ ok: false, code: "verification", message: "We couldn't verify the security check. Please try it again." }, 400);
+    return json({ ok: false, code: "verification", message: "We couldn’t verify the security check. Please try it again." }, 400);
   }
 
   const inquiry = toInquiry(input);
@@ -112,7 +112,7 @@ export async function handleInquiry(request: Request): Promise<Response> {
     if (result.reason === "not-configured") {
       return json({ ok: false, code: "unavailable", message: "Online requests are temporarily unavailable." }, 503);
     }
-    return json({ ok: false, code: "failed", message: "We couldn't send your request just now. Your details are still here — please try again." }, 502);
+    return json({ ok: false, code: "failed", message: "We couldn’t send your request just now. Your details are still here — please try again." }, 502);
   }
 
   rememberSubmission(fp, reference);

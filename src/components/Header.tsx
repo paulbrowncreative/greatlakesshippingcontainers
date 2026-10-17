@@ -28,7 +28,7 @@ export function Header() {
     if (returnFocus) toggleRef.current?.focus();
   }, []);
 
-  // Close menus on navigation. Adjusting state during render is React's recommended pattern here.
+  // Close menus on navigation. Adjusting state during render is React’s recommended pattern here.
   const [lastPath, setLastPath] = useState(pathname);
   if (lastPath !== pathname) {
     setLastPath(pathname);

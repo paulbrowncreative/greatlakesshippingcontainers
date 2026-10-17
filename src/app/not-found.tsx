@@ -7,7 +7,7 @@ export default function NotFound() {
         <p className="kicker-num" aria-hidden>
           404
         </p>
-        <h1 style={{ fontSize: "var(--fs-h2)" }}>This page isn&apos;t here</h1>
+        <h1 style={{ fontSize: "var(--fs-h2)" }}>This page isn’t here</h1>
         <p className="lede">The link may be old, or the page may have moved. These are the places most people are looking for:</p>
         <ul className="checklist">
           <li>

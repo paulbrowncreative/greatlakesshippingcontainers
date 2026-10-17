@@ -104,6 +104,8 @@ input, button, textarea, select { font: inherit; color: inherit; }
 button { cursor: pointer; }
 p, h1, h2, h3, h4, li, dd { overflow-wrap: break-word; }
 ul[role="list"], ol[role="list"] { list-style: none; padding: 0; }
+/* Continuous underlines: do not break the line around descenders (g, j, p, q, y). */
+:where(a, u, abbr) { text-decoration-skip-ink: none; -webkit-text-decoration-skip: none; }
 a { color: var(--lake-700); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
 a:hover { color: var(--ink); text-decoration-thickness: 2px; }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: var(--radius-sm); }

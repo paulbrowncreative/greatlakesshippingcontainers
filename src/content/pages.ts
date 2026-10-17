@@ -11,7 +11,7 @@ export const howWeWork = [
   },
   {
     title: "The grade, stated plainly",
-    body: "Every quote names the condition — one-trip, cargo-worthy or wind & water tight — so you know what's arriving.",
+    body: "Every quote names the condition — one-trip, cargo-worthy or wind & water tight — so you know what’s arriving.",
   },
   {
     title: "Site questions first",
@@ -32,7 +32,7 @@ export const uses: Use[] = [
     short: "Lockable jobsite storage for tools, materials and equipment — close to the work.",
     body: [
       "Theft and weather are the two biggest risks to materials left on a jobsite. A steel container secured with a heavy-duty padlock — ideally inside a lockbox — handles both, and it sits where your crew needs it rather than in a trailer across the lot.",
-      "For multi-phase projects, a 40 ft unit holds a full crew's tools, consumables and pallets of material. On tight urban or residential sites, a 20 ft unit fits where a trailer won't.",
+      "For multi-phase projects, a 40 ft unit holds a full crew’s tools, consumables and pallets of material. On tight urban or residential sites, a 20 ft unit fits where a trailer won’t.",
     ],
     sizes: "20 ft for tight sites; 40 ft for multi-trade projects.",
   },
@@ -42,7 +42,7 @@ export const uses: Use[] = [
     short: "Dry, rodent-resistant storage for feed, seed, tools and equipment.",
     body: [
       "Containers keep feed, seed, fertilizer and small equipment dry and out of reach of rodents — without the cost or permitting of a new pole barn.",
-      "Placed on a compacted gravel pad, a container stays level through Michigan's freeze–thaw cycles. A 40 ft high cube clears taller implements and leaves room for shelving.",
+      "Placed on a compacted gravel pad, a container stays level through Michigan’s freeze–thaw cycles. A 40 ft high cube clears taller implements and leaves room for shelving.",
     ],
     sizes: "40 ft standard or high cube for most farm use.",
     image: images.agriculture,
@@ -103,7 +103,7 @@ export const homeFaqs = [
     a: "The size (or what you plan to store), how many, your delivery ZIP code, when you need it, and anything unusual about site access. Photos of the drop spot are helpful but not required.",
   },
   {
-    q: "What's the difference between new and used containers?",
+    q: "What’s the difference between new and used containers?",
     a: "A new or one-trip container has made a single voyage and looks close to new. Used containers are graded: cargo-worthy units can still ship goods, while wind & water tight units are retired from shipping but keep the weather out. Our condition grade guide explains the trade-offs.",
   },
   {
@@ -127,7 +127,7 @@ export const deliveryFaqs = [
   },
   {
     q: "Can you place the container exactly where I want it?",
-    a: "If the truck and trailer can reach the spot with the clearance they need, yes. Tell us which way you want the doors to face — that's decided before the container comes off the truck.",
+    a: "If the truck and trailer can reach the spot with the clearance they need, yes. Tell us which way you want the doors to face — that’s decided before the container comes off the truck.",
   },
   {
     q: "Do I need to be there on delivery day?",
@@ -139,6 +139,6 @@ export const deliveryFaqs = [
   },
   {
     q: "Can I move the container later?",
-    a: "Yes, with the right equipment. An empty container can be picked up and relocated. Containers should always be emptied before they're moved.",
+    a: "Yes, with the right equipment. An empty container can be picked up and relocated. Containers should always be emptied before they’re moved.",
   },
 ];

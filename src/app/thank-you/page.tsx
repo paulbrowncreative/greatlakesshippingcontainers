@@ -34,7 +34,7 @@ export default function ThankYouPage() {
           <li>
             Read up on <Link href="/containers/condition-grades">condition grades</Link> so you can compare quotes like for like.
           </li>
-          <li>Call your city or township zoning office if you haven&apos;t confirmed local placement rules.</li>
+          <li>Call your city or township zoning office if you haven’t confirmed local placement rules.</li>
         </ul>
         <p className="mt-6">
           <Link href="/" className="btn btn--secondary">

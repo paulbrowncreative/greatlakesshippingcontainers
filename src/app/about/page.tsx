@@ -29,9 +29,9 @@ export default function AboutPage() {
             <p className="eyebrow">What we do</p>
             <h2 id="what-we-do">{business.tagline}</h2>
             <p>
-              Buying a container should be simple: choose a size, know what condition you&apos;re getting, and have it placed where
+              Buying a container should be simple: choose a size, know what condition you’re getting, and have it placed where
               you need it. In practice, buyers often get a low price that leaves out delivery, a vague description of condition, and
-              a truck that can&apos;t reach the drop spot.
+              a truck that can’t reach the drop spot.
             </p>
             <p>
               We built our process to avoid all three. Every request is quoted for a specific site, with the condition grade named and

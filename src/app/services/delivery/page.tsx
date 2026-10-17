@@ -26,7 +26,7 @@ export default function DeliveryPage() {
       <PageHero
         eyebrow="Delivery & placement"
         title="Container delivery, planned around your site"
-        lede="Delivery is where most container purchases go wrong — a truck that can't reach the spot, soft ground, a low wire. We settle those questions before we schedule."
+        lede="Delivery is where most container purchases go wrong — a truck that can’t reach the spot, soft ground, a low wire. We settle those questions before we schedule."
         crumbs={[
           { name: "Services", path: "/services/container-sales" },
           { name: "Delivery", path: "/services/delivery" },
@@ -47,7 +47,7 @@ export default function DeliveryPage() {
           </div>
           <ul className="checklist">
             <li>
-              <strong>Delivery ZIP code</strong> — and the street address once you&apos;re ready to schedule.
+              <strong>Delivery ZIP code</strong> — and the street address once you’re ready to schedule.
             </li>
             <li>
               <strong>Container size and quantity.</strong>
@@ -59,7 +59,7 @@ export default function DeliveryPage() {
               <strong>Access details</strong> — gate widths, overhead wires or branches, slopes, tight turns.
             </li>
             <li>
-              <strong>Door direction</strong> — which way you want the doors to face once it&apos;s placed.
+              <strong>Door direction</strong> — which way you want the doors to face once it’s placed.
             </li>
             <li>
               <strong>Photos of the spot</strong> (optional, but they answer most questions at a glance).
@@ -136,7 +136,7 @@ export default function DeliveryPage() {
               need a container in March or April, request your quote early.
             </p>
             <p>
-              In winter, ask for the drop path to be plowed and keep the container&apos;s roof clear of heavy snow. Placing it on gravel or
+              In winter, ask for the drop path to be plowed and keep the container’s roof clear of heavy snow. Placing it on gravel or
               blocks — rather than bare soil — reduces frost heave that can rack the frame out of square.
             </p>
             <p>
@@ -161,7 +161,7 @@ export default function DeliveryPage() {
       </section>
 
       <RelatedReading path="/services/delivery" title="Delivery & site-prep guides" />
-      <CtaBand location="delivery_footer" title="Ready to check your site?" body="Send your ZIP code and a few details about access. We'll tell you what the truck needs and quote delivery with the container." />
+      <CtaBand location="delivery_footer" title="Ready to check your site?" body="Send your ZIP code and a few details about access. We’ll tell you what the truck needs and quote delivery with the container." />
       <JsonLd
         data={{
           "@context": "https://schema.org",

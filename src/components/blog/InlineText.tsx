@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Fragment, type ReactNode } from "react";
 
 /**
- * Renders the blog's tiny inline syntax: **bold** and [text](href). Internal links use
+ * Renders the blog’s tiny inline syntax: **bold** and [text](href). Internal links use
  * next/link; external links open in a new tab. Content is authored in-repo, never user input.
  */
 export function InlineText({ text }: { text: string }) {

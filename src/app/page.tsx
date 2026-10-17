@@ -39,7 +39,7 @@ export default function HomePage() {
             </h1>
             <p className="hero__lede">
               Buy or rent 20 ft and 40 ft steel containers for jobsites, farms, businesses and homes — delivered on our own
-              truck and trailer. Tell us the size and ZIP code, and we&apos;ll come back with the right unit and a delivered price.
+              truck and trailer. Tell us the size and ZIP code, and we’ll come back with the right unit and a delivered price.
             </p>
             <div className="hero__actions cluster">
               <TrackedLink href="/quote" className="btn btn--lg" event="quote_cta_click" eventParams={{ location: "hero" }}>
@@ -49,7 +49,7 @@ export default function HomePage() {
                 Compare Sizes
               </Link>
             </div>
-            <p className="hero__note">Not sure what size you need? That&apos;s fine — the quote form helps you choose.</p>
+            <p className="hero__note">Not sure what size you need? That’s fine — the quote form helps you choose.</p>
           </div>
           <dl className="hero__facts tabular">
             <div className="hero__fact">
@@ -81,7 +81,7 @@ export default function HomePage() {
               <h2 id="how-we-work">Straight answers before the truck rolls</h2>
             </div>
             <p className="lede">
-              Buying a container shouldn&apos;t involve guessing what shows up or whether the truck can reach your spot. Every
+              Buying a container shouldn’t involve guessing what shows up or whether the truck can reach your spot. Every
               quote is built around your site.
             </p>
           </div>
@@ -102,7 +102,7 @@ export default function HomePage() {
           <div className="section-head section-head--split">
             <div>
               <p className="eyebrow">Containers</p>
-              <h2 id="containers-heading">Pick a size. We&apos;ll match the unit.</h2>
+              <h2 id="containers-heading">Pick a size. We’ll match the unit.</h2>
             </div>
             <div className="stack">
               <p className="lede">
@@ -213,7 +213,7 @@ export default function HomePage() {
             <div className="card">
               <h3>Frozen and soft ground</h3>
               <p>
-                Frozen ground is firm until it isn&apos;t. Plan a gravel or blocked base that stays level through freeze–thaw cycles
+                Frozen ground is firm until it isn’t. Plan a gravel or blocked base that stays level through freeze–thaw cycles
                 so the doors keep closing square.
               </p>
             </div>
@@ -234,7 +234,7 @@ export default function HomePage() {
             <p className="eyebrow">Size chooser</p>
             <h2>Not sure where to start?</h2>
             <p className="lede mt-4">
-              Answer three questions and get a starting recommendation. You can send it straight into a quote request — we&apos;ll
+              Answer three questions and get a starting recommendation. You can send it straight into a quote request — we’ll
               double-check it against your site.
             </p>
             <div className="mt-6">
@@ -273,8 +273,8 @@ export default function HomePage() {
             <p className="eyebrow">Questions</p>
             <h2 id="faq-heading">Common questions</h2>
             <p className="lede mt-4">
-              Don&apos;t see yours? Ask it in the{" "}
-              <Link href="/contact">contact form</Link> and we&apos;ll answer by email.
+              Don’t see yours? Ask it in the{" "}
+              <Link href="/contact">contact form</Link> and we’ll answer by email.
             </p>
           </div>
           <Faq items={homeFaqs} openFirst />

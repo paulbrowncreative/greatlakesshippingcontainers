@@ -201,7 +201,7 @@ export function validate(input: InquiryInput): FieldErrors {
     e.message = "Tell us a little about what you need (at least 10 characters).";
   }
   if (countLinks(input.message) + countLinks(input.accessNotes) > 2) {
-    e.message = "Please remove links from your message — we'll ask for anything we need.";
+    e.message = "Please remove links from your message — we’ll ask for anything we need.";
   }
   if (!input.consent) e.consent = "Please confirm we can contact you about this request.";
 

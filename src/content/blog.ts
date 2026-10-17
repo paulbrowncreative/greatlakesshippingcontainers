@@ -6,7 +6,7 @@ import { images, type SiteImage } from "./images";
  * that convert. Inline links use `[text](/path)`; external links open in a new tab.
  *
  * Content rules: general, accurate guidance only. No prices, stock levels, statistics or
- * legal specifics that aren't verified. Cite authorities (e.g. MDOT) for regulatory facts.
+ * legal specifics that aren’t verified. Cite authorities (e.g. MDOT) for regulatory facts.
  */
 
 export type Block =
@@ -49,7 +49,7 @@ export type BlogPost = {
 const quoteCta: Block = {
   type: "cta",
   title: "Want a delivered price?",
-  text: "Tell us the size, your ZIP code and when you need it. We'll reply with the right unit and one price that includes delivery.",
+  text: "Tell us the size, your ZIP code and when you need it. We’ll reply with the right unit and one price that includes delivery.",
   href: "/quote",
   label: "Request a Quote",
 };
@@ -62,7 +62,7 @@ export const posts: BlogPost[] = [
     description:
       "What drives shipping container prices: size, condition grade, market supply and delivery. How to compare quotes fairly and avoid common pricing traps.",
     excerpt:
-      "Two quotes for “a 40-footer” can be far apart and both be fair — or one can be hiding the delivery bill. Here's what moves the price and how to compare quotes like for like.",
+      "Two quotes for “a 40-footer” can be far apart and both be fair — or one can be hiding the delivery bill. Here’s what moves the price and how to compare quotes like for like.",
     category: "buying",
     primaryKeyword: "shipping container cost",
     secondaryKeywords: ["shipping container price", "how much is a shipping container", "used shipping container price", "container delivery cost"],
@@ -72,7 +72,7 @@ export const posts: BlogPost[] = [
     supports: ["/services/container-sales", "/containers", "/quote"],
     related: ["new-vs-used-shipping-containers", "rent-vs-buy-shipping-container", "20-ft-vs-40-ft-shipping-container"],
     body: [
-      { type: "p", text: "There's no single price for a shipping container, and any seller who quotes one number without asking where it's going is leaving something out. The price you actually pay is the container plus getting it to your site — and both halves move." },
+      { type: "p", text: "There’s no single price for a shipping container, and any seller who quotes one number without asking where it’s going is leaving something out. The price you actually pay is the container plus getting it to your site — and both halves move." },
       { type: "h2", text: "The five things that set the price" },
       { type: "h3", text: "1. Size" },
       { type: "p", text: "A 40 ft container costs more than a 20 ft one, but rarely twice as much. Because handling and trucking cost about the same for either size, the 40 usually wins on price per square foot. Compare the sizes on our [container sizes page](/containers)." },
@@ -81,9 +81,9 @@ export const posts: BlogPost[] = [
       { type: "h3", text: "3. Height" },
       { type: "p", text: "A [40 ft high cube](/containers/40-ft-high-cube-containers) adds a foot of height and usually a modest premium over a standard 40." },
       { type: "h3", text: "4. Supply" },
-      { type: "p", text: "Container prices follow global shipping. When ocean freight is busy, fewer containers retire into the domestic market and used prices rise; when it slows, supply loosens. That's why reputable sellers quote current prices rather than publishing a fixed list." },
+      { type: "p", text: "Container prices follow global shipping. When ocean freight is busy, fewer containers retire into the domestic market and used prices rise; when it slows, supply loosens. That’s why reputable sellers quote current prices rather than publishing a fixed list." },
       { type: "h3", text: "5. Delivery" },
-      { type: "p", text: "Distance from the yard, the equipment needed and how easy your site is to reach all affect the delivery cost. A container that's cheap at the yard can be expensive on your driveway. See [how delivery is planned](/services/delivery)." },
+      { type: "p", text: "Distance from the yard, the equipment needed and how easy your site is to reach all affect the delivery cost. A container that’s cheap at the yard can be expensive on your driveway. See [how delivery is planned](/services/delivery)." },
       quoteCta,
       { type: "h2", text: "How to compare two quotes fairly" },
       {
@@ -93,7 +93,7 @@ export const posts: BlogPost[] = [
         rows: [
           ["Is delivery included?", "A low container price plus a separate delivery bill can cost more than an all-in quote."],
           ["What exact grade is it?", "“Used” covers everything from nearly new to as-is."],
-          ["Standard or high cube?", "A 9 ft 6 in unit isn't the same product as an 8 ft 6 in one."],
+          ["Standard or high cube?", "A 9 ft 6 in unit isn’t the same product as an 8 ft 6 in one."],
           ["What does the truck need on site?", "A failed delivery attempt can add cost and delay."],
           ["Can I see photos of the unit or grade?", "Photos set expectations before it arrives."],
         ],
@@ -102,9 +102,9 @@ export const posts: BlogPost[] = [
       {
         type: "ul",
         items: [
-          "**Prices without a ZIP code.** If nobody asked where it's going, delivery isn't really in the number.",
-          "**Vague condition.** “Good condition” isn't a grade. Ask for one-trip, cargo-worthy, wind & water tight or as-is.",
-          "**Pressure to pay by wire before you've spoken to anyone.** Online container scams exist. Deal with a seller you can call, whose truck and yard you can see.",
+          "**Prices without a ZIP code.** If nobody asked where it’s going, delivery isn’t really in the number.",
+          "**Vague condition.** “Good condition” isn’t a grade. Ask for one-trip, cargo-worthy, wind & water tight or as-is.",
+          "**Pressure to pay by wire before you’ve spoken to anyone.** Online container scams exist. Deal with a seller you can call, whose truck and yard you can see.",
         ],
       },
       { type: "h2", text: "What a complete container quote should include" },
@@ -130,7 +130,7 @@ export const posts: BlogPost[] = [
     description:
       "Should you rent or buy a storage container? Compare cost over time, flexibility, pickup and resale value to choose the right option for your project.",
     excerpt:
-      "Renting wins for projects with an end date. Buying wins when you'll need the space for the long haul. Here's how to tell which one you're in.",
+      "Renting wins for projects with an end date. Buying wins when you’ll need the space for the long haul. Here’s how to tell which one you’re in.",
     category: "renting",
     primaryKeyword: "rent vs buy shipping container",
     secondaryKeywords: ["shipping container rental", "storage container rental Michigan", "should I buy or rent a storage container"],
@@ -140,7 +140,7 @@ export const posts: BlogPost[] = [
     supports: ["/services/container-rentals", "/services/container-sales"],
     related: ["shipping-container-cost", "secure-shipping-container-jobsite", "shipping-container-permit-michigan"],
     body: [
-      { type: "p", text: "Both options get you the same steel box on your site. The difference is what happens over time — and what happens when you're done with it." },
+      { type: "p", text: "Both options get you the same steel box on your site. The difference is what happens over time — and what happens when you’re done with it." },
       { type: "h2", text: "The short answer" },
       {
         type: "table",
@@ -150,7 +150,7 @@ export const posts: BlogPost[] = [
           ["Best for", "Projects with an end date", "Long-term or permanent storage"],
           ["Upfront cost", "Lower", "Higher"],
           ["Cost over time", "Adds up month by month", "Paid once"],
-          ["When you're done", "Picked up", "Yours to keep, move or resell"],
+          ["When you’re done", "Picked up", "Yours to keep, move or resell"],
           ["Modifications", "Usually not allowed", "Your choice"],
         ],
       },
@@ -161,21 +161,21 @@ export const posts: BlogPost[] = [
           "**Construction and remodeling** — secure storage for the length of the job, gone when the crew leaves.",
           "**Moves and renovations** — keep belongings on your own driveway instead of across town.",
           "**Seasonal inventory** — extra space for a busy season without owning it year-round.",
-          "**Uncertain needs** — when you're not sure how long you'll need storage, renting keeps options open.",
+          "**Uncertain needs** — when you’re not sure how long you’ll need storage, renting keeps options open.",
         ],
       },
       { type: "h2", text: "When buying makes sense" },
       {
         type: "ul",
         items: [
-          "You'll need the storage for a long time, or indefinitely.",
+          "You’ll need the storage for a long time, or indefinitely.",
           "You plan to modify it — shelving, lighting, a man door, insulation.",
           "You want an asset: a well-kept container holds resale value.",
         ],
       },
       { type: "h2", text: "Do the math over your timeline" },
-      { type: "p", text: "The tipping point depends on the rental rate, the purchase price, delivery and pickup costs, and how long you'll really keep it. Ask for both quotes on the same request and compare total cost over your timeline — then add a cushion, because projects run long." },
-      { type: "callout", title: "Tip", text: "If there's a real chance a short project becomes permanent storage, price the purchase too. Paying rent for longer than planned is the most common way renting ends up costing more." },
+      { type: "p", text: "The tipping point depends on the rental rate, the purchase price, delivery and pickup costs, and how long you’ll really keep it. Ask for both quotes on the same request and compare total cost over your timeline — then add a cushion, because projects run long." },
+      { type: "callout", title: "Tip", text: "If there’s a real chance a short project becomes permanent storage, price the purchase too. Paying rent for longer than planned is the most common way renting ends up costing more." },
       { type: "h2", text: "Three common scenarios" },
       { type: "h3", text: "A four-month kitchen remodel" },
       { type: "p", text: "Furniture and appliances need a dry, lockable home until the work is done. The end date is clear, so **renting** fits — the container leaves when the contractors do." },
@@ -188,7 +188,7 @@ export const posts: BlogPost[] = [
       { type: "callout", title: "Insure what is inside", text: "Whether you rent or buy, the container protects your belongings from weather and casual theft — but it is not insurance. Check that your home, farm or business policy covers contents stored on site." },
       { type: "h2", text: "Either way, the site prep is the same" },
       { type: "p", text: "Rented or bought, the container needs a level, firm spot and room for the delivery truck. Run through our [site-prep guide](/blog/preparing-your-site-for-container-delivery) before delivery day." },
-      { type: "cta", title: "Get both prices", text: "Choose “Rent a container” or “Buy a container” in the quote form — or mention you'd like both.", href: "/services/container-rentals", label: "See Container Rentals" },
+      { type: "cta", title: "Get both prices", text: "Choose “Rent a container” or “Buy a container” in the quote form — or mention you’d like both.", href: "/services/container-rentals", label: "See Container Rentals" },
     ],
   },
   {
@@ -198,7 +198,7 @@ export const posts: BlogPost[] = [
     description:
       "Shipping container rules in Michigan are set locally. Learn who regulates placement, the questions to ask your zoning office, and when HOA rules apply.",
     excerpt:
-      "Michigan doesn't have one statewide rule for storage containers — your city, township or village does. Here's who to call and exactly what to ask.",
+      "Michigan doesn’t have one statewide rule for storage containers — your city, township or village does. Here’s who to call and exactly what to ask.",
     category: "site",
     primaryKeyword: "shipping container permit Michigan",
     secondaryKeywords: ["storage container zoning", "can I put a shipping container on my property", "container ordinance Michigan township"],
@@ -208,8 +208,8 @@ export const posts: BlogPost[] = [
     supports: ["/services/delivery", "/service-area", "/services/container-rentals"],
     related: ["preparing-your-site-for-container-delivery", "rent-vs-buy-shipping-container", "michigan-frost-laws-container-delivery"],
     body: [
-      { type: "p", text: "Whether you can keep a shipping container on your property is decided locally. In Michigan, cities, townships and villages write their own zoning ordinances, and they treat storage containers in very different ways. Some allow them freely on commercial and agricultural land; some allow them temporarily on residential lots; some require a permit or don't allow them at all." },
-      { type: "callout", title: "This isn't legal advice", text: "Rules change and vary street by street. Your local zoning or building office has the final word — call them before delivery." },
+      { type: "p", text: "Whether you can keep a shipping container on your property is decided locally. In Michigan, cities, townships and villages write their own zoning ordinances, and they treat storage containers in very different ways. Some allow them freely on commercial and agricultural land; some allow them temporarily on residential lots; some require a permit or don’t allow them at all." },
+      { type: "callout", title: "This isn’t legal advice", text: "Rules change and vary street by street. Your local zoning or building office has the final word — call them before delivery." },
       { type: "h2", text: "Who regulates container placement" },
       {
         type: "ul",
@@ -228,13 +228,13 @@ export const posts: BlogPost[] = [
           "How long can a temporary container stay?",
           "What setbacks apply from property lines, the street and other buildings?",
           "Are there rules on screening, color or placement in front of the building line?",
-          "Does modifying the container (power, doors, insulation) change how it's classified?",
+          "Does modifying the container (power, doors, insulation) change how it’s classified?",
         ],
       },
       { type: "h2", text: "Temporary vs permanent placement" },
       { type: "p", text: "Many communities treat a container on site for a remodel or move differently from one that stays for good. If your need is short-term, a [container rental](/services/container-rentals) can fit within temporary-use rules more easily." },
       { type: "h2", text: "Farms and commercial properties" },
-      { type: "p", text: "Agricultural and industrial zoning is often more permissive, but don't assume. Commercial sites may also have fire-lane, parking and landscaping requirements that affect where a container can sit." },
+      { type: "p", text: "Agricultural and industrial zoning is often more permissive, but don’t assume. Commercial sites may also have fire-lane, parking and landscaping requirements that affect where a container can sit." },
       { type: "h2", text: "What to tell the zoning office" },
       { type: "p", text: "You will get a clearer answer if you describe the container the way an inspector would see it:" },
       { type: "ul", items: ["**Size:** 20 ft or 40 ft long, 8 ft wide, 8 ft 6 in or 9 ft 6 in tall.", "**Placement:** where on the lot it will sit, and its distance from property lines and buildings.", "**Duration:** a set number of weeks or months, or permanent.", "**Purpose:** storage only, or any modifications such as power or doors.", "**Zoning:** residential, agricultural, commercial or industrial."] },
@@ -255,9 +255,9 @@ export const posts: BlogPost[] = [
     title: "Michigan frost laws: planning a container delivery in spring",
     metaTitle: "Michigan Frost Laws & Spring Container Delivery Timing",
     description:
-      "How Michigan's spring weight restrictions (frost laws) work, who sets them, and how to plan a shipping container delivery around the thaw.",
+      "How Michigan’s spring weight restrictions (frost laws) work, who sets them, and how to plan a shipping container delivery around the thaw.",
     excerpt:
-      "Every spring, Michigan roads go soft as the frost comes out — and weight limits drop. If you need a container in March or April, here's how to plan around it.",
+      "Every spring, Michigan roads go soft as the frost comes out — and weight limits drop. If you need a container in March or April, here’s how to plan around it.",
     category: "site",
     primaryKeyword: "Michigan frost laws",
     secondaryKeywords: ["Michigan seasonal weight restrictions", "spring weight restrictions Michigan", "container delivery spring"],
@@ -267,13 +267,13 @@ export const posts: BlogPost[] = [
     supports: ["/services/delivery", "/service-area"],
     related: ["preparing-your-site-for-container-delivery", "shipping-container-permit-michigan", "keep-storage-container-dry"],
     body: [
-      { type: "p", text: "As Michigan's ground thaws each spring, water trapped beneath the pavement weakens the roadbed. To prevent damage, road agencies reduce the weight trucks can carry on many roads until the frost has drained. Drivers call these “frost laws.”" },
+      { type: "p", text: "As Michigan’s ground thaws each spring, water trapped beneath the pavement weakens the roadbed. To prevent damage, road agencies reduce the weight trucks can carry on many roads until the frost has drained. Drivers call these “frost laws.”" },
       { type: "h2", text: "Who sets the restrictions" },
       {
         type: "ul",
         items: [
           "**State highways:** the Michigan Department of Transportation (MDOT) decides when restrictions start and end, based on measured frost depths, road conditions and forecasts. On routes it designates as “seasonal,” legal axle weights are reduced.",
-          "**County roads and city streets:** county road commissions and city public works departments set their own seasonal limits. These often line up with MDOT's dates but don't always — and many rural roads are restricted when nearby highways aren't.",
+          "**County roads and city streets:** county road commissions and city public works departments set their own seasonal limits. These often line up with MDOT’s dates but don’t always — and many rural roads are restricted when nearby highways aren’t.",
         ],
       },
       { type: "p", text: "Restrictions typically lift from south to north, so the southern Lower Peninsula usually opens up before northern Michigan and the Upper Peninsula." },
@@ -291,7 +291,7 @@ export const posts: BlogPost[] = [
         type: "ol",
         items: [
           "**Order early.** If you need a container in spring, request your quote in winter so delivery can be scheduled before restrictions begin or as soon as they lift.",
-          "**Tell us your road.** Mention a gravel or seasonal road in the quote form's site notes.",
+          "**Tell us your road.** Mention a gravel or seasonal road in the quote form’s site notes.",
           "**Check your county.** Your county road commission publishes current restrictions and posts signs on restricted roads.",
           "**Have a firm drop spot.** Gravel, concrete or asphalt beats lawn during the thaw.",
         ],
@@ -303,7 +303,7 @@ export const posts: BlogPost[] = [
       { type: "h2", text: "Why fall and winter can be a smart time to order" },
       { type: "ul", items: ["Roads are not under spring weight limits.", "Frozen ground is firm for the truck — as long as the route is plowed.", "You will have storage in place before spring projects start."] },
       { type: "p", text: "Plan your base first: a gravel pad or blocks under the corners keep the container level when the ground thaws. See our [site-prep guide](/blog/preparing-your-site-for-container-delivery)." },
-      { type: "callout", title: "Where to check", text: "MDOT posts statewide restriction updates on its truckers page. For local roads, check your county road commission's website or call them." },
+      { type: "callout", title: "Where to check", text: "MDOT posts statewide restriction updates on its truckers page. For local roads, check your county road commission’s website or call them." },
       { type: "p", text: "Sources: [MDOT — annual spring weight restrictions (2026 announcement)](https://www.michigan.gov/mdot/news-outreach/pressreleases/2026/02/12/annual-spring-weight-restrictions-begin-tuesday-to-protect-michigans-roads) · [MDOT information for truckers](https://www.michigan.gov/truckers)." },
       quoteCta,
     ],
@@ -313,7 +313,7 @@ export const posts: BlogPost[] = [
     title: "How to keep a storage container dry: condensation and rust in Michigan",
     metaTitle: "Shipping Container Condensation & Rust: Keep It Dry in Michigan",
     description:
-      "Why shipping containers sweat, and how to prevent condensation, mildew and rust through Michigan's freeze–thaw seasons with venting, airflow and maintenance.",
+      "Why shipping containers sweat, and how to prevent condensation, mildew and rust through Michigan’s freeze–thaw seasons with venting, airflow and maintenance.",
     excerpt:
       "A watertight container can still get wet inside. Condensation is the usual culprit — and a few simple habits keep it under control.",
     category: "using",
@@ -325,7 +325,7 @@ export const posts: BlogPost[] = [
     supports: ["/containers/condition-grades", "/containers/20-ft-shipping-containers", "/containers/40-ft-shipping-containers"],
     related: ["secure-shipping-container-jobsite", "new-vs-used-shipping-containers", "michigan-frost-laws-container-delivery"],
     body: [
-      { type: "p", text: "Steel walls warm and cool quickly. When moist air inside the container meets a cold wall or roof, it condenses — “container rain” that drips onto whatever you've stored. Michigan's big day-to-night temperature swings in spring and fall make it worse." },
+      { type: "p", text: "Steel walls warm and cool quickly. When moist air inside the container meets a cold wall or roof, it condenses — “container rain” that drips onto whatever you’ve stored. Michigan’s big day-to-night temperature swings in spring and fall make it worse." },
       { type: "h2", text: "Where the moisture comes from" },
       {
         type: "ul",
@@ -340,7 +340,7 @@ export const posts: BlogPost[] = [
       {
         type: "ol",
         items: [
-          "**Ventilate.** Most containers have small vents; keep them clear. Additional vents can be added if you'll store moisture-sensitive goods.",
+          "**Ventilate.** Most containers have small vents; keep them clear. Additional vents can be added if you’ll store moisture-sensitive goods.",
           "**Use moisture absorbers.** Desiccant packs or hanging moisture absorbers pull water out of the air. Replace them as they fill.",
           "**Get things off the floor.** Store on pallets or shelving so air moves underneath.",
           "**Leave a gap from the walls.** A few inches lets air circulate and keeps items from touching cold steel.",
@@ -366,7 +366,7 @@ export const posts: BlogPost[] = [
         ],
       },
       { type: "callout", title: "Choosing the right grade helps", text: "A new or cargo-worthy container starts with better paint and seals. For long-term storage of sensitive goods, it can be worth the step up — see our condition grade guide." },
-      { type: "p", text: "Read the [condition grade guide](/containers/condition-grades), or ask us which grade suits what you're storing." },
+      { type: "p", text: "Read the [condition grade guide](/containers/condition-grades), or ask us which grade suits what you’re storing." },
       quoteCta,
       { type: "h2", text: "A seasonal checklist" },
       { type: "table", caption: "Seasonal maintenance for a storage container in Michigan", head: ["Season", "Check"], rows: [["Spring", "Clear debris from the roof, check door gaskets, air it out on dry days, re-level if the ground shifted over winter."], ["Summer", "Look for new scratches or rust spots and touch them up while it is warm and dry."], ["Fall", "Replace moisture absorbers, clear leaves from the roof, lubricate door hinges and lock rods."], ["Winter", "Keep heavy snow off the roof and the area in front of the doors clear."]] },
@@ -379,7 +379,7 @@ export const posts: BlogPost[] = [
     description:
       "Practical ways to secure a shipping container: lock boxes, puck locks, placement, lighting and inventory habits that deter theft on jobsites and farms.",
     excerpt:
-      "A steel container is already tough to break into. The weak point is almost always the lock — here's how to fix that and make your container a harder target.",
+      "A steel container is already tough to break into. The weak point is almost always the lock — here’s how to fix that and make your container a harder target.",
     category: "using",
     primaryKeyword: "shipping container security",
     secondaryKeywords: ["jobsite storage container", "container lock box", "construction site storage security"],
@@ -389,9 +389,9 @@ export const posts: BlogPost[] = [
     supports: ["/uses", "/containers/20-ft-shipping-containers", "/services/container-rentals"],
     related: ["keep-storage-container-dry", "rent-vs-buy-shipping-container", "20-ft-vs-40-ft-shipping-container"],
     body: [
-      { type: "p", text: "Contractors use containers because they're far harder to break into than a trailer or a shed. But thieves go for the easiest point, and on a container that's the padlock. Get the lock right and you've done most of the work." },
+      { type: "p", text: "Contractors use containers because they’re far harder to break into than a trailer or a shed. But thieves go for the easiest point, and on a container that’s the padlock. Get the lock right and you’ve done most of the work." },
       { type: "h2", text: "1. Use a lock box" },
-      { type: "p", text: "A lock box is a steel shroud welded around the door handles. It covers the padlock's shackle so bolt cutters and pry bars can't get a grip. Many containers have one; if yours doesn't, one can be welded on." },
+      { type: "p", text: "A lock box is a steel shroud welded around the door handles. It covers the padlock’s shackle so bolt cutters and pry bars can’t get a grip. Many containers have one; if yours doesn’t, one can be welded on." },
       { type: "h2", text: "2. Choose a shrouded or puck lock" },
       { type: "p", text: "A round “puck” or disc padlock hides its shackle almost entirely and fits neatly inside a lock box. Avoid long-shackle padlocks — the exposed steel is exactly what cutters need." },
       { type: "h2", text: "3. Place it smart" },
@@ -406,7 +406,7 @@ export const posts: BlogPost[] = [
       { type: "h2", text: "4. Add light and eyes" },
       { type: "p", text: "A motion-activated light over the doors and a visible camera are cheap deterrents. Battery and solar options work on sites without power." },
       { type: "h2", text: "5. Keep an inventory" },
-      { type: "p", text: "Photograph serial numbers and keep a list of what's inside. It helps with insurance claims and with recovering stolen equipment." },
+      { type: "p", text: "Photograph serial numbers and keep a list of what’s inside. It helps with insurance claims and with recovering stolen equipment." },
       { type: "h2", text: "6. Secure what is inside" },
       { type: "ul", items: ["Chain high-value equipment to the container’s lashing rings.", "Keep small, expensive tools in a locked gang box inside the container.", "Avoid stacking boxes in a way that advertises what is inside when the doors open."] },
       { type: "h2", text: "7. Check your insurance" },
@@ -416,7 +416,7 @@ export const posts: BlogPost[] = [
       { type: "h2", text: "A quick security checklist" },
       { type: "ul", items: ["Lock box fitted, with a puck or shrouded lock.", "Doors facing an occupied or visible area.", "Motion light and a visible camera.", "High-value items chained or boxed.", "Inventory with serial numbers kept off site."] },
       { type: "h2", text: "Pick the right size for the site" },
-      { type: "p", text: "A [20 ft container](/containers/20-ft-shipping-containers) fits tight urban and residential jobsites; a [40 ft unit](/containers/40-ft-shipping-containers) holds a whole crew's tools and materials. For a single project, consider a [container rental](/services/container-rentals)." },
+      { type: "p", text: "A [20 ft container](/containers/20-ft-shipping-containers) fits tight urban and residential jobsites; a [40 ft unit](/containers/40-ft-shipping-containers) holds a whole crew’s tools and materials. For a single project, consider a [container rental](/services/container-rentals)." },
       quoteCta,
     ],
   },
@@ -427,7 +427,7 @@ export const posts: BlogPost[] = [
     description:
       "High cube vs standard containers compared: height, door opening, volume and weight, plus when the extra foot of a 9'6\" high cube is worth paying for.",
     excerpt:
-      "A high cube is a foot taller than a standard container. Sometimes that foot is essential; sometimes it's money you don't need to spend.",
+      "A high cube is a foot taller than a standard container. Sometimes that foot is essential; sometimes it’s money you don’t need to spend.",
     category: "buying",
     primaryKeyword: "high cube vs standard container",
     secondaryKeywords: ["40 ft high cube container", "high cube container dimensions", "9'6\" container"],
@@ -455,7 +455,7 @@ export const posts: BlogPost[] = [
       {
         type: "ul",
         items: [
-          "**Tall equipment** that won't clear a 7 ft 6 in door.",
+          "**Tall equipment** that won’t clear a 7 ft 6 in door.",
           "**Shelving or racking** where an extra tier pays for itself.",
           "**Conversions** — insulation, lighting and ductwork eat headroom fast.",
           "**Bulky, light goods** where you run out of space before weight.",
@@ -485,7 +485,7 @@ export const posts: BlogPost[] = [
     metaTitle: "20 ft vs 40 ft Shipping Container: Which Size Should You Buy?",
     description:
       "Compare 20 ft and 40 ft shipping containers on space, cost per square foot, delivery room and site fit — with a simple way to decide.",
-    excerpt: "Most buyers end up choosing between the two standard sizes. Here's how floor space, cost per square foot and your site decide it.",
+    excerpt: "Most buyers end up choosing between the two standard sizes. Here’s how floor space, cost per square foot and your site decide it.",
     category: "buying",
     primaryKeyword: "20ft vs 40ft container",
     secondaryKeywords: ["shipping container sizes", "20 ft container dimensions", "40 ft container dimensions"],
@@ -495,7 +495,7 @@ export const posts: BlogPost[] = [
     supports: ["/containers", "/containers/20-ft-shipping-containers", "/containers/40-ft-shipping-containers"],
     related: ["high-cube-vs-standard-container", "shipping-container-cost", "preparing-your-site-for-container-delivery"],
     body: [
-      { type: "p", text: "Most buyers end up choosing between the two standard sizes. The right answer usually comes down to three things: how much you're storing, how much room you have for delivery, and cost per square foot." },
+      { type: "p", text: "Most buyers end up choosing between the two standard sizes. The right answer usually comes down to three things: how much you’re storing, how much room you have for delivery, and cost per square foot." },
       { type: "h2", text: "The quick comparison" },
       {
         type: "table",
@@ -513,7 +513,7 @@ export const posts: BlogPost[] = [
         type: "ul",
         items: [
           "Your site is a driveway, alley-access lot or tight jobsite.",
-          "You're storing up to about 10 pallets — tools, materials or household goods.",
+          "You’re storing up to about 10 pallets — tools, materials or household goods.",
           "You may move it again, and want the easiest unit to relocate.",
         ],
       },
@@ -522,12 +522,12 @@ export const posts: BlogPost[] = [
         type: "ul",
         items: [
           "You have an open yard, farm or commercial lot with room for the truck and trailer.",
-          "You need more than about 10 pallets' worth of space, now or later.",
+          "You need more than about 10 pallets’ worth of space, now or later.",
           "Cost per square foot matters more than total price.",
         ],
       },
       { type: "h2", text: "Why a 40 often costs less per square foot" },
-      { type: "p", text: "A 40 ft container doesn't usually cost twice as much as a 20. The handling and trucking involved in delivering either size are similar, so the delivered price per square foot is typically lower on the 40. More on what drives price in [how much does a shipping container cost](/blog/shipping-container-cost)." },
+      { type: "p", text: "A 40 ft container doesn’t usually cost twice as much as a 20. The handling and trucking involved in delivering either size are similar, so the delivered price per square foot is typically lower on the 40. More on what drives price in [how much does a shipping container cost](/blog/shipping-container-cost)." },
       quoteCta,
       { type: "h2", text: "Which size different customers usually choose" },
       { type: "table", caption: "Typical size by use", head: ["Customer", "Usual choice", "Why"], rows: [["Homeowner (move or remodel)", "20 ft", "Fits a driveway; enough for most household contents"], ["Contractor (single trade)", "20 ft", "Fits tight jobsites near the work"], ["Contractor (multi-trade, long project)", "40 ft", "Room for a whole crew’s tools and materials"], ["Farm", "40 ft or 40 ft high cube", "Open land; equipment and bulk supplies"], ["Retail or warehouse overflow", "40 ft", "Most pallets per delivery"]] },
@@ -553,7 +553,7 @@ export const posts: BlogPost[] = [
     description:
       "A practical checklist for container delivery: base and leveling, truck access and clearance, door orientation, permits and Michigan seasonal issues.",
     excerpt:
-      "A few hours of preparation prevents the two most common delivery problems: a truck that can't reach the spot, and a container that won't sit level.",
+      "A few hours of preparation prevents the two most common delivery problems: a truck that can’t reach the spot, and a container that won’t sit level.",
     category: "site",
     primaryKeyword: "shipping container site preparation",
     secondaryKeywords: ["shipping container foundation", "container delivery requirements", "what to put under a shipping container"],
@@ -563,7 +563,7 @@ export const posts: BlogPost[] = [
     supports: ["/services/delivery", "/service-area"],
     related: ["michigan-frost-laws-container-delivery", "shipping-container-permit-michigan", "keep-storage-container-dry"],
     body: [
-      { type: "p", text: "A container is only as useful as where it ends up. A few hours of preparation prevents the two most common delivery problems: a truck that can't reach the spot, and a container that settles out of level so its doors won't close." },
+      { type: "p", text: "A container is only as useful as where it ends up. A few hours of preparation prevents the two most common delivery problems: a truck that can’t reach the spot, and a container that settles out of level so its doors won’t close." },
       { type: "h2", text: "1. Choose the spot" },
       {
         type: "ul",
@@ -625,7 +625,7 @@ export const posts: BlogPost[] = [
     description:
       "One-trip, cargo-worthy or wind & water tight? How new and used shipping containers differ in condition, lifespan and value, and how to choose a grade.",
     excerpt:
-      "“Used” covers everything from a nearly new box to one that's seen fifteen years at sea. Knowing the grade matters more than the word.",
+      "“Used” covers everything from a nearly new box to one that’s seen fifteen years at sea. Knowing the grade matters more than the word.",
     category: "buying",
     primaryKeyword: "new vs used shipping containers",
     secondaryKeywords: ["one trip container", "cargo worthy container", "wind and water tight container", "used shipping containers Michigan"],
@@ -635,7 +635,7 @@ export const posts: BlogPost[] = [
     supports: ["/containers/condition-grades", "/services/container-sales"],
     related: ["shipping-container-cost", "keep-storage-container-dry", "high-cube-vs-standard-container"],
     body: [
-      { type: "p", text: "“Used” covers a wide range — from a nearly new box with a few scuffs to a well-traveled unit that's seen fifteen years at sea. Knowing the grade matters more than the word new or used." },
+      { type: "p", text: "“Used” covers a wide range — from a nearly new box with a few scuffs to a well-traveled unit that’s seen fifteen years at sea. Knowing the grade matters more than the word new or used." },
       { type: "h2", text: "New (one-trip) containers" },
       { type: "p", text: "Built recently and shipped loaded once, usually from the factory overseas. Expect uniform paint, tight door seals and few dents. Pick one-trip when the container will be visible to customers, when you plan to modify it, or when you want the longest service life." },
       { type: "h2", text: "Used containers" },
@@ -644,7 +644,7 @@ export const posts: BlogPost[] = [
       { type: "h3", text: "Wind & water tight (WWT)" },
       { type: "p", text: "Retired from shipping but sealed against weather. The most popular grade for on-site storage because it does the job at the lowest price." },
       { type: "h3", text: "As-is" },
-      { type: "p", text: "Sold with known problems. Only worth it for parts, projects that replace panels anyway, or storage where leaks don't matter." },
+      { type: "p", text: "Sold with known problems. Only worth it for parts, projects that replace panels anyway, or storage where leaks don’t matter." },
       { type: "h2", text: "How to choose" },
       {
         type: "table",

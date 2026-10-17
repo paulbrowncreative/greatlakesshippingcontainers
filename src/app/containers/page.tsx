@@ -22,11 +22,11 @@ export const metadata = pageMetadata({
 const faqs = [
   {
     q: "What size shipping container is most popular?",
-    a: "The 20 ft and 40 ft standard containers. The 20 fits more sites; the 40 gives twice the floor space for a delivery cost that's usually similar.",
+    a: "The 20 ft and 40 ft standard containers. The 20 fits more sites; the 40 gives twice the floor space for a delivery cost that’s usually similar.",
   },
   {
     q: "Are inside dimensions the same on every container?",
-    a: "Very close, but not identical. Manufacturers and build years differ by an inch or two. If an exact fit matters — racking, a vehicle, a machine — tell us the measurement and we'll confirm it against the actual unit.",
+    a: "Very close, but not identical. Manufacturers and build years differ by an inch or two. If an exact fit matters — racking, a vehicle, a machine — tell us the measurement and we’ll confirm it against the actual unit.",
   },
   {
     q: "Do you offer other sizes?",

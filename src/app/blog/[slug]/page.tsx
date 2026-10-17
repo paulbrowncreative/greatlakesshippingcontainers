@@ -86,7 +86,7 @@ export default async function PostPage({ params }: Props) {
             )}
             <div className="callout callout--warn">
               <p className="callout__title">Ready for a price?</p>
-              <p>Tell us the size, ZIP code and timing. We&apos;ll reply with a delivered quote.</p>
+              <p>Tell us the size, ZIP code and timing. We’ll reply with a delivered quote.</p>
               <p className="cluster mt-4">
                 <Link href="/quote" className="btn btn--sm">
                   Get a Quote

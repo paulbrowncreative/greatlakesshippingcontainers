@@ -4,7 +4,7 @@ import { TrackedLink } from "./TrackedLink";
 type Props = { title?: string; body?: string; ctaLabel?: string; ctaHref?: string; location: string };
 
 export function CtaBand({
-  title = "Tell us where it's going. We'll quote the rest.",
+  title = "Tell us where it’s going. We’ll quote the rest.",
   body = "Size, condition and delivery to your ZIP code — one written quote, usually with a few quick questions about your site. No obligation.",
   ctaLabel = "Request a Quote",
   ctaHref = "/quote",

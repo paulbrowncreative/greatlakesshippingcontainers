@@ -19,7 +19,7 @@ function Group({ title, specs }: { title: string; specs: Spec[] }) {
   );
 }
 
-/** Spec table styled after the data plate riveted to a container's door. */
+/** Spec table styled after the data plate riveted to a container’s door. */
 export function SpecPlate({ c }: { c: ContainerProduct }) {
   return (
     <section className="plate" aria-labelledby="spec-plate-title">
@@ -34,7 +34,7 @@ export function SpecPlate({ c }: { c: ContainerProduct }) {
       <Group title="Capacity" specs={c.capacity} />
       <p className="plate__foot">
         Typical ISO dry-container figures. Exact dimensions and weights vary by manufacturer and build year — the specific
-        unit&apos;s CSC plate governs, and we confirm it on your quote.
+        unit’s CSC plate governs, and we confirm it on your quote.
       </p>
     </section>
   );

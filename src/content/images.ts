@@ -1,6 +1,6 @@
 /**
  * Image registry. `illustrative: true` marks licensed stock (or photos whose origin
- * isn't the company's own yard) — those render with an "Illustrative photo" caption.
+ * isn’t the company’s own yard) — those render with an "Illustrative photo" caption.
  * Company photos are supplied by the owner (`illustrative: false`); they show example
  * units, so captions never imply a specific unit is in stock.
  */
@@ -102,7 +102,7 @@ export const images = {
     width: 1800,
     height: 1202,
     alt: "A farm worker loading hay bales into an open shipping container",
-    credit: unsplash("Land O'Lakes, Inc.", "1761839257874-e56dfa2260cb"),
+    credit: unsplash("Land O’Lakes, Inc.", "1761839257874-e56dfa2260cb"),
     illustrative: true,
   },
 } satisfies Record<string, SiteImage>;

@@ -104,7 +104,7 @@ export default async function ContainerPage({ params }: Props) {
             <p className="eyebrow">Before you order</p>
             <h2 id="before-you-order">Site &amp; delivery considerations</h2>
             <p className="lede mt-4">
-              What to check before a {c.shortName.toLowerCase()} arrives. We&apos;ll confirm anything you&apos;re unsure about when we
+              What to check before a {c.shortName.toLowerCase()} arrives. We’ll confirm anything you’re unsure about when we
               quote.
             </p>
             <p className="mt-5">
@@ -143,7 +143,7 @@ export default async function ContainerPage({ params }: Props) {
             ))}
             <div className="card" style={{ display: "grid", alignContent: "center", gap: "var(--space-3)" }}>
               <h3>New or used?</h3>
-              <p>One-trip, cargo-worthy and wind &amp; water tight units differ in price, appearance and what they&apos;re fit for.</p>
+              <p>One-trip, cargo-worthy and wind &amp; water tight units differ in price, appearance and what they’re fit for.</p>
               <Link href="/containers/condition-grades" className="text-link">
                 Compare condition grades
               </Link>
@@ -156,7 +156,7 @@ export default async function ContainerPage({ params }: Props) {
       <CtaBand
         location={`product_${c.slug}`}
         title={`Get a delivered price on a ${c.shortName}`}
-        body="Tell us how many, your ZIP code and when you need it. We'll confirm the unit's grade and your site access, then send one price in writing."
+        body="Tell us how many, your ZIP code and when you need it. We’ll confirm the unit’s grade and your site access, then send one price in writing."
         ctaLabel="Request a Quote"
         ctaHref={quoteHref}
       />

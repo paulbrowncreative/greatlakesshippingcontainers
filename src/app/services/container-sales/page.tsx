@@ -14,7 +14,7 @@ import { images } from "@/content/images";
 import { pageMetadata, serviceSchema } from "@/lib/seo";
 
 const description =
-  "Buy a 20 ft, 40 ft or high cube shipping container in Michigan: how quotes work, what's included, condition grades and what to expect through delivery.";
+  "Buy a 20 ft, 40 ft or high cube shipping container in Michigan: how quotes work, what’s included, condition grades and what to expect through delivery.";
 
 export const metadata = pageMetadata({
   title: "Buy a Shipping Container in Michigan | Container Sales",
@@ -24,8 +24,8 @@ export const metadata = pageMetadata({
 
 const faqs = [
   {
-    q: "Why don't you list prices online?",
-    a: "Container prices move with supply and condition, and delivery cost depends on your exact location and site. A posted price that excludes delivery isn't the price you'll pay — so we quote the full delivered number instead.",
+    q: "Why don’t you list prices online?",
+    a: "Container prices move with supply and condition, and delivery cost depends on your exact location and site. A posted price that excludes delivery isn’t the price you’ll pay — so we quote the full delivered number instead.",
   },
   {
     q: "Can I buy more than one container?",
@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     q: "What should I ask any container seller?",
-    a: "Which condition grade the unit is, whether delivery is included in the price, what the delivery truck needs on site, and what happens if the truck can't reach your spot. You should get clear answers to all four before you pay.",
+    a: "Which condition grade the unit is, whether delivery is included in the price, what the delivery truck needs on site, and what happens if the truck can’t reach your spot. You should get clear answers to all four before you pay.",
   },
   {
     q: "Do you rent containers too?",
@@ -41,7 +41,7 @@ const faqs = [
   },
   {
     q: "Can I modify the container after I buy it?",
-    a: "It's yours, so yes — though if you plan to add doors, windows or insulation, a one-trip or high cube unit is usually the better starting point. Tell us your plans when you request a quote.",
+    a: "It’s yours, so yes — though if you plan to add doors, windows or insulation, a one-trip or high cube unit is usually the better starting point. Tell us your plans when you request a quote.",
   },
 ];
 
@@ -99,7 +99,7 @@ export default function SalesPage() {
           <ol className="steps steps--4" role="list">
             <li className="step">
               <h3>Request a quote</h3>
-              <p>Size, quantity, ZIP code and timing. Not sure on size? We&apos;ll help.</p>
+              <p>Size, quantity, ZIP code and timing. Not sure on size? We’ll help.</p>
             </li>
             <li className="step">
               <h3>Review your quote</h3>
@@ -111,7 +111,7 @@ export default function SalesPage() {
             </li>
             <li className="step">
               <h3>Take delivery</h3>
-              <p>The container is placed where you&apos;ve chosen, doors facing the way you want.</p>
+              <p>The container is placed where you’ve chosen, doors facing the way you want.</p>
             </li>
           </ol>
         </div>
