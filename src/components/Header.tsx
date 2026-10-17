@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { business, phoneHref } from "@/content/business";
 import { primaryNav } from "@/content/site";
-import { BrandMark } from "./BrandMark";
+import { BrandLogo } from "./BrandLogo";
 import { IconChevron, IconClose, IconMenu, IconPhone } from "./Icons";
 import { TrackedLink } from "./TrackedLink";
 
@@ -81,11 +81,7 @@ export function Header() {
     <header className="site-header" onKeyDown={drawerOpen ? trapFocus : undefined}>
       <div className="container site-header__inner">
         <Link href="/" className="brand" aria-label={`${business.name} — home`}>
-          <BrandMark className="brand__mark" />
-          <span className="brand__text">
-            <span className="brand__name">Great Lakes</span>
-            <span className="brand__sub">Shipping Containers</span>
-          </span>
+          <BrandLogo priority />
         </Link>
 
         <nav className="nav" aria-label="Main" ref={navRef}>

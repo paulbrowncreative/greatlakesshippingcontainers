@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { business, phoneHref } from "@/content/business";
 import { footerNav } from "@/content/site";
-import { BrandMark } from "./BrandMark";
+import { BrandLogo } from "./BrandLogo";
 import { IconFacebook } from "./Icons";
 
 export function Footer() {
@@ -13,11 +13,7 @@ export function Footer() {
         <div className="footer-grid">
           <div>
             <Link href="/" className="brand" aria-label={`${business.name} — home`}>
-              <BrandMark className="brand__mark" />
-              <span className="brand__text">
-                <span className="brand__name">Great Lakes</span>
-                <span className="brand__sub">Shipping Containers</span>
-              </span>
+              <BrandLogo />
             </Link>
             <p className="mt-4 max-prose">
               {business.legalName} sells and rents 20 ft and 40 ft shipping containers, delivered to sites in {business.state} on

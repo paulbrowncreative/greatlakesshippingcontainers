@@ -88,6 +88,14 @@ export const images = {
     illustrative: false,
   },
 
+  truckYard: {
+    src: "/images/glsc-truck-container-yard.jpg",
+    width: 1320,
+    height: 947,
+    alt: "The Great Lakes Shipping Containers pickup and gooseneck trailer parked beside stacks of 40 ft high cube containers on a sunny day",
+    illustrative: false,
+  },
+
   // --- Illustrative stock photos ---
   agriculture: {
     src: "/images/container-agriculture-hay.jpg",

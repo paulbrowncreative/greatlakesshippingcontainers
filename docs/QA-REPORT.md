@@ -22,9 +22,9 @@ Home · Containers hub · 20 ft · 40 ft · 40 ft High Cube · Condition Grades 
 | ESLint (next/core-web-vitals + TS) | Pass, 0 warnings |
 | Vitest unit tests | **39/39 pass**: validation, sanitization, HTML escaping, header-injection-safe subject, API handler (recipient, reply-to, origin, honeypot, fill time, size limit, provider failure, network failure, not configured → 503, dedupe, rate limit, Turnstile), size chooser, rental-length rule |
 | `next build` | Pass. 27 routes, all pages static, only `/api/inquiry` dynamic |
-| Playwright e2e (production build + mock Resend API) | **19/19 pass** |
+| Playwright e2e (production build + mock Resend API) | **20/20 pass** |
 
-E2E coverage: every sitemap page returns 200 with a unique title (≤70 chars), unique description (50–160), correct canonical, exactly one H1, no skipped heading levels, no `<img>` without alt, valid JSON-LD and no page errors; every internal link resolves; robots, sitemap, legacy redirects (308) and 404 with noindex; security headers; API rejects foreign origins and GET; desktop dropdown keyboard behavior; chooser → pre-filled quote; FAQ keyboard toggle; **full quote submission to the mock email API, checking recipient `chris@stierenterprise.com`, reply-to, subject and body**; provider failure shows an error, keeps form values and sends nothing; contact submission; thank-you page doesn't claim success without a reference; rental CTA pre-selects a rental quote; tap-to-call link; no horizontal overflow at 360/414/768 px on 14 pages; mobile drawer open, Escape, focus return and navigation; sticky bar behavior; 44 px tap targets.
+E2E coverage: every sitemap page returns 200 with a unique title (≤70 chars), unique description (50–160), correct canonical, exactly one H1, no skipped heading levels, no `<img>` without alt, valid JSON-LD and no page errors; every internal link resolves; robots, sitemap, legacy redirects (308) and 404 with noindex; security headers; API rejects foreign origins and GET; desktop dropdown keyboard behavior; chooser → pre-filled quote; FAQ keyboard toggle; **full quote submission to the mock email API, checking recipient `chris@stierenterprise.com`, reply-to, subject and body**; provider failure shows an error, keeps form values and sends nothing; contact submission; thank-you page doesn't claim success without a reference; rental CTA pre-selects a rental quote; tap-to-call link; no element wider than the screen at 320/360/414/768 px on 15 pages (measured per element, because mobile emulation hides page-level overflow); mobile drawer open, Escape, focus return and navigation; sticky bar behavior; 44 px tap targets.
 
 ## 4. Defects found and fixed during QA
 
@@ -34,6 +34,7 @@ E2E coverage: every sitemap page returns 200 with a unique title (≤70 chars), 
 4. Thank-you page showed "sent" on direct visits; it now confirms only with a valid reference.
 5. Delivery copy wrongly assumed a tilt-bed truck. Owner photos show a pickup with a gooseneck flatbed trailer, so all delivery guidance was rewritten and the tilt-bed clearance figures removed.
 6. Product "Also consider" row referenced a non-product slug; fixed.
+8. A long, non-wrapping button label on About overflowed narrow phones. The old overflow test missed it because mobile emulation widens the layout viewport. Fixed the label, allowed button text to wrap on small screens, and rewrote the test to measure each element against the screen width.
 7. Container cards rendered with page-level H2 styling on `/containers` (huge, blue, underlined); card headings are now styled at either level.
 
 ## 5. Visual QA

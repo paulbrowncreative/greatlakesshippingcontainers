@@ -48,7 +48,7 @@ export function organizationSchema() {
     name: business.name,
     legalName: business.legalName,
     url: siteUrl,
-    logo: absoluteUrl("/icon.svg"),
+    logo: absoluteUrl("/brand/logo.png"),
     image: absoluteUrl(images.hero.src),
     slogan: business.tagline,
     areaServed: { "@type": "State", name: business.state },

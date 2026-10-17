@@ -1,14 +1,31 @@
 import { expect, test } from "@playwright/test";
 
-const paths = ["/", "/containers", "/containers/40-ft-high-cube-containers", "/containers/condition-grades", "/services/container-sales", "/services/delivery", "/uses", "/service-area", "/guides", "/guides/preparing-your-site-for-container-delivery", "/about", "/contact", "/quote", "/privacy"];
+const paths = ["/", "/containers", "/services/container-rentals", "/containers/40-ft-high-cube-containers", "/containers/condition-grades", "/services/container-sales", "/services/delivery", "/uses", "/service-area", "/guides", "/guides/preparing-your-site-for-container-delivery", "/about", "/contact", "/quote", "/privacy"];
 
-for (const width of [360, 414, 768]) {
+for (const width of [320, 360, 414, 768]) {
   test(`no horizontal overflow at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 860 });
     for (const path of paths) {
       await page.goto(path);
-      const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
-      expect(overflow, `${path} @ ${width}`).toBeLessThanOrEqual(0);
+      // Mobile emulation widens the layout viewport to fit overflowing content, so compare every
+      // element against the real screen width, skipping content inside intentional scroll areas.
+      const offenders = await page.evaluate((vw) => {
+        const scrolls = (el: Element | null): boolean => {
+          for (let n = el?.parentElement; n && n !== document.body; n = n.parentElement) {
+            const ox = getComputedStyle(n).overflowX;
+            if (ox === "auto" || ox === "scroll" || ox === "hidden" || ox === "clip") return true;
+          }
+          return false;
+        };
+        return [...document.querySelectorAll("body *")]
+          .filter((el) => {
+            const r = el.getBoundingClientRect();
+            return r.width > 0 && r.right > vw + 1 && getComputedStyle(el).position !== "fixed" && !scrolls(el);
+          })
+          .slice(0, 3)
+          .map((el) => `${el.tagName.toLowerCase()}.${el.className} → ${Math.round(el.getBoundingClientRect().right)}px`);
+      }, width);
+      expect(offenders, `${path} @ ${width}`).toEqual([]);
     }
   });
 }

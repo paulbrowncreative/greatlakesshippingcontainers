@@ -43,7 +43,7 @@ export default function AboutPage() {
               </Link>
             </p>
           </div>
-          <Photo image={images.deliveryYard} aspect="4x3" sizes="(min-width: 60rem) 45vw, 100vw" companyCaption="Our truck and trailer at the container yard" />
+          <Photo image={images.truckYard} aspect="4x3" sizes="(min-width: 60rem) 45vw, 100vw" companyCaption="Our truck and gooseneck trailer at the container yard" />
         </div>
       </section>
       <section className="section section--dark" aria-labelledby="commitments">
@@ -71,7 +71,7 @@ export default function AboutPage() {
           </p>
           <p>
             <a className="btn btn--secondary" href={business.social.facebook} target="_blank" rel="noopener">
-              Great Lakes Shipping Containers on Facebook<span className="sr-only"> (opens in a new tab)</span>
+              Follow Us on Facebook<span className="sr-only"> (opens in a new tab)</span>
             </a>
           </p>
         </div>

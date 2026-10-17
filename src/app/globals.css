@@ -209,6 +209,7 @@ h4 { font-size: var(--fs-h4); font-family: var(--font-display); font-weight: 600
 .btn--light { --btn-bg: transparent; --btn-fg: var(--white); --btn-border: rgb(255 255 255 / 0.7); }
 .btn--light:hover { --btn-bg: var(--white); --btn-fg: var(--ink); --btn-border: var(--white); }
 .btn--block { width: 100%; }
+@media (max-width: 30rem) { .btn { white-space: normal; text-align: center; line-height: 1.15; } }
 .btn[disabled], .btn[aria-disabled="true"] { opacity: 0.6; cursor: not-allowed; }
 .text-link {
   display: inline-flex; align-items: center; gap: 0.35em; font-weight: 600; color: var(--lake-700); text-decoration: none;
@@ -228,10 +229,8 @@ h4 { font-size: var(--fs-h4); font-family: var(--font-display); font-weight: 600
 .site-header__inner { display: flex; align-items: center; gap: var(--space-5); height: var(--header-h); }
 .brand { display: inline-flex; align-items: center; gap: var(--space-3); color: var(--white); text-decoration: none; flex: none; }
 .brand:hover { color: var(--white); }
-.brand__mark { height: 2.4rem; width: auto; aspect-ratio: 1186 / 774; flex: none; color: var(--brand-mark-on-dark); }
-.brand__text { display: grid; line-height: 1; }
-.brand__name { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; letter-spacing: 0.04em; text-transform: uppercase; }
-.brand__sub { font-family: var(--font-display); font-weight: 600; font-size: 0.78rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--lake-200); margin-top: 0.3rem; }
+.brand__logo { display: block; height: 2.6rem; width: auto; }
+@media (max-width: 22rem) { .brand__logo { height: 2.2rem; } }
 .nav { display: none; margin-left: auto; }
 .nav__list { display: flex; align-items: center; gap: var(--space-1); list-style: none; padding: 0; }
 .nav__item { position: relative; }
