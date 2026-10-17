@@ -51,3 +51,4 @@ No fabricated reviews, ratings, prices, inventory, addresses, phone numbers or c
 - **Typography:** curly apostrophes and quotes (’ “ ”); em dash (—) for breaks, en dash (–) for ranges (10–20). Feet and inch marks stay straight (9'6") so they match how people search.
 - **Terms:** ZIP code · jobsite · high cube · cargo-worthy · one-trip · wind & water tight · 20 ft / 40 ft (space, no period).
 - **Links:** underlines are continuous (`text-decoration-skip-ink: none`), so descenders like g and y never break them.
+- **Color:** light blue `#4FB8F2` is the primary color; black `#0B0B0C` and white support it. Black text on light blue is 8.9:1; **never put white text on light blue** (2.2:1, fails WCAG). On white, use the text-safe blue `#0A6AA8` (5.8:1) for links and small accents. Tints: `#DDEFFB`, `#D2EAFA`. All tokens are in `src/app/globals.css`.

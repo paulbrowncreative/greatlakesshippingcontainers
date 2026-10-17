@@ -137,3 +137,17 @@ Each post targets one primary phrase and links into the pages it supports. Those
 | new-vs-used-shipping-containers | new vs used shipping containers | Commercial investigation | Grades, sales |
 
 **Next posts to consider** (once the owner can confirm details): container modifications (if offered), farm storage case study with photos, a real customer delivery story (with permission), and pages for each confirmed Michigan delivery market.
+
+## 11. Color update (client direction, October 17, 2026)
+
+The client asked for light blue as the main color, with white and black supporting. This replaces the navy and corten palette in §7.
+
+| Role | Color | Use |
+|---|---|---|
+| Primary | `#4FB8F2` light blue | Buttons (black text), CTA bands, full-blue sections, badges, accents on black |
+| Supporting | `#0B0B0C` black | Header, hero overlay, page banners, footer, dark sections |
+| Supporting | `#FFFFFF` white | Content areas, cards, forms |
+| Text-safe blue | `#0A6AA8` | Links and small accents on white or tints (5.8:1) |
+| Tints | `#DDEFFB`, `#D2EAFA` | Alternating section backgrounds |
+
+The official logo stays royal blue (`#143AC4`) wherever it appears on white. On dark backgrounds, the logo's map now uses the light blue. Every pairing was contrast-checked, and the axe scan reports 0 contrast violations.

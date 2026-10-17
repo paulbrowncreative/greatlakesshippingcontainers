@@ -134,7 +134,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section section--dark" aria-labelledby="uses-heading">
+      <section className="section section--sky" aria-labelledby="uses-heading">
         <div className="container">
           <div className="section-head section-head--split">
             <div>

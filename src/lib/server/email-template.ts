@@ -84,27 +84,27 @@ export function buildHtml(i: Inquiry, reference: string): string {
     r
       .map(
         ([k, v]) =>
-          `<tr><th align="left" valign="top" style="padding:8px 12px 8px 0;color:#5b6b7b;font-weight:600;white-space:nowrap;font-size:14px">${escapeHtml(k)}</th><td style="padding:8px 0;color:#0b1f33;font-size:15px">${escapeHtml(v).replace(/\n/g, "<br>")}</td></tr>`,
+          `<tr><th align="left" valign="top" style="padding:8px 12px 8px 0;color:#5b6b7b;font-weight:600;white-space:nowrap;font-size:14px">${escapeHtml(k)}</th><td style="padding:8px 0;color:#0b0b0c;font-size:15px">${escapeHtml(v).replace(/\n/g, "<br>")}</td></tr>`,
       )
       .join("");
   const phoneDigits = i.phone.replace(/[^\d+]/g, "");
   const section = (title: string, body: string) =>
-    `<h2 style="margin:28px 0 8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#b5441a">${title}</h2>${body}`;
+    `<h2 style="margin:28px 0 8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#0a6aa8">${title}</h2>${body}`;
 
-  return `<!doctype html><html><body style="margin:0;background:#f4f2ed;font-family:Arial,Helvetica,sans-serif">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f2ed;padding:24px 12px"><tr><td align="center">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;background:#ffffff;border-top:6px solid #b5441a">
-<tr><td style="padding:24px 28px;background:#0b1f33;color:#ffffff">
-<div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#9fb6cc">${escapeHtml(business.name)}</div>
+  return `<!doctype html><html><body style="margin:0;background:#f1f8fd;font-family:Arial,Helvetica,sans-serif">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f1f8fd;padding:24px 12px"><tr><td align="center">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;background:#ffffff;border-top:6px solid #4fb8f2">
+<tr><td style="padding:24px 28px;background:#0b0b0c;color:#ffffff">
+<div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#9ed8f8">${escapeHtml(business.name)}</div>
 <div style="font-size:22px;font-weight:700;margin-top:6px">New website ${i.formType === "quote" ? "quote request" : "message"}</div>
 </td></tr>
 <tr><td style="padding:8px 28px 28px">
 ${section("Project", `<table role="presentation" cellpadding="0" cellspacing="0">${table(project)}</table>`)}
 ${section("Contact", `<table role="presentation" cellpadding="0" cellspacing="0">${table(contact)}</table>`)}
-${section("Message", `<p style="margin:0;color:#0b1f33;font-size:15px;line-height:1.55">${i.message ? escapeHtml(i.message).replace(/\n/g, "<br>") : "<em>No message</em>"}</p>`)}
+${section("Message", `<p style="margin:0;color:#0b0b0c;font-size:15px;line-height:1.55">${i.message ? escapeHtml(i.message).replace(/\n/g, "<br>") : "<em>No message</em>"}</p>`)}
 <p style="margin:28px 0 0">
-<a href="mailto:${escapeHtml(i.email)}" style="display:inline-block;background:#b5441a;color:#ffffff;text-decoration:none;padding:12px 18px;font-weight:700">Reply by email</a>
-${phoneDigits ? `&nbsp;<a href="tel:${escapeHtml(phoneDigits)}" style="display:inline-block;border:2px solid #0b1f33;color:#0b1f33;text-decoration:none;padding:10px 16px;font-weight:700">Call ${escapeHtml(i.phone)}</a>` : ""}
+<a href="mailto:${escapeHtml(i.email)}" style="display:inline-block;background:#4fb8f2;color:#0b0b0c;text-decoration:none;padding:12px 18px;font-weight:700">Reply by email</a>
+${phoneDigits ? `&nbsp;<a href="tel:${escapeHtml(phoneDigits)}" style="display:inline-block;border:2px solid #0b0b0c;color:#0b0b0c;text-decoration:none;padding:10px 16px;font-weight:700">Call ${escapeHtml(i.phone)}</a>` : ""}
 </p>
 <p style="margin:28px 0 0;color:#5b6b7b;font-size:12px;line-height:1.5">Submitted from ${escapeHtml(i.sourcePage || "unknown page")} · Reference ${escapeHtml(reference)}</p>
 </td></tr></table></td></tr></table></body></html>`;
