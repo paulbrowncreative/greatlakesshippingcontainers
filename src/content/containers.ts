@@ -3,8 +3,8 @@ import { images, type SiteImage } from "./images";
 /**
  * Container specifications are typical ISO dry-van figures. Actual units vary by
  * manufacturer and build year, so every spec table is labelled "typical" and buyers
- * are told the exact unit is confirmed on the quote. No prices or stock levels are
- * published because none are verified.
+ * are told the exact unit is confirmed on the quote. Specific units the owner has
+ * photographed live in inventory.ts.
  */
 
 export type Spec = { label: string; value: string; note?: string };

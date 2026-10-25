@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const pages: [string, number][] = [
     ["/", 1],
     ["/containers", 0.9],
+    ["/inventory", 0.9],
     ["/quote", 0.9],
     ["/services/container-sales", 0.8],
     ["/services/container-rentals", 0.8],

@@ -18,6 +18,7 @@ export const primaryNav: { label: string; href: string; children?: NavItem[] }[]
       { label: "All Containers", href: "/containers", description: "Compare sizes side by side" },
     ],
   },
+  { label: "Inventory", href: "/inventory" },
   {
     label: "Services",
     href: "/services/container-sales",
@@ -41,6 +42,7 @@ export const footerNav = {
     { label: "40 ft High Cube Containers", href: "/containers/40-ft-high-cube-containers" },
     { label: "Condition Grades Explained", href: "/containers/condition-grades" },
     { label: "Compare All Sizes", href: "/containers" },
+    { label: "Current Inventory", href: "/inventory" },
   ],
   company: [
     { label: "Container Sales", href: "/services/container-sales" },

@@ -3,6 +3,7 @@
  * (authoritative validation). Kept dependency-free on purpose.
  */
 import { offers } from "@/content/business";
+import { getUnit } from "@/content/inventory";
 
 export const LIMITS = {
   name: 100,
@@ -78,6 +79,8 @@ export type InquiryInput = {
   surface: string;
   accessNotes: string;
   rentalDuration: string;
+  /** Inventory unit ID (GL-001) when the request started from a specific listing. */
+  unitId: string;
   name: string;
   email: string;
   phone: string;
@@ -102,6 +105,7 @@ export const emptyInquiry = (formType: FormType): InquiryInput => ({
   surface: "",
   accessNotes: "",
   rentalDuration: "",
+  unitId: "",
   name: "",
   email: "",
   phone: "",
@@ -149,6 +153,8 @@ export function normalize(raw: unknown): InquiryInput {
     surface: clean(r.surface, 20),
     accessNotes: clean(r.accessNotes, LIMITS.accessNotes, true),
     rentalDuration: clean(r.rentalDuration, 10),
+    // Unknown or retired IDs are dropped rather than rejected so an old link never blocks a request.
+    unitId: getUnit(clean(r.unitId, 12))?.id ?? "",
     name: clean(r.name, LIMITS.name),
     email: clean(r.email, LIMITS.email).toLowerCase(),
     phone: clean(r.phone, LIMITS.phone),
@@ -225,6 +231,7 @@ export function toInquiry(input: InquiryInput): Inquiry {
     surface: project ? input.surface : "",
     accessNotes: project ? input.accessNotes : "",
     rentalDuration: project && input.inquiryType === "rent" ? input.rentalDuration : "",
+    unitId: project ? input.unitId : "",
   };
 }
 

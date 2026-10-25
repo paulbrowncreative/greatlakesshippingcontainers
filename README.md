@@ -24,6 +24,7 @@ npm run dev                    # http://localhost:3000
 ```
 src/content/business.ts      Business facts. Unverified values stay null and are hidden. START HERE.
 src/content/containers.ts    Container sizes, specs, FAQs, condition grades
+src/content/inventory.ts     Listed units (GL-001…) shown at /inventory; photos in public/images/inventory/
 src/content/pages.ts         Commitments, uses/industries, FAQs
 src/content/blog.ts          Blog posts, categories and keyword targets (renders /blog, RSS, related reading)
 src/content/service-areas.ts Location pages (empty until markets are confirmed)

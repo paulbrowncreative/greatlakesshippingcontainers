@@ -4,6 +4,7 @@ import { Photo } from "@/components/Photo";
 import { PostCard } from "@/components/blog/PostCard";
 import { ContainerCard } from "@/components/ContainerCard";
 import { ContainerChooser } from "@/components/ContainerChooser";
+import { InventoryCard } from "@/components/InventoryCard";
 import { CtaBand } from "@/components/CtaBand";
 import { Faq } from "@/components/Faq";
 import { IconArrow } from "@/components/Icons";
@@ -11,6 +12,7 @@ import { TrackedLink } from "@/components/TrackedLink";
 import { postsNewestFirst } from "@/content/blog";
 import { business } from "@/content/business";
 import { containers } from "@/content/containers";
+import { availableUnits } from "@/content/inventory";
 import { homeFaqs, howWeWork, uses } from "@/content/pages";
 import { images } from "@/content/images";
 import { pageMetadata } from "@/lib/seo";
@@ -133,6 +135,34 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {availableUnits.length > 0 && (
+        <section className="section section--white" aria-labelledby="inventory-heading">
+          <div className="container">
+            <div className="section-head section-head--split">
+              <div>
+                <p className="eyebrow">Inventory</p>
+                <h2 id="inventory-heading">Available now</h2>
+              </div>
+              <div className="stack">
+                <p className="lede">Specific units, photographed as listed. Request one by its ID and we’ll confirm the grade and price delivery.</p>
+                <p>
+                  <Link href="/inventory" className="text-link">
+                    See all {availableUnits.length} listed containers
+                  </Link>
+                </p>
+              </div>
+            </div>
+            <ul className="grid grid--3 stock-grid" role="list">
+              {availableUnits.slice(0, 3).map((u) => (
+                <li key={u.id}>
+                  <InventoryCard unit={u} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       <section className="section section--sky" aria-labelledby="uses-heading">
         <div className="container">

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useId, useMemo, useRef, useState, type ReactNode } from "react";
 import { business, phoneHref } from "@/content/business";
+import { getUnit, unitLabel } from "@/content/inventory";
 import { track } from "@/lib/analytics";
 import {
   conditions,
@@ -58,6 +59,7 @@ export function InquiryForm({ mode, initial }: Props) {
     [mode, project],
   );
   const step = steps[Math.min(stepIndex, steps.length - 1)];
+  const selectedUnit = values.unitId ? getUnit(values.unitId) : undefined;
 
   useEffect(() => {
     if (firstRender.current) {
@@ -229,6 +231,17 @@ export function InquiryForm({ mode, initial }: Props) {
             />
             {project && (
               <>
+                {selectedUnit && (
+                  <div className="unit-pick">
+                    <p>
+                      <span className="unit-pick__label">Requesting unit</span>
+                      <strong>{unitLabel(selectedUnit)}</strong>
+                    </p>
+                    <button type="button" className="text-link" onClick={() => set("unitId", "")}>
+                      Remove<span className="sr-only"> this unit and choose any container</span>
+                    </button>
+                  </div>
+                )}
                 <ChoiceGroup
                   name="containerSize"
                   legend="Container size"
@@ -244,7 +257,11 @@ export function InquiryForm({ mode, initial }: Props) {
                   options={containerSizes}
                   value={values.containerSize}
                   error={errors.containerSize}
-                  onChange={(v) => set("containerSize", v)}
+                  onChange={(v) => {
+                    set("containerSize", v);
+                    // A different size means they're no longer asking about that specific unit.
+                    if (selectedUnit && v !== selectedUnit.size) set("unitId", "");
+                  }}
                 />
                 <div className="form-row form-row--2">
                   <SelectField
@@ -608,6 +625,7 @@ function Review({ values, onEdit, steps }: { values: InquiryInput; onEdit: (s: S
           ["Request", labelFor(inquiryTypes, values.inquiryType)],
           ...(project
             ? ([
+                ["Unit", values.unitId ? unitLabel(getUnit(values.unitId)!) : ""],
                 ["Size", labelFor(containerSizes, values.containerSize)],
                 ["Condition", values.condition ? labelFor(conditions, values.condition) : "No preference"],
                 ["Quantity", values.quantity],

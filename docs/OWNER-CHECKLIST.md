@@ -30,6 +30,12 @@ The site is built to stay accurate when facts are missing: anything not yet conf
 - [ ] **Google Business Profile.** Create or claim it with the same name, phone and URL as the site.
 - [ ] **Real customer reviews.** Once you have some, add a reviews section with the customer's permission and a link to the source. Never paraphrase or invent reviews.
 
+- [ ] **Inventory (/inventory).** Five units are listed (GL-001 to GL-005), in `src/content/inventory.ts`. For each unit, please confirm:
+  - **Size.** GL-001, GL-004 and GL-005 were read from the 45G1/45xx codes on the doors. GL-002 (dark grey) is listed as a 40 ft high cube from its top-rail hazard striping, and GL-003 (CMA CGM blue) as a 40 ft standard; neither photo shows a readable size code.
+  - **Condition grade** (`grade`) and, if you want prices shown, **price** (`price`). Until then, cards say "Confirmed on your quote" and "Delivered price on request".
+  - **Photos.** Small lettering on several photos is garbled, which background-removal or AI-enhancement tools cause. Make sure each photo shows the actual unit for sale.
+  - When a unit sells, set `status: "sold"`; use `"pending"` for a deposit taken. Never reuse an ID.
+
 ## C. Optional setup
 
 - [ ] **Cloudflare Turnstile** spam protection → `NEXT_PUBLIC_TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY`.

@@ -12,6 +12,7 @@ import { PageHero } from "@/components/PageHero";
 import { SpecPlate } from "@/components/SpecPlate";
 import { TrackedLink } from "@/components/TrackedLink";
 import { containers, getContainer } from "@/content/containers";
+import { availableUnits, type UnitSize } from "@/content/inventory";
 import { pageMetadata, serviceSchema } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return pageMetadata({ title: c.metaTitle, description: c.metaDescription, path: `/containers/${c.slug}`, image: c.image });
 }
 
-const sizeParam: Record<string, string> = {
+const sizeParam: Record<string, UnitSize> = {
   "20-ft-shipping-containers": "20-standard",
   "40-ft-shipping-containers": "40-standard",
   "40-ft-high-cube-containers": "40-high-cube",
@@ -38,6 +39,7 @@ export default async function ContainerPage({ params }: Props) {
   const c = getContainer((await params).slug);
   if (!c) notFound();
   const quoteHref = `/quote?size=${sizeParam[c.slug]}`;
+  const inStock = availableUnits.filter((u) => u.size === sizeParam[c.slug]).length;
   const related = c.related.map(getContainer).filter((r): r is NonNullable<typeof r> => Boolean(r));
 
   return (
@@ -69,10 +71,15 @@ export default async function ContainerPage({ params }: Props) {
                 Container prices move with supply, condition grade and delivery distance, so we quote each order individually. Your
                 quote names the condition grade and includes delivery to your ZIP code.
               </p>
-              <p className="mt-3">
+              <p className="mt-3 cluster" style={{ gap: "var(--space-5)" }}>
                 <Link href={quoteHref} className="text-link">
                   Request a delivered price
                 </Link>
+                {inStock > 0 && (
+                  <Link href={`/inventory?size=${sizeParam[c.slug]}`} className="text-link">
+                    See {inStock} listed {inStock === 1 ? "unit" : "units"}
+                  </Link>
+                )}
               </p>
             </div>
           </div>

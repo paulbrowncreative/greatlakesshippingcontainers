@@ -295,6 +295,15 @@ h4 { font-size: var(--fs-h4); font-family: var(--font-display); font-weight: 600
   .header-actions { margin-left: var(--space-3); }
   .header-cta { display: inline-flex; }
 }
+@media (min-width: 64rem) and (max-width: 79.99rem) {
+  /* Eight nav items plus the quote button only just fit on small laptops; tighten rather than wrap. */
+  .site-header__inner { gap: var(--space-3); }
+  .brand__logo { height: 2.2rem; }
+  .nav__list { gap: 0; }
+  .nav__link, .nav__trigger { padding-inline: 0.5rem; }
+  .header-actions { margin-left: var(--space-2); }
+}
+.nav__link, .nav__trigger { white-space: nowrap; }
 @media (min-width: 80rem) { .header-phone { display: inline-flex; } }
 
 /* Mobile drawer */
@@ -383,6 +392,42 @@ body[data-menu-open="true"] { overflow: hidden; }
 .unit-card__specs dd { font-weight: 600; color: var(--ink); font-size: var(--fs-sm); }
 .unit-card__specs div + div { border-left: 1px solid var(--border); padding-left: var(--space-3); }
 .unit-card .text-link { position: relative; z-index: 1; }
+
+/* Inventory: one card per real unit. Photos are cut out on white, so they're contained, never cropped. */
+.stock-grid { align-items: stretch; }
+.stock-grid > li { display: grid; }
+.stock-grid > li[hidden] { display: none; }
+.stock-card { display: grid; grid-template-rows: auto 1fr; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; scroll-margin-top: 6rem; }
+.stock-card:target { outline: 3px solid var(--sky); outline-offset: 2px; }
+.stock-card__media { position: relative; aspect-ratio: 4 / 3; background: var(--white); border-bottom: 1px solid var(--border); }
+.stock-card__media img { width: 100%; height: 100%; object-fit: contain; padding: var(--space-3); }
+.stock-card__status {
+  position: absolute; top: var(--space-3); left: var(--space-3); padding: 0.3rem 0.65rem 0.25rem;
+  background: var(--sky); color: var(--black); font-family: var(--font-display); font-weight: 700; font-size: var(--fs-sm); letter-spacing: 0.08em; text-transform: uppercase; line-height: 1;
+}
+.stock-card__status--pending { background: var(--black); color: var(--white); }
+.stock-card__body { display: grid; gap: var(--space-3); align-content: start; padding: var(--space-5); }
+.stock-card__body :is(h2, h3) { font-size: var(--fs-h4); text-transform: none; }
+.stock-card__id { font-size: var(--fs-xs); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sky-700); }
+.stock-card__body > .small { color: var(--steel-700); }
+.stock-card__facts { display: grid; gap: var(--space-2); border-block: 1px solid var(--border); padding-block: var(--space-3); font-size: var(--fs-sm); }
+.stock-card__facts div { display: grid; grid-template-columns: 7.5rem 1fr; gap: var(--space-2); }
+.stock-card__facts dt { color: var(--text-muted); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.08em; padding-top: 0.15rem; }
+.stock-card__facts dd { font-weight: 600; color: var(--ink); }
+.stock-card__actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3) var(--space-4); margin-top: var(--space-1); }
+.stock-filter { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-5); }
+.stock-filter button {
+  min-height: 2.75rem; padding: 0.5rem 1rem; border: 1px solid var(--steel-300); border-radius: 999px; background: var(--white);
+  color: var(--ink); font: inherit; font-size: var(--fs-sm); font-weight: 600; cursor: pointer;
+}
+.stock-filter button:hover { border-color: var(--ink); }
+.stock-filter button[aria-pressed="true"] { background: var(--black); border-color: var(--black); color: var(--white); }
+.stock-filter span { font-weight: 400; opacity: 0.8; }
+.unit-pick { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-2) var(--space-4); padding: var(--space-3) var(--space-4); background: var(--sky-50); border-left: 4px solid var(--sky); border-radius: var(--radius); }
+.unit-pick p { display: grid; gap: 0.15rem; }
+.unit-pick__label { font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); }
+.unit-pick button { background: none; border: 0; padding: 0.5rem 0; font: inherit; font-size: var(--fs-sm); cursor: pointer; }
+.unit-pick button::after { content: none; }
 
 /* Data plate — styled after a container's CSC/spec plate */
 .plate { background: var(--white); border: 2px solid var(--ink); border-radius: var(--radius); font-variant-numeric: tabular-nums; }

@@ -1,5 +1,6 @@
 import "server-only";
 import { business } from "@/content/business";
+import { getUnit, unitLabel } from "@/content/inventory";
 import { absoluteUrl } from "@/content/site";
 import {
   conditions,
@@ -31,7 +32,8 @@ export function buildSubject(i: Inquiry): string {
   }
   const type = labelFor(inquiryTypes, i.inquiryType).replace(/ a container$/i, "");
   const size = labelFor(containerSizes, i.containerSize);
-  return headerSafe(`${base} | ${type}: ${i.quantity} × ${size} · ZIP ${i.deliveryZip}`);
+  const unit = i.unitId ? ` · Unit ${i.unitId}` : "";
+  return headerSafe(`${base} | ${type}: ${i.quantity} × ${size}${unit} · ZIP ${i.deliveryZip}`);
 }
 
 type Row = [label: string, value: string];
@@ -40,6 +42,8 @@ function rows(i: Inquiry): { project: Row[]; contact: Row[] } {
   const project: Row[] = [];
   project.push(["Request", labelFor(inquiryTypes, i.inquiryType)]);
   if (i.quantity !== null) {
+    const unit = i.unitId ? getUnit(i.unitId) : undefined;
+    if (unit) project.push(["Inventory unit", `${unitLabel(unit)} (${absoluteUrl("/inventory")}#${unit.id.toLowerCase()})`]);
     project.push(["Container", labelFor(containerSizes, i.containerSize)]);
     project.push(["Quantity", String(i.quantity)]);
     if (i.condition) project.push(["Condition", labelFor(conditions, i.condition)]);
