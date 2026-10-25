@@ -130,6 +130,90 @@ export const inventory: InventoryUnit[] = [
       "Beige 40 ft high cube open-side shipping container with all four pairs of side doors swung open, showing the empty interior",
     ),
   },
+  {
+    id: "GL-006",
+    size: "40-high-cube",
+    variant: "Open side",
+    color: "Beige",
+    grade: null,
+    price: null,
+    status: "available",
+    notes:
+      "Door markings read 4563 (40 ft, 9'6\" high). Four pairs of lockable side doors along one wall plus cargo doors on the end. Clean, even paint in the photo.",
+    image: photo(
+      "gl-006-40ft-high-cube-open-side-beige",
+      1408,
+      1408,
+      "Beige 40 ft high cube open-side shipping container with four pairs of side doors closed, viewed from the cargo-door end",
+    ),
+  },
+  {
+    id: "GL-007",
+    size: "40-high-cube",
+    variant: "Open side",
+    color: "Light grey",
+    grade: null,
+    price: null,
+    status: "available",
+    notes:
+      "Door markings read 45G3 with a 9'6\" height label. Four pairs of lockable side doors along one wall. Clean, even paint in the photo.",
+    image: photo(
+      "gl-007-40ft-high-cube-open-side-grey",
+      1600,
+      1200,
+      "Light grey 40 ft high cube shipping container with four pairs of side doors along its length, all closed",
+    ),
+  },
+  {
+    id: "GL-008",
+    size: "40-high-cube",
+    color: "Beige",
+    grade: null,
+    price: null,
+    status: "available",
+    notes:
+      "Door markings read 45G1 (40 ft, 9'6\" high), 76.4 cu m capacity. Clean paint with light staining on the door-end corner post. Standard cargo doors.",
+    image: photo(
+      "gl-008-40ft-high-cube-beige",
+      1600,
+      1200,
+      "Beige 40 ft high cube shipping container with cargo doors closed and clean corrugated side walls",
+    ),
+  },
+  {
+    id: "GL-009",
+    size: "40-high-cube",
+    variant: "Double door",
+    color: "Beige",
+    grade: null,
+    price: null,
+    status: "available",
+    notes:
+      "Cargo doors on both ends, so you can load from either side or drive straight through. Clean interior walls and wood floor in the photo.",
+    image: photo(
+      "gl-009-40ft-double-door-beige",
+      1200,
+      900,
+      "Beige 40 ft double-door shipping container with one end's doors swung open, showing a clean interior and the second set of doors at the far end",
+    ),
+  },
+  {
+    id: "GL-010",
+    size: "40-high-cube",
+    age: "Used",
+    color: "Red",
+    grade: null,
+    price: null,
+    status: "available",
+    notes:
+      "Door markings read 45G1 with a 9'6\" height label. Faded paint, rust on the door-end frame and corner posts, and chalk marks on the side.",
+    image: photo(
+      "gl-010-40ft-high-cube-used-red",
+      1600,
+      1200,
+      "Used red 40 ft high cube shipping container with TAL markings, viewed from the cargo-door end",
+    ),
+  },
 ];
 
 /** Units shown on the site, in listing order. */
