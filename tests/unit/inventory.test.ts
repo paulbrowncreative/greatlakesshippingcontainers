@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { availableUnits, getUnit, inventory, unitLabel, unitProduct } from "@/content/inventory";
+import { availableUnits, getUnit, inventory, unitLabel, unitProduct, unitSpecs } from "@/content/inventory";
 import { emptyInquiry, normalize, toInquiry } from "@/lib/inquiry";
 import { buildSubject, buildText } from "@/lib/server/email-template";
 import { existsSync } from "node:fs";
@@ -26,6 +26,11 @@ describe("inventory data", () => {
   it("labels a unit with ID, size, variant and color", () => {
     expect(unitLabel(getUnit("GL-005")!)).toBe("GL-005 · 40 ft high cube, open side · Beige");
     expect(unitLabel(getUnit("GL-001")!)).toBe("GL-001 · 40 ft high cube · Used Blue-grey");
+  });
+
+  it("describes a 20 ft high cube even though it has no product page of its own", () => {
+    const s = unitSpecs(getUnit("GL-016")!);
+    expect(s).toMatchObject({ shortName: "20 ft high cube", heightLabel: "9'6\" tall", insideHeight: "8 ft 10 in", specsHref: "/containers/20-ft-shipping-containers" });
   });
 });
 

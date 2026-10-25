@@ -1,14 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { conditions, labelFor } from "@/lib/inquiry";
-import { unitProduct, unitTitle, type InventoryUnit } from "@/content/inventory";
+import { unitSpecs, unitTitle, type InventoryUnit } from "@/content/inventory";
 import { TrackedLink } from "./TrackedLink";
-
-const spec = (list: { label: string; value: string }[], label: string) => list.find((s) => s.label === label)?.value ?? "";
 
 export function InventoryCard({ unit, headingLevel = 3, priority }: { unit: InventoryUnit; headingLevel?: 2 | 3; priority?: boolean }) {
   const H = `h${headingLevel}` as "h2" | "h3";
-  const product = unitProduct(unit);
+  const specs = unitSpecs(unit);
   const pending = unit.status === "pending";
   return (
     <article className="stock-card" id={unit.id.toLowerCase()} aria-labelledby={`${unit.id}-title`}>
@@ -30,7 +28,7 @@ export function InventoryCard({ unit, headingLevel = 3, priority }: { unit: Inve
         <ul className="chips" role="list" aria-label="Unit details">
           {unit.age && <li className="chip">{unit.age}</li>}
           <li className="chip">{unit.color}</li>
-          <li className="chip">{product.heightLabel}</li>
+          <li className="chip">{specs.heightLabel}</li>
         </ul>
         <p className="small">{unit.notes}</p>
         <dl className="stock-card__facts">
@@ -41,7 +39,7 @@ export function InventoryCard({ unit, headingLevel = 3, priority }: { unit: Inve
           <div>
             <dt>Inside (typical)</dt>
             <dd className="tabular">
-              {spec(product.internal, "Length")} × {spec(product.internal, "Height")} high
+              {specs.insideLength} × {specs.insideHeight} high
             </dd>
           </div>
           <div>
@@ -58,8 +56,8 @@ export function InventoryCard({ unit, headingLevel = 3, priority }: { unit: Inve
           >
             Request This Container<span className="sr-only"> ({unit.id})</span>
           </TrackedLink>
-          <Link href={`/containers/${product.slug}`} className="text-link small">
-            {product.shortName} specs
+          <Link href={specs.specsHref} className="text-link small">
+            {specs.specsLabel}
           </Link>
         </div>
       </div>

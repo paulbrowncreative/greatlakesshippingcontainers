@@ -14,7 +14,7 @@ import type { SiteImage } from "./images";
  * - IDs are permanent. Never reuse one.
  */
 
-export type UnitSize = "20-standard" | "40-standard" | "40-high-cube";
+export type UnitSize = "20-standard" | "20-high-cube" | "40-standard" | "40-high-cube";
 export type UnitStatus = "available" | "pending" | "sold";
 
 export type InventoryUnit = {
@@ -37,8 +37,15 @@ export type InventoryUnit = {
 
 const productSlug: Record<UnitSize, string> = {
   "20-standard": "20-ft-shipping-containers",
+  // No 20 ft high cube page yet; its specs link goes to the 20 ft page and the card uses the overrides below.
+  "20-high-cube": "20-ft-shipping-containers",
   "40-standard": "40-ft-shipping-containers",
   "40-high-cube": "40-ft-high-cube-containers",
+};
+
+/** Typical figures for sizes without their own product page (20 ft HC: a 20 ft box one foot taller). */
+const sizeOverrides: Partial<Record<UnitSize, { shortName: string; heightLabel: string; insideHeight: string }>> = {
+  "20-high-cube": { shortName: "20 ft high cube", heightLabel: "9'6\" tall", insideHeight: "8 ft 10 in" },
 };
 
 const photo = (file: string, width: number, height: number, alt: string): SiteImage => ({
@@ -278,6 +285,22 @@ export const inventory: InventoryUnit[] = [
       "Dark grey 20 ft double-door shipping container with the far-end doors open and the near-end doors closed",
     ),
   },
+  {
+    id: "GL-016",
+    size: "20-high-cube",
+    color: "Beige",
+    grade: null,
+    price: null,
+    status: "available",
+    notes:
+      "Door markings read 25G1 (20 ft, 9'6\" high), 37.4 cu m capacity: about 13% more space than a standard 20. Clean paint and bright hardware in the photo.",
+    image: photo(
+      "gl-016-20ft-high-cube-beige",
+      1600,
+      1200,
+      "Beige 20 ft high cube shipping container with cargo doors closed and high-cube hazard striping on the top rails",
+    ),
+  },
 ];
 
 /** Units shown on the site, in listing order. */
@@ -291,9 +314,25 @@ export function unitProduct(u: InventoryUnit): ContainerProduct {
   return getContainer(productSlug[u.size])!;
 }
 
+const spec = (list: { label: string; value: string }[], label: string) => list.find((x) => x.label === label)?.value ?? "";
+
+/** What a card needs to describe a unit's size, including sizes without a product page. */
+export function unitSpecs(u: InventoryUnit) {
+  const product = unitProduct(u);
+  const o = sizeOverrides[u.size];
+  return {
+    shortName: o?.shortName ?? product.shortName,
+    heightLabel: o?.heightLabel ?? product.heightLabel,
+    insideLength: spec(product.internal, "Length"),
+    insideHeight: o?.insideHeight ?? spec(product.internal, "Height"),
+    specsHref: `/containers/${product.slug}`,
+    specsLabel: o ? `${product.shortName.replace(" standard", "")} container specs` : `${product.shortName} specs`,
+  };
+}
+
 /** "40 ft high cube, open side" */
 export function unitTitle(u: InventoryUnit): string {
-  const base = unitProduct(u).shortName;
+  const base = unitSpecs(u).shortName;
   return u.variant ? `${base}, ${u.variant.toLowerCase()}` : base;
 }
 
@@ -303,7 +342,8 @@ export function unitLabel(u: InventoryUnit): string {
 }
 
 export const sizeFilters: { value: UnitSize; label: string }[] = [
-  { value: "20-standard", label: "20 ft" },
+  { value: "20-standard", label: "20 ft standard" },
+  { value: "20-high-cube", label: "20 ft high cube" },
   { value: "40-standard", label: "40 ft standard" },
   { value: "40-high-cube", label: "40 ft high cube" },
 ];
