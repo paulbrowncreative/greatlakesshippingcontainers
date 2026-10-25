@@ -12,7 +12,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Container Inventory | Used & High Cube Containers in Michigan",
   description:
-    "Shipping containers available now, photographed unit by unit: 40 ft standard, 40 ft high cube and open-side units. Request a delivered Michigan quote.",
+    "Shipping containers available now, photographed unit by unit: 20 ft, 40 ft and high cube, plus open-side and double-door units. Request a delivered quote.",
   path: "/inventory",
 });
 
@@ -103,7 +103,7 @@ export default function InventoryPage() {
         <div className="container stack max-prose">
           <h2 id="not-listed-heading">Need a size that isn’t listed?</h2>
           <p className="lede">
-            This page shows units we’ve photographed, not everything we can supply. {business.name} also quotes 20 ft containers and other
+            This page shows units we’ve photographed, not everything we can supply. {business.name} also quotes other sizes and
             grades on request — tell us what you need and where it’s going.
           </p>
           <p>
